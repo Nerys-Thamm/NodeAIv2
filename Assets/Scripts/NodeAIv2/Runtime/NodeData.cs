@@ -48,7 +48,7 @@ namespace NodeAI
             [SerializeField]
             public string GUID;
             [SerializeField]
-            public System.Type type;
+            public string typeName;
         }
 
         [System.Serializable]
@@ -56,7 +56,7 @@ namespace NodeAI
         {
             public Property()
             {
-                type = typeof(T);
+                typeName = typeof(T).Name;
                 GUID = System.Guid.NewGuid().ToString();
                 value = default(T);
             }

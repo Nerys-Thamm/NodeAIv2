@@ -5136,3 +5136,594 @@ Serialization hierarchy:
  -> (artifact id: '807524fd1ef9815575e703746213ef19') in 0.021120 seconds 
   Import took 0.026495 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.946 seconds
+Domain Reload Profiling:
+	ReloadAssembly (947ms)
+		BeginReloadAssembly (81ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (807ms)
+			LoadAssemblies (56ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (304ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (273ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (201ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.5 MB.
+System memory in use after: 109.6 MB.
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3319.
+Total: 4.556693 ms (FindLiveObjects: 0.311580 ms CreateObjectMapping: 0.066490 ms MarkObjects: 2.570112 ms  DeleteObjects: 1.607292 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002248 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.927 seconds
+Domain Reload Profiling:
+	ReloadAssembly (927ms)
+		BeginReloadAssembly (77ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (794ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (299ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (276ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (201ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.5 MB.
+System memory in use after: 109.6 MB.
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3322.
+Total: 4.509534 ms (FindLiveObjects: 0.290820 ms CreateObjectMapping: 0.065150 ms MarkObjects: 2.606772 ms  DeleteObjects: 1.545952 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 166.175525 seconds.
+  path: Assets/Testing.asset
+  artifactKey: Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Testing.asset using Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: NodeAI::NodeTree.rootLeaf
+0: NodeAI::NodeAI_Behaviour.nodeTree
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: Leaf.children
+0: Leaf.children
+
+ -> (artifact id: '9d070d6a70cfced89bb7c78c776b52d9') in 0.017832 seconds 
+  Import took 0.022883 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002128 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.919 seconds
+Domain Reload Profiling:
+	ReloadAssembly (919ms)
+		BeginReloadAssembly (74ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (791ms)
+			LoadAssemblies (52ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (293ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (281ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (208ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.5 MB.
+System memory in use after: 109.6 MB.
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 4.347944 ms (FindLiveObjects: 0.263490 ms CreateObjectMapping: 0.067160 ms MarkObjects: 2.646312 ms  DeleteObjects: 1.369891 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 110.153453 seconds.
+  path: Assets/Testing.asset
+  artifactKey: Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Testing.asset using Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: NodeAI::NodeTree.rootLeaf
+0: NodeAI::NodeAI_Behaviour.nodeTree
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: Leaf.children
+0: Leaf.children
+
+ -> (artifact id: '17be331c81ece0faf189fa1b7d299356') in 0.020734 seconds 
+  Import took 0.026329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000732 seconds.
+  path: Assets/Testing.asset
+  artifactKey: Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Testing.asset using Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17be331c81ece0faf189fa1b7d299356') in 0.001806 seconds 
+  Import took 0.005992 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002181 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.909 seconds
+Domain Reload Profiling:
+	ReloadAssembly (909ms)
+		BeginReloadAssembly (80ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (774ms)
+			LoadAssemblies (52ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (291ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (269ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (59ms)
+				ProcessInitializeOnLoadAttributes (198ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.5 MB.
+System memory in use after: 109.6 MB.
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3328.
+Total: 4.314143 ms (FindLiveObjects: 0.346270 ms CreateObjectMapping: 0.077820 ms MarkObjects: 2.459942 ms  DeleteObjects: 1.429341 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 327.796056 seconds.
+  path: Assets/Testing.asset
+  artifactKey: Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Testing.asset using Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: NodeAI::NodeTree.rootLeaf
+0: NodeAI::NodeAI_Behaviour.nodeTree
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: Leaf.children
+0: Leaf.children
+
+ -> (artifact id: '4d196ebef8d6b7373a787bc91b53fc19') in 0.016312 seconds 
+  Import took 0.020956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Testing.asset
+  artifactKey: Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Testing.asset using Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d196ebef8d6b7373a787bc91b53fc19') in 0.001166 seconds 
+  Import took 0.003683 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002180 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.909 seconds
+Domain Reload Profiling:
+	ReloadAssembly (909ms)
+		BeginReloadAssembly (78ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (775ms)
+			LoadAssemblies (55ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (288ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (272ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (201ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.5 MB.
+System memory in use after: 109.6 MB.
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3331.
+Total: 10.508389 ms (FindLiveObjects: 0.268550 ms CreateObjectMapping: 0.066610 ms MarkObjects: 8.679497 ms  DeleteObjects: 1.492181 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002284 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.933 seconds
+Domain Reload Profiling:
+	ReloadAssembly (933ms)
+		BeginReloadAssembly (80ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (798ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (301ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (277ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (199ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.5 MB.
+System memory in use after: 109.6 MB.
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3334.
+Total: 4.292344 ms (FindLiveObjects: 0.287561 ms CreateObjectMapping: 0.065060 ms MarkObjects: 2.444943 ms  DeleteObjects: 1.493961 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002135 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.913 seconds
+Domain Reload Profiling:
+	ReloadAssembly (913ms)
+		BeginReloadAssembly (77ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (782ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (283ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (285ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (202ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.5 MB.
+System memory in use after: 109.6 MB.
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3337.
+Total: 4.080404 ms (FindLiveObjects: 0.269361 ms CreateObjectMapping: 0.065760 ms MarkObjects: 2.381982 ms  DeleteObjects: 1.357921 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1782.485910 seconds.
+  path: Assets/Testing.asset
+  artifactKey: Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Testing.asset using Guid(0db28d7e7c2a57d9e971f441417c16ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: NodeAI::NodeTree.rootLeaf
+0: NodeAI::NodeAI_Behaviour.nodeTree
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: Leaf.children
+0: Leaf.children
+
+ -> (artifact id: 'e59834a406c384c1d0c266480b49dc6e') in 0.017114 seconds 
+  Import took 0.021504 seconds .
+

@@ -28,7 +28,7 @@ namespace NodeAI
             properties.Add(new NodeData.Property<T>()
             {
                 name = name.ToUpper(),
-                type = typeof(T),
+                typeName = typeof(T).Name,
                 value = initialValue
             });
         }
@@ -37,7 +37,7 @@ namespace NodeAI
         {
             foreach (NodeData.Property property in properties)
             {
-                if (property.name == name.ToUpper() && property.type == typeof(T))
+                if (property.name == name.ToUpper() && property.typeName == typeof(T).Name)
                 {
                     ((NodeData.Property<T>)property).value = value;
                     return;
@@ -54,7 +54,7 @@ namespace NodeAI
             }
             foreach (NodeData.Property property in properties)
             {
-                if (property.name == name.ToUpper() && property.type == typeof(T))
+                if (property.name == name.ToUpper() && property.typeName == typeof(T).Name)
                 {
                     return ((NodeData.Property<T>)property).value;
                 }

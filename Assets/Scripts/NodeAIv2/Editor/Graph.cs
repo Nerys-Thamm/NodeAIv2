@@ -134,7 +134,41 @@ namespace NodeAI
             blackboard.Add(new BlackboardSection{ title = "Exposed Properties" });
             blackboard.addItemRequested = _blackboard =>
             {
-                graphView.AddPropertyToBlackboard(new NodeData.Property<string> { name = "New Property", value = "String" });
+                var contextMenu = new GenericMenu();
+                contextMenu.AddItem(new GUIContent("String"), false, () =>
+                {
+                    graphView.AddPropertyToBlackboard(new NodeData.Property<string> { name = "New Property", value = "String" });
+                });
+                contextMenu.AddItem(new GUIContent("Int"), false, () =>
+                {
+                    graphView.AddPropertyToBlackboard(new NodeData.Property<int> { name = "New Property", value = 0 });
+                });
+                contextMenu.AddItem(new GUIContent("Float"), false, () =>
+                {
+                    graphView.AddPropertyToBlackboard(new NodeData.Property<float> { name = "New Property", value = 0.0f });
+                });
+                contextMenu.AddItem(new GUIContent("Bool"), false, () =>
+                {
+                    graphView.AddPropertyToBlackboard(new NodeData.Property<bool> { name = "New Property", value = false });
+                });
+                contextMenu.AddItem(new GUIContent("Vector2"), false, () =>
+                {
+                    graphView.AddPropertyToBlackboard(new NodeData.Property<Vector2> { name = "New Property", value = Vector2.zero });
+                });
+                contextMenu.AddItem(new GUIContent("Vector3"), false, () =>
+                {
+                    graphView.AddPropertyToBlackboard(new NodeData.Property<Vector3> { name = "New Property", value = Vector3.zero });
+                });
+                contextMenu.AddItem(new GUIContent("Vector4"), false, () =>
+                {
+                    graphView.AddPropertyToBlackboard(new NodeData.Property<Vector4> { name = "New Property", value = Vector4.zero });
+                });
+                contextMenu.AddItem(new GUIContent("Color"), false, () =>
+                {
+                    graphView.AddPropertyToBlackboard(new NodeData.Property<Color> { name = "New Property", value = Color.white });
+                });
+                contextMenu.ShowAsContext();
+                
             };
             blackboard.editTextRequested = (bb, element, newVal) =>
             {

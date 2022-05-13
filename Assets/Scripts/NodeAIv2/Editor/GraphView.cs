@@ -23,6 +23,9 @@ namespace NodeAI
             this.AddManipulator(new ContentDragger());
             this.AddManipulator(new SelectionDragger());
             this.AddManipulator(new RectangleSelector());
+            this.AddManipulator(new SelectionDropper());
+
+            
 
             var grid = new GridBackground();
             Insert(0, grid);
@@ -301,8 +304,8 @@ namespace NodeAI
         {
             var newPort = GeneratePort(node, Direction.Input);
             newPort.portName = property.name;
-            newPort.portType = property.type;
-            if(property.type == typeof(bool))
+            newPort.portType = System.Type.GetType(property.typeName);
+            if(property.typeName == typeof(bool).Name)
             {
                 var boolField = new Toggle
                 {
@@ -316,7 +319,7 @@ namespace NodeAI
                 });
                 newPort.contentContainer.Add(boolField);
             }
-            else if(property.type == typeof(int))
+            else if(property.typeName == typeof(int).Name)
             {
                 var intField = new IntegerField
                 {
@@ -330,7 +333,7 @@ namespace NodeAI
                 });
                 newPort.contentContainer.Add(intField);
             }
-            else if(property.type == typeof(float))
+            else if(property.typeName == typeof(float).Name)
             {
                 var floatField = new FloatField
                 {
@@ -344,7 +347,7 @@ namespace NodeAI
                 });
                 newPort.contentContainer.Add(floatField);
             }
-            else if(property.type == typeof(string))
+            else if(property.typeName == typeof(string).Name)
             {
                 var textField = new TextField
                 {
@@ -358,7 +361,7 @@ namespace NodeAI
                 });
                 newPort.contentContainer.Add(textField);
             }
-            else if(property.type == typeof(Vector2))
+            else if(property.typeName == typeof(Vector2).Name)
             {
                 var vectorField = new Vector2Field
                 {
@@ -372,7 +375,7 @@ namespace NodeAI
                 });
                 newPort.contentContainer.Add(vectorField);
             }
-            else if(property.type == typeof(Vector3))
+            else if(property.typeName == typeof(Vector3).Name)
             {
                 var vectorField = new Vector3Field
                 {
@@ -386,7 +389,7 @@ namespace NodeAI
                 });
                 newPort.contentContainer.Add(vectorField);
             }
-            else if(property.type == typeof(Vector4))
+            else if(property.typeName == typeof(Vector4).Name)
             {
                 var vectorField = new Vector4Field
                 {
@@ -400,7 +403,7 @@ namespace NodeAI
                 });
                 newPort.contentContainer.Add(vectorField);
             }
-            else if(property.type == typeof(Color))
+            else if(property.typeName == typeof(Color).Name)
             {
                 var colorField = new ColorField
                 {
@@ -414,7 +417,7 @@ namespace NodeAI
                 });
                 newPort.contentContainer.Add(colorField);
             }
-            else if(property.type == typeof(Rect))
+            else if(property.typeName == typeof(Rect).Name)
             {
                 var rectField = new RectField
                 {
@@ -453,39 +456,44 @@ namespace NodeAI
                 exposedProperties = new List<NodeData.Property>();
             }
             NodeData.Property p = null;
-            if(exposedProperty.type == typeof(bool))
+            if(exposedProperty.typeName == typeof(bool).Name)
             {
-                p = new NodeData.Property<bool>{name = exposedProperty.name, value = ((NodeData.Property<bool>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+                p = new NodeData.Property<bool>{name = exposedProperty.name, value = ((NodeData.Property<bool>)exposedProperty).value, typeName = exposedProperty.typeName, GUID = exposedProperty.GUID};
             }
-            else if(exposedProperty.type == typeof(int))
+            else if(exposedProperty.typeName == typeof(int).Name)
             {
-                p = new NodeData.Property<int>{name = exposedProperty.name, value = ((NodeData.Property<int>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+                p = new NodeData.Property<int>{name = exposedProperty.name, value = ((NodeData.Property<int>)exposedProperty).value, typeName = exposedProperty.typeName, GUID = exposedProperty.GUID};
             }
-            else if(exposedProperty.type == typeof(float))
+            else if(exposedProperty.typeName == typeof(float).Name)
             {
-                p = new NodeData.Property<float>{name = exposedProperty.name, value = ((NodeData.Property<float>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+                p = new NodeData.Property<float>{name = exposedProperty.name, value = ((NodeData.Property<float>)exposedProperty).value, typeName = exposedProperty.typeName, GUID = exposedProperty.GUID};
             }
-            else if(exposedProperty.type == typeof(string))
+            else if(exposedProperty.typeName == typeof(string).Name)
             {
-                p = new NodeData.Property<string>{name = exposedProperty.name, value = ((NodeData.Property<string>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+                p = new NodeData.Property<string>{name = exposedProperty.name, value = ((NodeData.Property<string>)exposedProperty).value, typeName = exposedProperty.typeName, GUID = exposedProperty.GUID};
             }
-            else if(exposedProperty.type == typeof(Vector2))
+            else if(exposedProperty.typeName == typeof(Vector2).Name)
             {
-                p = new NodeData.Property<Vector2>{name = exposedProperty.name, value = ((NodeData.Property<Vector2>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+                p = new NodeData.Property<Vector2>{name = exposedProperty.name, value = ((NodeData.Property<Vector2>)exposedProperty).value, typeName = exposedProperty.typeName, GUID = exposedProperty.GUID};
             }
-            else if(exposedProperty.type == typeof(Vector3))
+            else if(exposedProperty.typeName == typeof(Vector3).Name)
             {
-                p = new NodeData.Property<Vector3>{name = exposedProperty.name, value = ((NodeData.Property<Vector3>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+                p = new NodeData.Property<Vector3>{name = exposedProperty.name, value = ((NodeData.Property<Vector3>)exposedProperty).value, typeName = exposedProperty.typeName, GUID = exposedProperty.GUID};
             }
-            else if(exposedProperty.type == typeof(Vector4))
+            else if(exposedProperty.typeName == typeof(Vector4).Name)
             {
-                p = new NodeData.Property<Vector4>{name = exposedProperty.name, value = ((NodeData.Property<Vector4>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+                p = new NodeData.Property<Vector4>{name = exposedProperty.name, value = ((NodeData.Property<Vector4>)exposedProperty).value, typeName = exposedProperty.typeName, GUID = exposedProperty.GUID};
+            }
+            else if(exposedProperty.typeName == typeof(Color).Name)
+            {
+                p = new NodeData.Property<Color>{name = exposedProperty.name, value = ((NodeData.Property<Color>)exposedProperty).value, typeName = exposedProperty.typeName, GUID = exposedProperty.GUID};
             }
             
+
             exposedProperties.Add(p);
 
             var container = new VisualElement();
-            var blackboardField = new BlackboardField{ text = exposedProperty.name, typeText = exposedProperty.type.Name };
+            var blackboardField = new BlackboardField{ text = p.name, typeText = p.typeName };
             container.Add(blackboardField);
             blackboard.Add(container);
 

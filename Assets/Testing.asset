@@ -49,8 +49,11 @@ MonoBehaviour:
       runtimeLogic: {fileID: 0}
   exposedProperties:
   - name: New Property
-    GUID: 04e76011-bd4e-475e-b795-2d756a394735
+    GUID: a0c52ee8-190b-4c9d-8798-b9beddfc56e9
+    typeName: Int32
   - name: New Property
-    GUID: 04dd38a1-29a9-4a5f-aba2-5342bb128ed7
+    GUID: 39854371-d1aa-44f6-9f8a-45d33387b997
+    typeName: Boolean
   - name: New Property
-    GUID: f47f066e-f823-4038-8f87-1840b4f31eb1
+    GUID: 9ad9623b-2c78-4cbf-b655-9d19cbe26e94
+    typeName: Vector3
