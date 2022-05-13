@@ -28,7 +28,7 @@ namespace NodeAI
             properties.Add(new NodeData.Property<T>()
             {
                 name = name.ToUpper(),
-                typeName = typeof(T).Name,
+                type = typeof(T),
                 value = initialValue
             });
         }
@@ -37,9 +37,22 @@ namespace NodeAI
         {
             foreach (NodeData.Property property in properties)
             {
-                if (property.name == name.ToUpper() && property.typeName == typeof(T).Name)
+                if (property.name == name.ToUpper() && property.type == typeof(T))
                 {
                     ((NodeData.Property<T>)property).value = value;
+                    return;
+                }
+            }
+            Debug.LogError("Property with name " + name + " does not exist");
+        }
+
+        public void SetPropertyGUID(string name, string GUID)
+        {
+            foreach (NodeData.Property property in properties)
+            {
+                if (property.name == name.ToUpper())
+                {
+                    ((NodeData.Property)property).GUID = GUID;
                     return;
                 }
             }
@@ -54,9 +67,9 @@ namespace NodeAI
             }
             foreach (NodeData.Property property in properties)
             {
-                if (property.name == name.ToUpper() && property.typeName == typeof(T).Name)
+                if (property.name == name.ToUpper() && property.type == typeof(T))
                 {
-                    return ((NodeData.Property<T>)property).value;
+                    return ((NodeData.Property<T>)property).Value;
                 }
             }
             return default(T);

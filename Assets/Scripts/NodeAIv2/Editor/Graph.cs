@@ -182,6 +182,14 @@ namespace NodeAI
                 var index = graphView.exposedProperties.FindIndex(x => x.name == oldName);
                 graphView.exposedProperties[index].name = newVal;
                 ((BlackboardField)element).text = newVal;
+
+                graphView.nodes.ForEach(x =>
+                {
+                    if(((Node)x).paramReference == graphView.exposedProperties[index].GUID)
+                    {
+                        ((Node)x).title = graphView.exposedProperties[index].name;
+                    }
+                });
             };
 
             blackboard.SetPosition(new Rect(10, 30, 200, 300));

@@ -11,6 +11,7 @@ namespace NodeAI
         public NodeData.Type nodeType;
 
         public RuntimeBase runtimeLogic;
+        public string paramReference;
 
         public Port inputPort;
         public Port outputPort;

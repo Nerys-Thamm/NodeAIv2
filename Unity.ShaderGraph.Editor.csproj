@@ -181,11 +181,11 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Input\Scene\FogNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Utility\Logic\IsInfiniteNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Drawing\Inspector\InspectorView.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Generation\Contexts\TargetFieldContext.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Graphs\StickyNoteData.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Drawing\Inspector\PropertyDrawers\Vector2PropertyDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Math\Trigonometry\CosineNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Math\Vector\DistanceNode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Generation\Contexts\TargetFieldContext.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Math\Derivative\DDXYNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Drawing\Inspector\PropertyDrawers\CubemapPropertyDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Generation\Processors\MatrixNames.cs" />

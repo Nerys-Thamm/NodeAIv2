@@ -39,21 +39,33 @@ namespace NodeAI
                     title = node.title,
                     runtimeLogic = node.runtimeLogic
                 };
+                if(node.nodeType == NodeData.Type.Parameter) nodeData.parentGUID = node.paramReference;
                 nodeAI_Behaviour.nodeData.Add(nodeData);
             }
 
             foreach (var edge in edges)
             {
-                var inputNodeData = nodeAI_Behaviour.nodeData.Find(x => x.GUID == ((Node)edge.input.node).GUID);
-                var outputNodeData = nodeAI_Behaviour.nodeData.Find(x => x.GUID == ((Node)edge.output.node).GUID);
+                if(((Node)edge.output.node).nodeType == NodeData.Type.Parameter)
+                {
+                    ((Node)edge.input.node).runtimeLogic.SetPropertyGUID(edge.input.portName, ((Node)edge.output.node).GUID);
+                }
+                else
+                {
+                    var inputNodeData = nodeAI_Behaviour.nodeData.Find(x => x.GUID == ((Node)edge.input.node).GUID);
+                    var outputNodeData = nodeAI_Behaviour.nodeData.Find(x => x.GUID == ((Node)edge.output.node).GUID);
 
-                inputNodeData.parentGUID = outputNodeData.GUID;
-                outputNodeData.childGUIDs.Add(inputNodeData.GUID);
+                    inputNodeData.parentGUID = outputNodeData.GUID;
+                    outputNodeData.childGUIDs.Add(inputNodeData.GUID);
+                }
             }
             
             nodeAI_Behaviour.nodeTree = NodeTree.CreateFromNodeData(nodeAI_Behaviour.nodeData.Find(x => x.nodeType == NodeData.Type.EntryPoint), nodeAI_Behaviour.nodeData);
 
-            nodeAI_Behaviour.exposedProperties.AddRange(target.exposedProperties);
+            
+            foreach(var p in target.exposedProperties)
+            {
+                nodeAI_Behaviour.exposedProperties.Add(p);
+            }
 
             return nodeAI_Behaviour;
         }
@@ -61,6 +73,13 @@ namespace NodeAI
 
         public void Deserialize(NodeAI_Behaviour nodeAI_Behaviour)
         {
+            target.exposedProperties.Clear();
+            target.blackboard.Clear();
+            foreach (var property in nodeAI_Behaviour.exposedProperties)
+            {
+                target.AddPropertyToBlackboard(property);
+            }
+            
             foreach (var node in nodes)
             {
                 target.RemoveElement(node);
@@ -80,21 +99,21 @@ namespace NodeAI
             foreach (var nodeData in nodeAI_Behaviour.nodeData)
             {
                 var node = nodes.Find(x => x.GUID == nodeData.GUID);
-                if (nodeData.nodeType != NodeData.Type.EntryPoint)
+                if (nodeData.nodeType != NodeData.Type.EntryPoint && nodeData.nodeType != NodeData.Type.Parameter)
                 {
                     var parent = nodes.Find(x => x.GUID == nodeData.parentGUID);
                     var edge = parent.outputPort.ConnectTo(node.inputPort);
                     edges.Add(edge);
                     target.AddElement(edge);
                 }
+                else if(nodeData.nodeType == NodeData.Type.Parameter)
+                {
+                    node.paramReference = nodeData.parentGUID;
+                    
+                }
                 
             }
-            target.exposedProperties.Clear();
-            target.blackboard.Clear();
-            foreach (var property in nodeAI_Behaviour.exposedProperties)
-            {
-                target.AddPropertyToBlackboard(property);
-            }
+            
             
 
             

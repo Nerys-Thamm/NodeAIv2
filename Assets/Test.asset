@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe18a7553fa2eea7bdc407af41fe506, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  nodeData:
+  - GUID: c484acbc-f2f1-40b6-8115-eea4bbd40f33
+    parentGUID: 
+    title: Entry Point
+    childGUIDs:
+    - fbb08133-fa03-4084-be55-679fa3227a86
+    nodeType: 0
+    position: {x: -103, y: -175}
+    runtimeLogic: {fileID: 0}
+  - GUID: 9b54d4d5-ebb0-44a4-ab8a-522deb980284
+    parentGUID: 6185d7ee-232b-4700-b7af-b49e8eb1b722
+    title: Parameter
+    childGUIDs: []
+    nodeType: 7
+    position: {x: -39, y: -74}
+    runtimeLogic: {fileID: 0}
+  - GUID: fbb08133-fa03-4084-be55-679fa3227a86
+    parentGUID: c484acbc-f2f1-40b6-8115-eea4bbd40f33
+    title: Sequence
+    childGUIDs:
+    - 5d211b22-9dc7-4580-ba2e-3215c0b453c6
+    nodeType: 4
+    position: {x: 31, y: -175}
+    runtimeLogic: {fileID: 0}
+  - GUID: e2f3c5d2-c565-4dc5-b806-e119689589d3
+    parentGUID: f5ecfbd7-08cb-4145-862d-cb2f90aec3d2
+    title: Parameter
+    childGUIDs: []
+    nodeType: 7
+    position: {x: -54, y: 3}
+    runtimeLogic: {fileID: 0}
+  - GUID: c73e6c8f-71ef-4fbc-b2f6-bace8b7a354d
+    parentGUID: 19fe14bd-78ef-4041-b515-255da179f70b
+    title: Name
+    childGUIDs: []
+    nodeType: 7
+    position: {x: -39, y: 80}
+    runtimeLogic: {fileID: 0}
+  - GUID: 5d211b22-9dc7-4580-ba2e-3215c0b453c6
+    parentGUID: fbb08133-fa03-4084-be55-679fa3227a86
+    title: DebugNode
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 178, y: -175}
+    runtimeLogic: {fileID: 0}
+  nodeTree:
+    rootNode:
+      GUID: c484acbc-f2f1-40b6-8115-eea4bbd40f33
+      parentGUID: 
+      title: Entry Point
+      childGUIDs:
+      - fbb08133-fa03-4084-be55-679fa3227a86
+      nodeType: 0
+      position: {x: -103, y: -175}
+      runtimeLogic: {fileID: 0}
+    rootLeaf:
+      nodeData:
+        GUID: c484acbc-f2f1-40b6-8115-eea4bbd40f33
+        parentGUID: 
+        title: Entry Point
+        childGUIDs:
+        - fbb08133-fa03-4084-be55-679fa3227a86
+        nodeType: 0
+        position: {x: -103, y: -175}
+        runtimeLogic: {fileID: 0}
+      children:
+      - nodeData:
+          GUID: fbb08133-fa03-4084-be55-679fa3227a86
+          parentGUID: c484acbc-f2f1-40b6-8115-eea4bbd40f33
+          title: Sequence
+          childGUIDs:
+          - 5d211b22-9dc7-4580-ba2e-3215c0b453c6
+          nodeType: 4
+          position: {x: 31, y: -175}
+          runtimeLogic: {fileID: 0}
+        children:
+        - nodeData:
+            GUID: 5d211b22-9dc7-4580-ba2e-3215c0b453c6
+            parentGUID: fbb08133-fa03-4084-be55-679fa3227a86
+            title: DebugNode
+            childGUIDs: []
+            nodeType: 1
+            position: {x: 178, y: -175}
+            runtimeLogic: {fileID: 0}
+          children: []
+    nodes:
+    - GUID: c484acbc-f2f1-40b6-8115-eea4bbd40f33
+      parentGUID: 
+      title: Entry Point
+      childGUIDs:
+      - fbb08133-fa03-4084-be55-679fa3227a86
+      nodeType: 0
+      position: {x: -103, y: -175}
+      runtimeLogic: {fileID: 0}
+    - GUID: 9b54d4d5-ebb0-44a4-ab8a-522deb980284
+      parentGUID: 6185d7ee-232b-4700-b7af-b49e8eb1b722
+      title: Parameter
+      childGUIDs: []
+      nodeType: 7
+      position: {x: -39, y: -74}
+      runtimeLogic: {fileID: 0}
+    - GUID: fbb08133-fa03-4084-be55-679fa3227a86
+      parentGUID: c484acbc-f2f1-40b6-8115-eea4bbd40f33
+      title: Sequence
+      childGUIDs:
+      - 5d211b22-9dc7-4580-ba2e-3215c0b453c6
+      nodeType: 4
+      position: {x: 31, y: -175}
+      runtimeLogic: {fileID: 0}
+    - GUID: e2f3c5d2-c565-4dc5-b806-e119689589d3
+      parentGUID: f5ecfbd7-08cb-4145-862d-cb2f90aec3d2
+      title: Parameter
+      childGUIDs: []
+      nodeType: 7
+      position: {x: -54, y: 3}
+      runtimeLogic: {fileID: 0}
+    - GUID: c73e6c8f-71ef-4fbc-b2f6-bace8b7a354d
+      parentGUID: 19fe14bd-78ef-4041-b515-255da179f70b
+      title: Name
+      childGUIDs: []
+      nodeType: 7
+      position: {x: -39, y: 80}
+      runtimeLogic: {fileID: 0}
+    - GUID: 5d211b22-9dc7-4580-ba2e-3215c0b453c6
+      parentGUID: fbb08133-fa03-4084-be55-679fa3227a86
+      title: DebugNode
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 178, y: -175}
+      runtimeLogic: {fileID: 0}
+  exposedProperties:
+  - name: Name
+    GUID: 19fe14bd-78ef-4041-b515-255da179f70b
+    serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+  - name: New Property
+    GUID: f5ecfbd7-08cb-4145-862d-cb2f90aec3d2
+    serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+  - name: New Property
+    GUID: 63a66c31-82e2-4e5f-8f2a-783c979f3f60
+    serializedTypename: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: New Property
+    GUID: 6185d7ee-232b-4700-b7af-b49e8eb1b722
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089

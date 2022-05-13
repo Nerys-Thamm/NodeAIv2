@@ -9,5 +9,7 @@ namespace NodeAI
     {
         public string baseGUID;
         public string targetGUID;
+
+        public string targetPortName;
     }
 }
