@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
+using System.Linq;
 
 namespace NodeAI
 {
@@ -85,6 +86,7 @@ namespace NodeAI
                     NodeAI_Behaviour newData = Serializer.GetInstance(graphView).Serialize();
                     behaviour.nodeData = newData.nodeData;
                     behaviour.nodeTree = newData.nodeTree;
+                    behaviour.exposedProperties = newData.exposedProperties;
                     EditorUtility.SetDirty(behaviour);
                     AssetDatabase.SaveAssets();
                     AssetDatabase.Refresh();
@@ -130,9 +132,26 @@ namespace NodeAI
         {
             var blackboard = new Blackboard(graphView);
             blackboard.Add(new BlackboardSection{ title = "Exposed Properties" });
-            
+            blackboard.addItemRequested = _blackboard =>
+            {
+                graphView.AddPropertyToBlackboard(new NodeData.Property<string> { name = "New Property", value = "String" });
+            };
+            blackboard.editTextRequested = (bb, element, newVal) =>
+            {
+                var oldName = ((BlackboardField)element).text;
+                if(graphView.exposedProperties.Any(x => x.name == newVal))
+                {
+                    EditorUtility.DisplayDialog("Error", "Property with name " + newVal + " already exists", "OK");
+                    return;
+                }
+
+                var index = graphView.exposedProperties.FindIndex(x => x.name == oldName);
+                graphView.exposedProperties[index].name = newVal;
+                ((BlackboardField)element).text = newVal;
+            };
+
             blackboard.SetPosition(new Rect(10, 30, 200, 300));
-            
+            graphView.blackboard = blackboard;
             graphView.Add(blackboard);
         }
 

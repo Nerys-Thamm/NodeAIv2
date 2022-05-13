@@ -11,6 +11,9 @@ namespace NodeAI
 
         private List<Edge> edges => target.edges.ToList();
         private List<Node> nodes => target.nodes.ToList().ConvertAll(x => x as Node);
+
+        
+
         public static Serializer GetInstance(GraphView target)
         {
             return new Serializer
@@ -50,6 +53,8 @@ namespace NodeAI
             
             nodeAI_Behaviour.nodeTree = NodeTree.CreateFromNodeData(nodeAI_Behaviour.nodeData.Find(x => x.nodeType == NodeData.Type.EntryPoint), nodeAI_Behaviour.nodeData);
 
+            nodeAI_Behaviour.exposedProperties.AddRange(target.exposedProperties);
+
             return nodeAI_Behaviour;
         }
 
@@ -84,6 +89,13 @@ namespace NodeAI
                 }
                 
             }
+            target.exposedProperties.Clear();
+            target.blackboard.Clear();
+            foreach (var property in nodeAI_Behaviour.exposedProperties)
+            {
+                target.AddPropertyToBlackboard(property);
+            }
+            
 
             
         }

@@ -10,6 +10,8 @@ namespace NodeAI
         public DebugNode()
         {
             AddProperty<string>("Message", "Debug");
+            AddProperty<float>("Duration", 1f);
+            AddProperty<bool>("Show", true);
         }
         public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
         {

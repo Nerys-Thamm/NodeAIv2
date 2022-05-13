@@ -12,6 +12,8 @@ namespace NodeAI
     public class GraphView : UnityEditor.Experimental.GraphView.GraphView
     {
         private SearchWindow searchWindow;
+        public List<NodeData.Property> exposedProperties = new List<NodeData.Property>();
+        public Blackboard blackboard;
 
         public GraphView()
         {
@@ -47,6 +49,22 @@ namespace NodeAI
             return node.InstantiatePort(Orientation.Horizontal, dir, capacity, typeof(float));
         }
 
+        private Node GenerateParameterNode(string paramReference, System.Type paramType, Vector2 position)
+        {
+            Node node = new Node();
+            node.title = "Parameter";
+            node.GUID = System.Guid.NewGuid().ToString();
+            node.nodeType = NodeData.Type.Parameter;
+            node.SetPosition(new Rect(position, new Vector2(200, 50)));
+            node.outputPort = GeneratePort(node, Direction.Output);
+            node.outputPort.portType = paramType;
+            node.outputPort.portName = "Output";
+            node.outputContainer.Add(node.outputPort);
+            node.RefreshExpandedState();
+            node.RefreshPorts();
+            return node;
+        }
+
         private Node GenerateEntryPointNode()
         {
             Node entryPointNode = new Node();
@@ -66,29 +84,7 @@ namespace NodeAI
             {
                 if(entryPointNode.outputPort.Query("connection").ToList().Count > 1) return;
                 AddSearchWindow(entryPointNode.outputPort.GetPosition().position);
-                // GenericMenu menu = new GenericMenu();
                 
-                // menu.AddItem(new GUIContent("Create/Action"), false, () => {
-                //     ContextCreateNode(entryPointNode, NodeData.Type.Action);
-                // });
-                // menu.AddItem(new GUIContent("Create/Condition"), false, () => {
-                //     ContextCreateNode(entryPointNode, NodeData.Type.Condition);
-                // });
-                // menu.AddItem(new GUIContent("Create/Decorator"), false, () => {
-                //     ContextCreateNode(entryPointNode, NodeData.Type.Decorator);
-                // });
-                // menu.AddItem(new GUIContent("Create/Sequence"), false, () => {
-                //     ContextCreateNode(entryPointNode, NodeData.Type.Sequence);
-                // });
-                // menu.AddItem(new GUIContent("Create/Fallback"), false, () => {
-                //     ContextCreateNode(entryPointNode, NodeData.Type.Fallback);
-                // });
-                // menu.AddItem(new GUIContent("Create/Parallel"), false, () => {
-                //     ContextCreateNode(entryPointNode, NodeData.Type.Parallel);
-                // });
-
-                
-                // menu.ShowAsContext();
             });
             entryPointNode.titleContainer.Add(btn_newChild);
 
@@ -125,7 +121,7 @@ namespace NodeAI
             newNode.title = data.title;
             newNode.GUID = data.GUID;
             newNode.nodeType = data.nodeType;
-            newNode.SetPosition(new Rect(data.position, new Vector2(200, 200)));
+            newNode.SetPosition(new Rect(data.position, new Vector2(800, 200)));
 
             switch (data.nodeType)
             {
@@ -205,7 +201,7 @@ namespace NodeAI
             node.title = name;
             node.GUID = System.Guid.NewGuid().ToString();
             node.nodeType = nodeType;
-            node.SetPosition(new Rect(new Vector2(0, 0), new Vector2(200, 200)));
+            node.SetPosition(new Rect(new Vector2(0, 0), new Vector2(400, 200)));
             node.runtimeLogic = logic;
             switch (nodeType)
             {
@@ -303,6 +299,9 @@ namespace NodeAI
 
         void AddPropertyField(Node node, NodeData.Property property, RuntimeBase logic)
         {
+            var newPort = GeneratePort(node, Direction.Input);
+            newPort.portName = property.name;
+            newPort.portType = property.type;
             if(property.type == typeof(bool))
             {
                 var boolField = new Toggle
@@ -315,7 +314,7 @@ namespace NodeAI
                     ((NodeData.Property<bool>)property).value = boolField.value;
                     logic.SetProperty(property.name, boolField.value);
                 });
-                node.inputContainer.Add(boolField);
+                newPort.contentContainer.Add(boolField);
             }
             else if(property.type == typeof(int))
             {
@@ -329,7 +328,7 @@ namespace NodeAI
                     ((NodeData.Property<int>)property).value = intField.value;
                     logic.SetProperty(property.name, intField.value);
                 });
-                node.inputContainer.Add(intField);
+                newPort.contentContainer.Add(intField);
             }
             else if(property.type == typeof(float))
             {
@@ -343,7 +342,7 @@ namespace NodeAI
                     ((NodeData.Property<float>)property).value = floatField.value;
                     logic.SetProperty(property.name, floatField.value);
                 });
-                node.inputContainer.Add(floatField);
+                newPort.contentContainer.Add(floatField);
             }
             else if(property.type == typeof(string))
             {
@@ -357,7 +356,7 @@ namespace NodeAI
                     ((NodeData.Property<string>)property).value = textField.value;
                     logic.SetProperty<string>(property.name, textField.value);
                 });
-                node.inputContainer.Add(textField);
+                newPort.contentContainer.Add(textField);
             }
             else if(property.type == typeof(Vector2))
             {
@@ -371,7 +370,7 @@ namespace NodeAI
                     ((NodeData.Property<Vector2>)property).value = vectorField.value;
                     logic.SetProperty<Vector2>(property.name, vectorField.value);
                 });
-                node.inputContainer.Add(vectorField);
+                newPort.contentContainer.Add(vectorField);
             }
             else if(property.type == typeof(Vector3))
             {
@@ -385,7 +384,7 @@ namespace NodeAI
                     ((NodeData.Property<Vector3>)property).value = vectorField.value;
                     logic.SetProperty<Vector3>(property.name, vectorField.value);
                 });
-                node.inputContainer.Add(vectorField);
+                newPort.contentContainer.Add(vectorField);
             }
             else if(property.type == typeof(Vector4))
             {
@@ -399,7 +398,7 @@ namespace NodeAI
                     ((NodeData.Property<Vector4>)property).value = vectorField.value;
                     logic.SetProperty<Vector4>(property.name, vectorField.value);
                 });
-                node.inputContainer.Add(vectorField);
+                newPort.contentContainer.Add(vectorField);
             }
             else if(property.type == typeof(Color))
             {
@@ -413,7 +412,7 @@ namespace NodeAI
                     ((NodeData.Property<Color>)property).value = colorField.value;
                     logic.SetProperty<Color>(property.name, colorField.value);
                 });
-                node.inputContainer.Add(colorField);
+                newPort.contentContainer.Add(colorField);
             }
             else if(property.type == typeof(Rect))
             {
@@ -427,8 +426,9 @@ namespace NodeAI
                     ((NodeData.Property<Rect>)property).value = rectField.value;
                     logic.SetProperty<Rect>(property.name, rectField.value);
                 });
-                node.inputContainer.Add(rectField);
+                newPort.contentContainer.Add(rectField);
             }
+            node.inputContainer.Add(newPort);
         }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
@@ -437,7 +437,7 @@ namespace NodeAI
 
             ports.ForEach(port =>
             {
-                if (startPort!=port && startPort.node!=port.node)
+                if (startPort!=port && startPort.node!=port.node && port.portType == startPort.portType && port.direction != startPort.direction)
                 {
                     compatiblePorts.Add(port);
                 }
@@ -446,10 +446,52 @@ namespace NodeAI
             return compatiblePorts;
         }
 
-        public void AddPropertyToBlackboard()
+        public void AddPropertyToBlackboard(NodeData.Property exposedProperty)
         {
+            if(exposedProperties == null)
+            {
+                exposedProperties = new List<NodeData.Property>();
+            }
+            NodeData.Property p = null;
+            if(exposedProperty.type == typeof(bool))
+            {
+                p = new NodeData.Property<bool>{name = exposedProperty.name, value = ((NodeData.Property<bool>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+            }
+            else if(exposedProperty.type == typeof(int))
+            {
+                p = new NodeData.Property<int>{name = exposedProperty.name, value = ((NodeData.Property<int>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+            }
+            else if(exposedProperty.type == typeof(float))
+            {
+                p = new NodeData.Property<float>{name = exposedProperty.name, value = ((NodeData.Property<float>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+            }
+            else if(exposedProperty.type == typeof(string))
+            {
+                p = new NodeData.Property<string>{name = exposedProperty.name, value = ((NodeData.Property<string>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+            }
+            else if(exposedProperty.type == typeof(Vector2))
+            {
+                p = new NodeData.Property<Vector2>{name = exposedProperty.name, value = ((NodeData.Property<Vector2>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+            }
+            else if(exposedProperty.type == typeof(Vector3))
+            {
+                p = new NodeData.Property<Vector3>{name = exposedProperty.name, value = ((NodeData.Property<Vector3>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+            }
+            else if(exposedProperty.type == typeof(Vector4))
+            {
+                p = new NodeData.Property<Vector4>{name = exposedProperty.name, value = ((NodeData.Property<Vector4>)exposedProperty).value, type = exposedProperty.type, GUID = exposedProperty.GUID};
+            }
             
+            exposedProperties.Add(p);
+
+            var container = new VisualElement();
+            var blackboardField = new BlackboardField{ text = exposedProperty.name, typeText = exposedProperty.type.Name };
+            container.Add(blackboardField);
+            blackboard.Add(container);
+
         }
+
+        
 
         
 

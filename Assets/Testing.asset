@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe18a7553fa2eea7bdc407af41fe506, type: 3}
+  m_Name: Testing
+  m_EditorClassIdentifier: 
+  nodeData:
+  - GUID: 88288460-5325-4760-8f37-2ceceb2ff169
+    parentGUID: 
+    title: Entry Point
+    childGUIDs: []
+    nodeType: 0
+    position: {x: 0, y: 0}
+    runtimeLogic: {fileID: 0}
+  nodeTree:
+    rootNode:
+      GUID: 88288460-5325-4760-8f37-2ceceb2ff169
+      parentGUID: 
+      title: Entry Point
+      childGUIDs: []
+      nodeType: 0
+      position: {x: 0, y: 0}
+      runtimeLogic: {fileID: 0}
+    rootLeaf:
+      nodeData:
+        GUID: 88288460-5325-4760-8f37-2ceceb2ff169
+        parentGUID: 
+        title: Entry Point
+        childGUIDs: []
+        nodeType: 0
+        position: {x: 0, y: 0}
+        runtimeLogic: {fileID: 0}
+      children: []
+    nodes:
+    - GUID: 88288460-5325-4760-8f37-2ceceb2ff169
+      parentGUID: 
+      title: Entry Point
+      childGUIDs: []
+      nodeType: 0
+      position: {x: 0, y: 0}
+      runtimeLogic: {fileID: 0}
+  exposedProperties:
+  - name: New Property
+    GUID: 04e76011-bd4e-475e-b795-2d756a394735
+  - name: New Property
+    GUID: 04dd38a1-29a9-4a5f-aba2-5342bb128ed7
+  - name: New Property
+    GUID: f47f066e-f823-4038-8f87-1840b4f31eb1

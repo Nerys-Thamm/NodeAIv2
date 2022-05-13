@@ -25,6 +25,7 @@ namespace NodeAI
                 Sequence,
                 Selector,
                 Parallel,
+                Parameter
             }
 
         public enum State
@@ -39,16 +40,27 @@ namespace NodeAI
 
         public RuntimeBase runtimeLogic;
 
-
-        public abstract class Property
+        [System.Serializable]
+        public class Property
         {
+            [SerializeField]
             public string name;
+            [SerializeField]
+            public string GUID;
+            [SerializeField]
             public System.Type type;
         }
 
         [System.Serializable]
         public class Property<T> : Property
         {
+            public Property()
+            {
+                type = typeof(T);
+                GUID = System.Guid.NewGuid().ToString();
+                value = default(T);
+            }
+            [SerializeField]
             public T value;
         }
         

@@ -9,5 +9,7 @@ namespace NodeAI
         public List<NodeData> nodeData;
         
         public NodeTree nodeTree;
+        [SerializeField]
+        public List<NodeData.Property> exposedProperties = new List<NodeData.Property>();
     }
 }

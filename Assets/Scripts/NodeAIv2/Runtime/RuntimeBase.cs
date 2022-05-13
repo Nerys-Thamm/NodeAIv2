@@ -17,7 +17,7 @@ namespace NodeAI
             {
                 properties = new List<NodeData.Property>();
             }
-            foreach (NodeData.Property<T> property in properties)
+            foreach (NodeData.Property property in properties)
             {
                 if (property.name == name.ToUpper())
                 {
@@ -35,11 +35,11 @@ namespace NodeAI
 
         public void SetProperty<T>(string name, T value)
         {
-            foreach (NodeData.Property<T> property in properties)
+            foreach (NodeData.Property property in properties)
             {
                 if (property.name == name.ToUpper() && property.type == typeof(T))
                 {
-                    property.value = value;
+                    ((NodeData.Property<T>)property).value = value;
                     return;
                 }
             }
@@ -52,11 +52,11 @@ namespace NodeAI
             {
                 return default(T);
             }
-            foreach (NodeData.Property<T> property in properties)
+            foreach (NodeData.Property property in properties)
             {
                 if (property.name == name.ToUpper() && property.type == typeof(T))
                 {
-                    return property.value;
+                    return ((NodeData.Property<T>)property).value;
                 }
             }
             return default(T);
