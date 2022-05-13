@@ -13,24 +13,59 @@ namespace NodeAI
 
         public void AddProperty<T>(string name, T initialValue)
         {
-            properties.Add(new NodeData.Property<T>()
+            if(properties == null)
             {
-                name = name.ToUpper(),
-                typename = typeof(T).Name,
-                value = initialValue
-            });
-        }
-
-        public T GetProperty<T>(string name)
-        {
+                properties = new List<NodeData.Property>();
+            }
             foreach (NodeData.Property<T> property in properties)
             {
                 if (property.name == name.ToUpper())
                 {
-                    return (T)property.value;
+                    Debug.LogError("Property with name " + name + " already exists");
+                    return;
+                }
+            }
+            properties.Add(new NodeData.Property<T>()
+            {
+                name = name.ToUpper(),
+                type = typeof(T),
+                value = initialValue
+            });
+        }
+
+        public void SetProperty<T>(string name, T value)
+        {
+            foreach (NodeData.Property<T> property in properties)
+            {
+                if (property.name == name.ToUpper() && property.type == typeof(T))
+                {
+                    property.value = value;
+                    return;
+                }
+            }
+            Debug.LogError("Property with name " + name + " does not exist");
+        }
+
+        public T GetProperty<T>(string name)
+        {
+            if(properties == null)
+            {
+                return default(T);
+            }
+            foreach (NodeData.Property<T> property in properties)
+            {
+                if (property.name == name.ToUpper() && property.type == typeof(T))
+                {
+                    return property.value;
                 }
             }
             return default(T);
+        }
+
+        public NodeData.Property[] GetProperties()
+        {
+            if(properties == null) properties = new List<NodeData.Property>();
+            return properties.ToArray();
         }
 
 

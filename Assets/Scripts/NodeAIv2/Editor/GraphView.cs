@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental;
 using UnityEngine.UIElements;
+using UnityEditor.UIElements;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor;
 
@@ -100,9 +101,9 @@ namespace NodeAI
             return entryPointNode;
         }
 
-        public Node ContextCreateNode(Node parent, NodeData.Type type, string name)
+        public Node ContextCreateNode(Node parent, NodeData.Type type, string name, RuntimeBase logic)
         {
-            Node newNode = GenerateNode(type, name);
+            Node newNode = GenerateNode(type, name, logic);
             AddElement(newNode);
 
             newNode.SetPosition(new Rect(new Vector2(parent.GetPosition().x + parent.GetPosition().width, parent.GetPosition().y), new Vector2(200, 200)));
@@ -174,7 +175,14 @@ namespace NodeAI
                 newNode.outputContainer.Add(newNode.outputPort);
 
             newNode.runtimeLogic = data.runtimeLogic;
-
+            if(newNode.runtimeLogic != null)
+            {
+                NodeData.Property[] properties = newNode.runtimeLogic.GetProperties();
+                foreach(NodeData.Property p in properties)
+                {
+                    AddPropertyField(newNode, p, newNode.runtimeLogic);
+                }
+            }
             if(!(newNode.nodeType == NodeData.Type.Action || newNode.nodeType == NodeData.Type.Condition))
             {
                 Button btn_newChild = new Button(() =>
@@ -191,14 +199,14 @@ namespace NodeAI
             return newNode;
         }
 
-        public Node GenerateNode(NodeData.Type nodeType, string name)
+        public Node GenerateNode(NodeData.Type nodeType, string name, RuntimeBase logic)
         {
             Node node = new Node();
             node.title = name;
             node.GUID = System.Guid.NewGuid().ToString();
             node.nodeType = nodeType;
             node.SetPosition(new Rect(new Vector2(0, 0), new Vector2(200, 200)));
-
+            node.runtimeLogic = logic;
             switch (nodeType)
             {
                 case NodeData.Type.Action:
@@ -270,7 +278,6 @@ namespace NodeAI
                     }
                     break;
             }
-
             if(!(node.nodeType == NodeData.Type.Action || node.nodeType == NodeData.Type.Condition))
             {
                 Button btn_newChild = new Button(() =>
@@ -281,12 +288,147 @@ namespace NodeAI
                 });
                 node.titleContainer.Add(btn_newChild);
             }
+            NodeData.Property[] properties = logic.GetProperties();
+            foreach(NodeData.Property p in properties)
+            {
+                AddPropertyField(node, p, logic);
+            }
             node.RefreshExpandedState();
             node.RefreshPorts();
 
             node.SetPosition(new Rect(new Vector2(0, 0), new Vector2(200, 200)));
 
             return node;
+        }
+
+        void AddPropertyField(Node node, NodeData.Property property, RuntimeBase logic)
+        {
+            if(property.type == typeof(bool))
+            {
+                var boolField = new Toggle
+                {
+                    name = property.name,
+                    value = ((NodeData.Property<bool>)property).value
+                };
+                boolField.RegisterValueChangedCallback(evt =>
+                {
+                    ((NodeData.Property<bool>)property).value = boolField.value;
+                    logic.SetProperty(property.name, boolField.value);
+                });
+                node.inputContainer.Add(boolField);
+            }
+            else if(property.type == typeof(int))
+            {
+                var intField = new IntegerField
+                {
+                    name = property.name,
+                    value = ((NodeData.Property<int>)property).value
+                };
+                intField.RegisterValueChangedCallback(evt =>
+                {
+                    ((NodeData.Property<int>)property).value = intField.value;
+                    logic.SetProperty(property.name, intField.value);
+                });
+                node.inputContainer.Add(intField);
+            }
+            else if(property.type == typeof(float))
+            {
+                var floatField = new FloatField
+                {
+                    name = property.name,
+                    value = ((NodeData.Property<float>)property).value
+                };
+                floatField.RegisterValueChangedCallback(evt =>
+                {
+                    ((NodeData.Property<float>)property).value = floatField.value;
+                    logic.SetProperty(property.name, floatField.value);
+                });
+                node.inputContainer.Add(floatField);
+            }
+            else if(property.type == typeof(string))
+            {
+                var textField = new TextField
+                {
+                    name = property.name,
+                    value = ((NodeData.Property<string>)property).value
+                };
+                textField.RegisterValueChangedCallback(evt =>
+                {
+                    ((NodeData.Property<string>)property).value = textField.value;
+                    logic.SetProperty<string>(property.name, textField.value);
+                });
+                node.inputContainer.Add(textField);
+            }
+            else if(property.type == typeof(Vector2))
+            {
+                var vectorField = new Vector2Field
+                {
+                    name = property.name,
+                    value = ((NodeData.Property<Vector2>)property).value
+                };
+                vectorField.RegisterValueChangedCallback(evt =>
+                {
+                    ((NodeData.Property<Vector2>)property).value = vectorField.value;
+                    logic.SetProperty<Vector2>(property.name, vectorField.value);
+                });
+                node.inputContainer.Add(vectorField);
+            }
+            else if(property.type == typeof(Vector3))
+            {
+                var vectorField = new Vector3Field
+                {
+                    name = property.name,
+                    value = ((NodeData.Property<Vector3>)property).value
+                };
+                vectorField.RegisterValueChangedCallback(evt =>
+                {
+                    ((NodeData.Property<Vector3>)property).value = vectorField.value;
+                    logic.SetProperty<Vector3>(property.name, vectorField.value);
+                });
+                node.inputContainer.Add(vectorField);
+            }
+            else if(property.type == typeof(Vector4))
+            {
+                var vectorField = new Vector4Field
+                {
+                    name = property.name,
+                    value = ((NodeData.Property<Vector4>)property).value
+                };
+                vectorField.RegisterValueChangedCallback(evt =>
+                {
+                    ((NodeData.Property<Vector4>)property).value = vectorField.value;
+                    logic.SetProperty<Vector4>(property.name, vectorField.value);
+                });
+                node.inputContainer.Add(vectorField);
+            }
+            else if(property.type == typeof(Color))
+            {
+                var colorField = new ColorField
+                {
+                    name = property.name,
+                    value = ((NodeData.Property<Color>)property).value
+                };
+                colorField.RegisterValueChangedCallback(evt =>
+                {
+                    ((NodeData.Property<Color>)property).value = colorField.value;
+                    logic.SetProperty<Color>(property.name, colorField.value);
+                });
+                node.inputContainer.Add(colorField);
+            }
+            else if(property.type == typeof(Rect))
+            {
+                var rectField = new RectField
+                {
+                    name = property.name,
+                    value = ((NodeData.Property<Rect>)property).value
+                };
+                rectField.RegisterValueChangedCallback(evt =>
+                {
+                    ((NodeData.Property<Rect>)property).value = rectField.value;
+                    logic.SetProperty<Rect>(property.name, rectField.value);
+                });
+                node.inputContainer.Add(rectField);
+            }
         }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
