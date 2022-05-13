@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe18a7553fa2eea7bdc407af41fe506, type: 3}
+  m_Name: NodeAI_Behaviour
+  m_EditorClassIdentifier: 
+  nodeData:
+  - GUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+    parentGUID: a1e319f1-ccb1-4cbb-a709-835a32c30cce
+    title: Sequence
+    childGUIDs:
+    - 5826d9ad-4e2b-46a6-90f5-31123a482339
+    - 9435bbf1-4075-4a42-b3ec-505b5c36ffa3
+    - c66d4d9e-a2e1-464d-8e3a-4432a66216db
+    - 776a944d-4d45-4d1b-9d47-041a0af87ed9
+    nodeType: 4
+    position: {x: 167, y: 318}
+  - GUID: a1e319f1-ccb1-4cbb-a709-835a32c30cce
+    parentGUID: 
+    title: Entry Point
+    childGUIDs:
+    - 180a9a01-5a4d-4323-805a-da87b38a4a7b
+    nodeType: 0
+    position: {x: 13, y: 318}
+  - GUID: 5826d9ad-4e2b-46a6-90f5-31123a482339
+    parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+    title: Action
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 321, y: 318}
+  - GUID: c66d4d9e-a2e1-464d-8e3a-4432a66216db
+    parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+    title: Action
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 321, y: 640}
+  - GUID: 9435bbf1-4075-4a42-b3ec-505b5c36ffa3
+    parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+    title: Action
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 321, y: 533}
+  - GUID: 776a944d-4d45-4d1b-9d47-041a0af87ed9
+    parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+    title: Action
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 321, y: 423}
+  nodeTree:
+    rootNode:
+      GUID: a1e319f1-ccb1-4cbb-a709-835a32c30cce
+      parentGUID: 
+      title: Entry Point
+      childGUIDs:
+      - 180a9a01-5a4d-4323-805a-da87b38a4a7b
+      nodeType: 0
+      position: {x: 13, y: 318}
+    rootLeaf:
+      nodeData:
+        GUID: a1e319f1-ccb1-4cbb-a709-835a32c30cce
+        parentGUID: 
+        title: Entry Point
+        childGUIDs:
+        - 180a9a01-5a4d-4323-805a-da87b38a4a7b
+        nodeType: 0
+        position: {x: 13, y: 318}
+      children:
+      - nodeData:
+          GUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+          parentGUID: a1e319f1-ccb1-4cbb-a709-835a32c30cce
+          title: Sequence
+          childGUIDs:
+          - 5826d9ad-4e2b-46a6-90f5-31123a482339
+          - 9435bbf1-4075-4a42-b3ec-505b5c36ffa3
+          - c66d4d9e-a2e1-464d-8e3a-4432a66216db
+          - 776a944d-4d45-4d1b-9d47-041a0af87ed9
+          nodeType: 4
+          position: {x: 167, y: 318}
+        children:
+        - nodeData:
+            GUID: 5826d9ad-4e2b-46a6-90f5-31123a482339
+            parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+            title: Action
+            childGUIDs: []
+            nodeType: 1
+            position: {x: 321, y: 318}
+          children: []
+        - nodeData:
+            GUID: 776a944d-4d45-4d1b-9d47-041a0af87ed9
+            parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+            title: Action
+            childGUIDs: []
+            nodeType: 1
+            position: {x: 321, y: 423}
+          children: []
+        - nodeData:
+            GUID: 9435bbf1-4075-4a42-b3ec-505b5c36ffa3
+            parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+            title: Action
+            childGUIDs: []
+            nodeType: 1
+            position: {x: 321, y: 533}
+          children: []
+        - nodeData:
+            GUID: c66d4d9e-a2e1-464d-8e3a-4432a66216db
+            parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+            title: Action
+            childGUIDs: []
+            nodeType: 1
+            position: {x: 321, y: 640}
+          children: []
+    nodes:
+    - GUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+      parentGUID: a1e319f1-ccb1-4cbb-a709-835a32c30cce
+      title: Sequence
+      childGUIDs:
+      - 5826d9ad-4e2b-46a6-90f5-31123a482339
+      - 9435bbf1-4075-4a42-b3ec-505b5c36ffa3
+      - c66d4d9e-a2e1-464d-8e3a-4432a66216db
+      - 776a944d-4d45-4d1b-9d47-041a0af87ed9
+      nodeType: 4
+      position: {x: 167, y: 318}
+    - GUID: a1e319f1-ccb1-4cbb-a709-835a32c30cce
+      parentGUID: 
+      title: Entry Point
+      childGUIDs:
+      - 180a9a01-5a4d-4323-805a-da87b38a4a7b
+      nodeType: 0
+      position: {x: 13, y: 318}
+    - GUID: 5826d9ad-4e2b-46a6-90f5-31123a482339
+      parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+      title: Action
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 321, y: 318}
+    - GUID: c66d4d9e-a2e1-464d-8e3a-4432a66216db
+      parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+      title: Action
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 321, y: 640}
+    - GUID: 9435bbf1-4075-4a42-b3ec-505b5c36ffa3
+      parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+      title: Action
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 321, y: 533}
+    - GUID: 776a944d-4d45-4d1b-9d47-041a0af87ed9
+      parentGUID: 180a9a01-5a4d-4323-805a-da87b38a4a7b
+      title: Action
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 321, y: 423}
