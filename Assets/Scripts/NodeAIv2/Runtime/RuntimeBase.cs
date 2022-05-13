@@ -9,6 +9,31 @@ namespace NodeAI
     {
         protected NodeData.State state;
 
+        List<NodeData.Property> properties;
+
+        public void AddProperty<T>(string name, T initialValue)
+        {
+            properties.Add(new NodeData.Property<T>()
+            {
+                name = name.ToUpper(),
+                typename = typeof(T).Name,
+                value = initialValue
+            });
+        }
+
+        public T GetProperty<T>(string name)
+        {
+            foreach (NodeData.Property<T> property in properties)
+            {
+                if (property.name == name.ToUpper())
+                {
+                    return (T)property.value;
+                }
+            }
+            return default(T);
+        }
+
+
         public virtual NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current) => NodeData.State.Failure;
         public void Init(NodeTree.Leaf current) 
         {

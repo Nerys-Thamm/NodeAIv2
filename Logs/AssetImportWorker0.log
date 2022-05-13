@@ -2098,3 +2098,92 @@ Received Import Request.
 Start importing Assets/Testy.asset using Guid(fe638989965f4c25a8b4a50984c00f9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d55f75b4e6803365d0e3f0761a7bb12') in 0.002085 seconds 
   Import took 0.007319 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 225.814556 seconds.
+  path: Assets/Scripts/NodeAIv2/Runtime/Conditions
+  artifactKey: Guid(795f6d968a9eff87bb278c524a1c77bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeAIv2/Runtime/Conditions using Guid(795f6d968a9eff87bb278c524a1c77bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c19fdad3690bed1df32a5741eb2c97c0') in 0.000905 seconds 
+  Import took 0.004817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.829466 seconds.
+  path: Assets/Scripts/NodeAIv2/Runtime/Actions
+  artifactKey: Guid(76d91308f26e27c2fafe66a4b66b20a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeAIv2/Runtime/Actions using Guid(76d91308f26e27c2fafe66a4b66b20a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44f6908e3f1b1dd77b09f728e065f27c') in 0.001100 seconds 
+  Import took 0.005438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 106.621388 seconds.
+  path: Assets/Scripts/NodeAIv2/Runtime/Actions/DebugNode.cs
+  artifactKey: Guid(a1f63f32b04a430f3aa42360fd3c3f2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeAIv2/Runtime/Actions/DebugNode.cs using Guid(a1f63f32b04a430f3aa42360fd3c3f2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ac48f38f49a082cd352a6cc8fbc6ce6') in 0.001296 seconds 
+  Import took 0.005175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000985 seconds.
+  path: Assets/Scripts/NodeAIv2/Runtime/Actions/DebugNode.cs
+  artifactKey: Guid(a1f63f32b04a430f3aa42360fd3c3f2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeAIv2/Runtime/Actions/DebugNode.cs using Guid(a1f63f32b04a430f3aa42360fd3c3f2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ac48f38f49a082cd352a6cc8fbc6ce6') in 0.000627 seconds 
+  Import took 0.003670 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002110 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.922 seconds
+Domain Reload Profiling:
+	ReloadAssembly (922ms)
+		BeginReloadAssembly (73ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (795ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (290ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (281ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (210ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.1 MB.
+System memory in use after: 109.2 MB.
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3180.
+Total: 4.200344 ms (FindLiveObjects: 0.281700 ms CreateObjectMapping: 0.066870 ms MarkObjects: 2.398752 ms  DeleteObjects: 1.452311 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
