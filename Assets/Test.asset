@@ -16,7 +16,9 @@ MonoBehaviour:
   - GUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
     parentGUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
     title: Sequence
-    childGUIDs: []
+    childGUIDs:
+    - 9b486b14-0fbb-4ede-979b-caacd18db30a
+    - 9c2c6991-57f8-4276-ad88-a4df3521c5d8
     nodeType: 4
     position: {x: 3, y: 0}
     runtimeLogic: {fileID: 0}
@@ -27,6 +29,20 @@ MonoBehaviour:
     - b04ed5a6-867c-4ffd-b7f3-04728937b6de
     nodeType: 0
     position: {x: -162, y: 0}
+    runtimeLogic: {fileID: 0}
+  - GUID: 9b486b14-0fbb-4ede-979b-caacd18db30a
+    parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
+    title: CheckTagInRange
+    childGUIDs: []
+    nodeType: 2
+    position: {x: 183, y: 0}
+    runtimeLogic: {fileID: 0}
+  - GUID: 9c2c6991-57f8-4276-ad88-a4df3521c5d8
+    parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
+    title: DebugNode
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 183, y: 135}
     runtimeLogic: {fileID: 0}
   nodeTree:
     rootNode:
@@ -53,16 +69,38 @@ MonoBehaviour:
           GUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
           parentGUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
           title: Sequence
-          childGUIDs: []
+          childGUIDs:
+          - 9b486b14-0fbb-4ede-979b-caacd18db30a
+          - 9c2c6991-57f8-4276-ad88-a4df3521c5d8
           nodeType: 4
           position: {x: 3, y: 0}
           runtimeLogic: {fileID: 0}
-        children: []
+        children:
+        - nodeData:
+            GUID: 9b486b14-0fbb-4ede-979b-caacd18db30a
+            parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
+            title: CheckTagInRange
+            childGUIDs: []
+            nodeType: 2
+            position: {x: 183, y: 0}
+            runtimeLogic: {fileID: 0}
+          children: []
+        - nodeData:
+            GUID: 9c2c6991-57f8-4276-ad88-a4df3521c5d8
+            parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
+            title: DebugNode
+            childGUIDs: []
+            nodeType: 1
+            position: {x: 183, y: 135}
+            runtimeLogic: {fileID: 0}
+          children: []
     nodes:
     - GUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
       parentGUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
       title: Sequence
-      childGUIDs: []
+      childGUIDs:
+      - 9b486b14-0fbb-4ede-979b-caacd18db30a
+      - 9c2c6991-57f8-4276-ad88-a4df3521c5d8
       nodeType: 4
       position: {x: 3, y: 0}
       runtimeLogic: {fileID: 0}
@@ -73,5 +111,19 @@ MonoBehaviour:
       - b04ed5a6-867c-4ffd-b7f3-04728937b6de
       nodeType: 0
       position: {x: -162, y: 0}
+      runtimeLogic: {fileID: 0}
+    - GUID: 9b486b14-0fbb-4ede-979b-caacd18db30a
+      parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
+      title: CheckTagInRange
+      childGUIDs: []
+      nodeType: 2
+      position: {x: 183, y: 0}
+      runtimeLogic: {fileID: 0}
+    - GUID: 9c2c6991-57f8-4276-ad88-a4df3521c5d8
+      parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
+      title: DebugNode
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 183, y: 135}
       runtimeLogic: {fileID: 0}
   exposedProperties: []
