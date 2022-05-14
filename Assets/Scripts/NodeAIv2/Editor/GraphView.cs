@@ -82,6 +82,7 @@ namespace NodeAI
 
             Port newPort = GeneratePort(entryPointNode, Direction.Output);
             newPort.portName = "";
+            newPort.portColor = Color.magenta;
             entryPointNode.outputContainer.Add(newPort);
             entryPointNode.outputPort = newPort;
 
@@ -176,8 +177,10 @@ namespace NodeAI
             }
 
             if(newNode.inputPort != null)
+                newNode.inputPort.portColor = Color.magenta;
                 newNode.inputContainer.Add(newNode.inputPort);
             if(newNode.outputPort != null)
+                newNode.outputPort.portColor = newNode.nodeType == NodeData.Type.Parameter ? Color.green : Color.magenta;
                 newNode.outputContainer.Add(newNode.outputPort);
 
             newNode.runtimeLogic = data.runtimeLogic;
@@ -284,6 +287,10 @@ namespace NodeAI
                     }
                     break;
             }
+            if(node.inputPort != null)
+                node.inputPort.portColor = Color.magenta;
+            if(node.outputPort != null)
+                node.outputPort.portColor = node.nodeType == NodeData.Type.Parameter ? Color.green : Color.magenta;
             if(!(node.nodeType == NodeData.Type.Action || node.nodeType == NodeData.Type.Condition))
             {
                 Button btn_newChild = new Button(() =>
@@ -312,6 +319,7 @@ namespace NodeAI
             var newPort = GeneratePort(node, Direction.Input);
             newPort.portName = property.name;
             newPort.portType = property.type;
+            newPort.portColor = Color.green;
             Node paramNode = nodes.ToList().ConvertAll(x => x as Node).Find(x => x.GUID == property.GUID);
             
             if(property.type == typeof(bool))

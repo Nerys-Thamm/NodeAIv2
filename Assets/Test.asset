@@ -17,23 +17,33 @@ MonoBehaviour:
     parentGUID: 
     title: Entry Point
     childGUIDs:
-    - 0cdfca22-57dc-453f-940a-97d4586088e3
+    - 582693c5-a243-4e40-953c-61f0378fa750
     nodeType: 0
-    position: {x: 0, y: 0}
+    position: {x: -44, y: 16}
     runtimeLogic:
       state: 0
       properties: []
-  - GUID: 0cdfca22-57dc-453f-940a-97d4586088e3
+  - GUID: 582693c5-a243-4e40-953c-61f0378fa750
     parentGUID: 937446fd-9ffb-4af2-bffa-aa3070c6e28e
+    title: Sequence
+    childGUIDs:
+    - 7f212dd6-3a65-4070-acda-f4f6a77dedfa
+    nodeType: 4
+    position: {x: 90, y: 16}
+    runtimeLogic:
+      state: 0
+      properties: []
+  - GUID: 7f212dd6-3a65-4070-acda-f4f6a77dedfa
+    parentGUID: 582693c5-a243-4e40-953c-61f0378fa750
     title: DebugNode
     childGUIDs: []
     nodeType: 1
-    position: {x: 193, y: 0}
+    position: {x: 220, y: 16}
     runtimeLogic:
       state: 0
       properties:
       - name: MESSAGE
-        GUID: 
+        GUID: 2aa02859-ca49-4369-b460-d59621b7c63d
         serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
         svalue: Debug
@@ -68,15 +78,24 @@ MonoBehaviour:
         v2value: {x: 0, y: 0}
         v3value: {x: 0, y: 0, z: 0}
         v4value: {x: 0, y: 0, z: 0, w: 0}
+  - GUID: 2aa02859-ca49-4369-b460-d59621b7c63d
+    parentGUID: c2be0a1a-e88b-400f-a427-fa86f3837538
+    title: YaYeet
+    childGUIDs: []
+    nodeType: 7
+    position: {x: 2, y: 107}
+    runtimeLogic:
+      state: 0
+      properties: []
   nodeTree:
     rootNode:
       GUID: 937446fd-9ffb-4af2-bffa-aa3070c6e28e
       parentGUID: 
       title: Entry Point
       childGUIDs:
-      - 0cdfca22-57dc-453f-940a-97d4586088e3
+      - 582693c5-a243-4e40-953c-61f0378fa750
       nodeType: 0
-      position: {x: 0, y: 0}
+      position: {x: -44, y: 16}
       runtimeLogic:
         state: 0
         properties: []
@@ -86,82 +105,104 @@ MonoBehaviour:
         parentGUID: 
         title: Entry Point
         childGUIDs:
-        - 0cdfca22-57dc-453f-940a-97d4586088e3
+        - 582693c5-a243-4e40-953c-61f0378fa750
         nodeType: 0
-        position: {x: 0, y: 0}
+        position: {x: -44, y: 16}
         runtimeLogic:
           state: 0
           properties: []
       children:
       - nodeData:
-          GUID: 0cdfca22-57dc-453f-940a-97d4586088e3
+          GUID: 582693c5-a243-4e40-953c-61f0378fa750
           parentGUID: 937446fd-9ffb-4af2-bffa-aa3070c6e28e
-          title: DebugNode
-          childGUIDs: []
-          nodeType: 1
-          position: {x: 193, y: 0}
+          title: Sequence
+          childGUIDs:
+          - 7f212dd6-3a65-4070-acda-f4f6a77dedfa
+          nodeType: 4
+          position: {x: 90, y: 16}
           runtimeLogic:
             state: 0
-            properties:
-            - name: MESSAGE
-              GUID: 
-              serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-                PublicKeyToken=b77a5c561934e089
-              svalue: Debug
-              ivalue: 0
-              fvalue: 0
-              bvalue: 0
-              cvalue: {r: 0, g: 0, b: 0, a: 0}
-              v2value: {x: 0, y: 0}
-              v3value: {x: 0, y: 0, z: 0}
-              v4value: {x: 0, y: 0, z: 0, w: 0}
-            - name: DURATION
-              GUID: 
-              serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-                PublicKeyToken=b77a5c561934e089
-              svalue: 
-              ivalue: 0
-              fvalue: 1
-              bvalue: 0
-              cvalue: {r: 0, g: 0, b: 0, a: 0}
-              v2value: {x: 0, y: 0}
-              v3value: {x: 0, y: 0, z: 0}
-              v4value: {x: 0, y: 0, z: 0, w: 0}
-            - name: SHOW
-              GUID: 
-              serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-                PublicKeyToken=b77a5c561934e089
-              svalue: 
-              ivalue: 0
-              fvalue: 0
-              bvalue: 1
-              cvalue: {r: 0, g: 0, b: 0, a: 0}
-              v2value: {x: 0, y: 0}
-              v3value: {x: 0, y: 0, z: 0}
-              v4value: {x: 0, y: 0, z: 0, w: 0}
-        children: []
+            properties: []
+        children:
+        - nodeData:
+            GUID: 7f212dd6-3a65-4070-acda-f4f6a77dedfa
+            parentGUID: 582693c5-a243-4e40-953c-61f0378fa750
+            title: DebugNode
+            childGUIDs: []
+            nodeType: 1
+            position: {x: 220, y: 16}
+            runtimeLogic:
+              state: 0
+              properties:
+              - name: MESSAGE
+                GUID: 2aa02859-ca49-4369-b460-d59621b7c63d
+                serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+                  PublicKeyToken=b77a5c561934e089
+                svalue: Debug
+                ivalue: 0
+                fvalue: 0
+                bvalue: 0
+                cvalue: {r: 0, g: 0, b: 0, a: 0}
+                v2value: {x: 0, y: 0}
+                v3value: {x: 0, y: 0, z: 0}
+                v4value: {x: 0, y: 0, z: 0, w: 0}
+              - name: DURATION
+                GUID: 
+                serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+                  PublicKeyToken=b77a5c561934e089
+                svalue: 
+                ivalue: 0
+                fvalue: 1
+                bvalue: 0
+                cvalue: {r: 0, g: 0, b: 0, a: 0}
+                v2value: {x: 0, y: 0}
+                v3value: {x: 0, y: 0, z: 0}
+                v4value: {x: 0, y: 0, z: 0, w: 0}
+              - name: SHOW
+                GUID: 
+                serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+                  PublicKeyToken=b77a5c561934e089
+                svalue: 
+                ivalue: 0
+                fvalue: 0
+                bvalue: 1
+                cvalue: {r: 0, g: 0, b: 0, a: 0}
+                v2value: {x: 0, y: 0}
+                v3value: {x: 0, y: 0, z: 0}
+                v4value: {x: 0, y: 0, z: 0, w: 0}
+          children: []
     nodes:
     - GUID: 937446fd-9ffb-4af2-bffa-aa3070c6e28e
       parentGUID: 
       title: Entry Point
       childGUIDs:
-      - 0cdfca22-57dc-453f-940a-97d4586088e3
+      - 582693c5-a243-4e40-953c-61f0378fa750
       nodeType: 0
-      position: {x: 0, y: 0}
+      position: {x: -44, y: 16}
       runtimeLogic:
         state: 0
         properties: []
-    - GUID: 0cdfca22-57dc-453f-940a-97d4586088e3
+    - GUID: 582693c5-a243-4e40-953c-61f0378fa750
       parentGUID: 937446fd-9ffb-4af2-bffa-aa3070c6e28e
+      title: Sequence
+      childGUIDs:
+      - 7f212dd6-3a65-4070-acda-f4f6a77dedfa
+      nodeType: 4
+      position: {x: 90, y: 16}
+      runtimeLogic:
+        state: 0
+        properties: []
+    - GUID: 7f212dd6-3a65-4070-acda-f4f6a77dedfa
+      parentGUID: 582693c5-a243-4e40-953c-61f0378fa750
       title: DebugNode
       childGUIDs: []
       nodeType: 1
-      position: {x: 193, y: 0}
+      position: {x: 220, y: 16}
       runtimeLogic:
         state: 0
         properties:
         - name: MESSAGE
-          GUID: 
+          GUID: 2aa02859-ca49-4369-b460-d59621b7c63d
           serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
             PublicKeyToken=b77a5c561934e089
           svalue: Debug
@@ -196,4 +237,25 @@ MonoBehaviour:
           v2value: {x: 0, y: 0}
           v3value: {x: 0, y: 0, z: 0}
           v4value: {x: 0, y: 0, z: 0, w: 0}
-  exposedProperties: []
+    - GUID: 2aa02859-ca49-4369-b460-d59621b7c63d
+      parentGUID: c2be0a1a-e88b-400f-a427-fa86f3837538
+      title: YaYeet
+      childGUIDs: []
+      nodeType: 7
+      position: {x: 2, y: 107}
+      runtimeLogic:
+        state: 0
+        properties: []
+  exposedProperties:
+  - name: YaYeet
+    GUID: c2be0a1a-e88b-400f-a427-fa86f3837538
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    svalue: String
+    ivalue: 0
+    fvalue: 0
+    bvalue: 0
+    cvalue: {r: 0, g: 0, b: 0, a: 0}
+    v2value: {x: 0, y: 0}
+    v3value: {x: 0, y: 0, z: 0}
+    v4value: {x: 0, y: 0, z: 0, w: 0}
