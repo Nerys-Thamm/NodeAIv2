@@ -8,6 +8,7 @@ namespace NodeAI
     [System.Serializable]
     public class NodeData 
     {
+        
         public string GUID;
         public string parentGUID;
         public string title;
@@ -38,6 +39,7 @@ namespace NodeAI
 
         public State Eval(NodeAI_Agent agent, NodeTree.Leaf current) => runtimeLogic.Eval(agent, current);
 
+        [SerializeField]
         public RuntimeBase runtimeLogic;
 
         [System.Serializable]

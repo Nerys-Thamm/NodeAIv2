@@ -86,6 +86,8 @@ namespace NodeAI
             entryPointNode.outputContainer.Add(newPort);
             entryPointNode.outputPort = newPort;
 
+            entryPointNode.runtimeLogic = ScriptableObject.CreateInstance<Repeater>();
+
             Button btn_newChild = new Button(() =>
             {
                 if(entryPointNode.outputPort.Query("connection").ToList().Count > 1) return;

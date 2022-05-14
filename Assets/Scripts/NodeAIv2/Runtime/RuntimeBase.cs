@@ -5,10 +5,15 @@ using UnityEngine;
 namespace NodeAI
 {
     [System.Serializable]
-    public class RuntimeBase
+    public class RuntimeBase : ScriptableObject
     {
+
+        public void OnEnable()
+        {
+            hideFlags = HideFlags.HideAndDontSave;
+        }
         [SerializeField]
-        protected NodeData.State state;
+        public NodeData.State state;
         [SerializeField]
         List<NodeData.SerializableProperty> properties = new List<NodeData.SerializableProperty>();
 
@@ -98,7 +103,35 @@ namespace NodeAI
             {
                 if (property.name == name.ToUpper() && property.serializedTypename == typeof(T).AssemblyQualifiedName)
                 {
-                    return ((NodeData.Property<T>)property).Value;
+                    switch(property.type.Name)
+                    {
+                        case "Int32":
+                            return (T)(object)property.ivalue;
+                            
+                        case "Single":
+                            return (T)(object)property.fvalue;
+                            
+                        case "Boolean":
+                            return (T)(object)property.bvalue;
+                            
+                        case "String":
+                            return (T)(object)property.svalue;
+                            
+                        case "Vector2":
+                            return (T)(object)property.v2value;
+                            
+                        case "Vector3":
+                            return (T)(object)property.v3value;
+                            
+                        case "Vector4":
+                            return (T)(object)property.v4value;
+                            
+                        case "Color":
+                            return (T)(object)property.cvalue;
+                            
+                        default:
+                            break;
+                    }
                 }
             }
             return default(T);
@@ -112,15 +145,19 @@ namespace NodeAI
 
 
         public virtual NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current) => NodeData.State.Failure;
+        
         public void Init(NodeTree.Leaf current) 
         {
             state = NodeData.State.Running;
+            Debug.Log("Init");
             foreach (NodeTree.Leaf child in current.children)
             {
                 child.nodeData.runtimeLogic.Init(child);
             }
         }
     }
+
+    
     [System.Serializable]
     public class ActionBase : RuntimeBase
     {
@@ -175,6 +212,11 @@ namespace NodeAI
                 return childState;
             }
         }
+
+        public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
+        {
+            return ApplyDecorator(agent, current.children[0]);
+        }
     }
     [System.Serializable]
     public class Succeeder : DecoratorBase
@@ -182,6 +224,11 @@ namespace NodeAI
         public override NodeData.State ApplyDecorator(NodeAI_Agent agent, NodeTree.Leaf child)
         {
             return NodeData.State.Success;
+        }
+
+        public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
+        {
+            return ApplyDecorator(agent, current.children[0]);
         }
     }
     [System.Serializable]
@@ -199,6 +246,11 @@ namespace NodeAI
             {
                 return childState;
             }
+        }
+
+        public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
+        {
+            return ApplyDecorator(agent, current.children[0]);
         }
     }
 
