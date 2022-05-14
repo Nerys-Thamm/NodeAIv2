@@ -5,19 +5,20 @@ using UnityEngine;
 namespace NodeAI
 {
     [System.Serializable]
-    public class RuntimeBase : ScriptableObject
+    public class RuntimeBase
     {
+        [SerializeField]
         protected NodeData.State state;
-
-        List<NodeData.Property> properties;
+        [SerializeField]
+        List<NodeData.SerializableProperty> properties = new List<NodeData.SerializableProperty>();
 
         public void AddProperty<T>(string name, T initialValue)
         {
             if(properties == null)
             {
-                properties = new List<NodeData.Property>();
+                properties = new List<NodeData.SerializableProperty>();
             }
-            foreach (NodeData.Property property in properties)
+            foreach (NodeData.SerializableProperty property in properties)
             {
                 if (property.name == name.ToUpper())
                 {
@@ -25,7 +26,7 @@ namespace NodeAI
                     return;
                 }
             }
-            properties.Add(new NodeData.Property<T>()
+            properties.Add(new NodeData.Property()
             {
                 name = name.ToUpper(),
                 type = typeof(T),
@@ -35,11 +36,39 @@ namespace NodeAI
 
         public void SetProperty<T>(string name, T value)
         {
-            foreach (NodeData.Property property in properties)
+            foreach (NodeData.SerializableProperty property in properties)
             {
-                if (property.name == name.ToUpper() && property.type == typeof(T))
+                if (property.name == name.ToUpper() && (property).type == typeof(T))
                 {
-                    ((NodeData.Property<T>)property).value = value;
+                    switch(property.type.Name)
+                    {
+                        case "Int32":
+                            property.ivalue = (int)(object)value;
+                            break;
+                        case "Single":
+                            property.fvalue = (float)(object)value;
+                            break;
+                        case "Boolean":
+                            property.bvalue = (bool)(object)value;
+                            break;
+                        case "String":
+                            property.svalue = (string)(object)value;
+                            break;
+                        case "Vector2":
+                            property.v2value = (Vector2)(object)value;
+                            break;
+                        case "Vector3":
+                            property.v3value = (Vector3)(object)value;
+                            break;
+                        case "Vector4":
+                            property.v4value = (Vector4)(object)value;
+                            break;
+                        case "Color":
+                            property.cvalue = (Color)(object)value;
+                            break;
+                        default:
+                            break;
+                    }
                     return;
                 }
             }
@@ -48,11 +77,11 @@ namespace NodeAI
 
         public void SetPropertyGUID(string name, string GUID)
         {
-            foreach (NodeData.Property property in properties)
+            foreach (NodeData.SerializableProperty property in properties)
             {
                 if (property.name == name.ToUpper())
                 {
-                    ((NodeData.Property)property).GUID = GUID;
+                    (property).GUID = GUID;
                     return;
                 }
             }
@@ -65,9 +94,9 @@ namespace NodeAI
             {
                 return default(T);
             }
-            foreach (NodeData.Property property in properties)
+            foreach (NodeData.SerializableProperty property in properties)
             {
-                if (property.name == name.ToUpper() && property.type == typeof(T))
+                if (property.name == name.ToUpper() && property.serializedTypename == typeof(T).AssemblyQualifiedName)
                 {
                     return ((NodeData.Property<T>)property).Value;
                 }
@@ -77,8 +106,8 @@ namespace NodeAI
 
         public NodeData.Property[] GetProperties()
         {
-            if(properties == null) properties = new List<NodeData.Property>();
-            return properties.ToArray();
+            if(properties == null) properties = new List<NodeData.SerializableProperty>();
+            return properties.ConvertAll(x => (NodeData.Property)x).ToArray();
         }
 
 
@@ -92,7 +121,7 @@ namespace NodeAI
             }
         }
     }
-
+    [System.Serializable]
     public class ActionBase : RuntimeBase
     {
         public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
@@ -100,7 +129,7 @@ namespace NodeAI
             return NodeData.State.Success;
         }
     }
-
+    [System.Serializable]
     public class ConditionBase : RuntimeBase
     {
         public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
@@ -108,7 +137,7 @@ namespace NodeAI
             return NodeData.State.Success;
         }
     }
-
+    [System.Serializable]
     public class TestCondition : ConditionBase
     {
         public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
@@ -116,7 +145,7 @@ namespace NodeAI
             return NodeData.State.Success;
         }
     }
-
+    [System.Serializable]
     public class DecoratorBase : RuntimeBase
     {
         public virtual NodeData.State ApplyDecorator(NodeAI_Agent agent, NodeTree.Leaf child) => child.nodeData.Eval(agent, child);
@@ -127,7 +156,7 @@ namespace NodeAI
 
         
     }
-
+    [System.Serializable]
     public class Inverter : DecoratorBase
     {
         public override NodeData.State ApplyDecorator(NodeAI_Agent agent, NodeTree.Leaf child)
@@ -147,12 +176,29 @@ namespace NodeAI
             }
         }
     }
-
+    [System.Serializable]
     public class Succeeder : DecoratorBase
     {
         public override NodeData.State ApplyDecorator(NodeAI_Agent agent, NodeTree.Leaf child)
         {
             return NodeData.State.Success;
+        }
+    }
+    [System.Serializable]
+    public class Repeater : DecoratorBase
+    {
+        public override NodeData.State ApplyDecorator(NodeAI_Agent agent, NodeTree.Leaf child)
+        {
+            NodeData.State childState = child.nodeData.Eval(agent, child);
+            if (childState == NodeData.State.Success)
+            {
+                child.nodeData.runtimeLogic.Init(child);
+                return NodeData.State.Running;
+            }
+            else
+            {
+                return childState;
+            }
         }
     }
 

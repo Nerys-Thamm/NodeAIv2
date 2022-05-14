@@ -67,27 +67,27 @@ namespace NodeAI
             Node newNode = null;
             if(((Type)entry.userData) == typeof(Sequence))
             {
-                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Sequence, ((Type)entry.userData).Name, ScriptableObject.CreateInstance<Sequence>());
+                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Sequence, ((Type)entry.userData).Name, new Sequence());
                 
             }
             else if(((Type)entry.userData) == typeof(Selector))
             {
-                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Selector, ((Type)entry.userData).Name, ScriptableObject.CreateInstance<Selector>());
+                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Selector, ((Type)entry.userData).Name, new Selector());
                 
             }
             else if(((Type)entry.userData).BaseType == typeof(DecoratorBase))
             {
-                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Decorator, ((Type)entry.userData).Name, (DecoratorBase)ScriptableObject.CreateInstance(((Type)entry.userData)));
+                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Decorator, ((Type)entry.userData).Name, Activator.CreateInstance(((Type)entry.userData)) as DecoratorBase);
                 
             }
             else if(((Type)entry.userData).BaseType == typeof(ActionBase))
             {
-                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Action, ((Type)entry.userData).Name, (ActionBase)ScriptableObject.CreateInstance(((Type)entry.userData)));
+                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Action, ((Type)entry.userData).Name, Activator.CreateInstance(((Type)entry.userData)) as ActionBase);
                 
             }
             else if(((Type)entry.userData).BaseType == typeof(ConditionBase))
             {
-                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Condition, ((Type)entry.userData).Name, (ConditionBase)ScriptableObject.CreateInstance(((Type)entry.userData)));
+                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Condition, ((Type)entry.userData).Name, Activator.CreateInstance(((Type)entry.userData)) as ConditionBase);
                 
             }
             return true;

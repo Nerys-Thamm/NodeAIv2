@@ -41,7 +41,6 @@
      <Compile Include="Assets\Scripts\NodeAIv2\Editor\Graph.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Editor\Serializer.cs" />
-     <Compile Include="Assets\Scripts\NodeAIv2\Editor\SearchWindow.cs" />
      <None Include="Assets\Scripts\NodeAIv2\Editor\Resources\GraphStyle.uss" />
      <None Include="Assets\Scripts\NodeAIv2\Editor\Resources\NodeStyle_.uss" />
     <Reference Include="UnityEngine">

@@ -74,7 +74,35 @@ namespace NodeAI
                 serializableProperty.name = property.name;
                 serializableProperty.GUID = property.GUID;
                 serializableProperty.serializedTypename = property.type.AssemblyQualifiedName;
-                serializableProperty.value = property.value;
+                switch(property.type.Name)
+                    {
+                        case "Int32":
+                            serializableProperty.ivalue = (int)(object)property.value;
+                            break;
+                        case "Single":
+                            serializableProperty.fvalue = (float)(object)property.value;
+                            break;
+                        case "Boolean":
+                            serializableProperty.bvalue = (bool)(object)property.value;
+                            break;
+                        case "String":
+                            serializableProperty.svalue = (string)(object)property.value;
+                            break;
+                        case "Vector2":
+                            serializableProperty.v2value = (Vector2)(object)property.value;
+                            break;
+                        case "Vector3":
+                            serializableProperty.v3value = (Vector3)(object)property.value;
+                            break;
+                        case "Vector4":
+                            serializableProperty.v4value = (Vector4)(object)property.value;
+                            break;
+                        case "Color":
+                            serializableProperty.cvalue = (Color)(object)property.value;
+                            break;
+                        default:
+                            break;
+                    }
                 return serializableProperty;
             }
 
@@ -84,14 +112,49 @@ namespace NodeAI
                 property.name = serializableProperty.name;
                 property.GUID = serializableProperty.GUID;
                 property.type = System.Type.GetType(serializableProperty.serializedTypename);
-                property.value = serializableProperty.value;
+                switch(property.type.Name)
+                    {
+                        case "Int32":
+                            property.value = serializableProperty.ivalue;
+                            break;
+                        case "Single":
+                            property.value = serializableProperty.fvalue;
+                            break;
+                        case "Boolean":
+                            property.value = serializableProperty.bvalue;
+                            break;
+                        case "String":
+                            property.value = serializableProperty.svalue;
+                            break;
+                        case "Vector2":
+                            property.value = serializableProperty.v2value;
+                            break;
+                        case "Vector3":
+                            property.value = serializableProperty.v3value;
+                            break;
+                        case "Vector4":
+                            property.value = serializableProperty.v4value;
+                            break;
+                        case "Color":
+                            property.value = serializableProperty.cvalue;
+                            break;
+                        default:
+                            break;
+                    }
                 return property;
             }
             public string name;
             public string GUID;
             public string serializedTypename;
-
-            public object value;
+            public System.Type type => System.Type.GetType(serializedTypename);
+            public string svalue;
+            public int ivalue;
+            public float fvalue;
+            public bool bvalue;
+            public Color cvalue;
+            public Vector2 v2value;
+            public Vector3 v3value;
+            public Vector4 v4value;
 
         }
         
