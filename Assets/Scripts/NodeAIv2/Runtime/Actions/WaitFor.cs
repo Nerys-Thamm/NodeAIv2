@@ -6,7 +6,9 @@ namespace NodeAI
 {
     public class WaitFor : ActionBase
     {
-        public float timer = 0f;
+        float timer = 0f;
+        float sceneTime = 0f;
+
         public WaitFor()
         {
             AddProperty<float>("Time", 1f);
@@ -19,7 +21,7 @@ namespace NodeAI
             }
             else
             {
-                timer += Time.deltaTime;
+                timer += Time.timeSinceLevelLoad - sceneTime;
                 state = NodeData.State.Running;
             }
 
@@ -29,6 +31,7 @@ namespace NodeAI
         public override void OnInit()
         {
             timer = 0f;
+            sceneTime = Time.timeSinceLevelLoad;
         }
         
     }

@@ -253,14 +253,37 @@ namespace NodeAI
     [System.Serializable]
     public class Repeater : DecoratorBase
     {
+        int repeatCount = 0;
+
+        public Repeater()
+        {
+            AddProperty<int>("RepeatCount", 1);
+            AddProperty<bool>("RepeatForever", false);
+        }
+
+        public override void OnInit()
+        {
+            repeatCount = 0;
+        }
         public override NodeData.State ApplyDecorator(NodeAI_Agent agent, NodeTree.Leaf child)
         {
             NodeData.State childState = child.nodeData.Eval(agent, child);
-            if (childState != NodeData.State.Running)
+            if (childState != NodeData.State.Running && repeatCount < GetProperty<int>("RepeatCount"))
+            {
+                repeatCount++;
+                child.nodeData.runtimeLogic.Init(child);
+                return NodeData.State.Running;
+            }
+            else if (childState != NodeData.State.Running && GetProperty<bool>("RepeatForever"))
             {
                 child.nodeData.runtimeLogic.Init(child);
+                return NodeData.State.Running;
             }
-            return NodeData.State.Running;
+            else
+            {
+                return childState;
+            }
+            
 
         }
 
