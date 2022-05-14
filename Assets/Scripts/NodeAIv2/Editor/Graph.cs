@@ -6,6 +6,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 using System.Linq;
+using UnityEditor.Callbacks;
 
 namespace NodeAI
 {
@@ -14,12 +15,30 @@ namespace NodeAI
         private GraphView graphView;
         private NodeAI_Behaviour behaviour;
 
+        private ObjectField behaviourField;
+
         [MenuItem("Window/NodeAI/Graph")]
         public static void OpenGraphWindow()
         {
             Graph window = (Graph)EditorWindow.GetWindow(typeof(Graph));
             window.titleContent = new GUIContent("NodeAI Graph");
             window.Show();
+        }
+
+        [OnOpenAsset]
+        public static bool OnOpenAsset(int instanceId, int line) {
+            if(Selection.activeObject is NodeAI_Behaviour)
+            {
+                Graph window = (Graph)EditorWindow.GetWindow(typeof(Graph));
+                window.titleContent = new GUIContent("NodeAI Graph");
+                window.behaviour = Selection.activeObject as NodeAI_Behaviour;
+
+                Serializer.GetInstance(window.graphView).Deserialize(window.behaviour);
+                window.behaviourField.value = window.behaviour;
+                window.Show();
+                return true;
+            }
+            return false;
         }
 
         private void OnEnable()
@@ -108,11 +127,11 @@ namespace NodeAI
             newBehaviourButton.text = "New Behaviour";
             toolbar.Add(newBehaviourButton);
 
-            var objField = new ObjectField();
-            objField.objectType = typeof(NodeAI_Behaviour);
-            objField.allowSceneObjects = false;
-            objField.value = behaviour;
-            objField.RegisterValueChangedCallback(evt => {
+            behaviourField = new ObjectField();
+            behaviourField.objectType = typeof(NodeAI_Behaviour);
+            behaviourField.allowSceneObjects = false;
+            behaviourField.value = behaviour;
+            behaviourField.RegisterValueChangedCallback(evt => {
                 behaviour = (NodeAI_Behaviour)evt.newValue;
                 if(behaviour != null)
                 {
@@ -120,7 +139,8 @@ namespace NodeAI
                 }
             });
             
-            toolbar.Add(objField);
+            
+            toolbar.Add(behaviourField);
 
             
             rootVisualElement.Add(toolbar);

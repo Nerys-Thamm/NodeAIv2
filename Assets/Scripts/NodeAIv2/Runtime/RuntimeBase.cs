@@ -149,7 +149,7 @@ namespace NodeAI
         public void Init(NodeTree.Leaf current) 
         {
             state = NodeData.State.Running;
-            Debug.Log("Init");
+            
             foreach (NodeTree.Leaf child in current.children)
             {
                 child.nodeData.runtimeLogic.Init(child);
