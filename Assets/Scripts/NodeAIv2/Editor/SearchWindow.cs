@@ -88,7 +88,6 @@ namespace NodeAI
             else if(((Type)entry.userData).BaseType == typeof(ConditionBase))
             {
                 newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Condition, ((Type)entry.userData).Name, Activator.CreateInstance(((Type)entry.userData)) as ConditionBase);
-                
             }
             return true;
         }

@@ -307,11 +307,11 @@ namespace NodeAI
             return node;
         }
 
-        void AddPropertyField(Node node, NodeData.Property property, RuntimeBase logic)
+        void AddPropertyField(Node node, NodeData.SerializableProperty property, RuntimeBase logic)
         {
             var newPort = GeneratePort(node, Direction.Input);
             newPort.portName = property.name;
-            newPort.portType =property.type;
+            newPort.portType = property.type;
             Node paramNode = nodes.ToList().ConvertAll(x => x as Node).Find(x => x.GUID == property.GUID);
             
             if(property.type == typeof(bool))
@@ -319,11 +319,11 @@ namespace NodeAI
                 var boolField = new Toggle
                 {
                     name = property.name,
-                    value = ((NodeData.Property<bool>)property).Value
+                    value = (property).bvalue
                 };
                 boolField.RegisterValueChangedCallback(evt =>
                 {
-                    ((NodeData.Property<bool>)property).value = boolField.value;
+                    (property).bvalue = boolField.value;
                     logic.SetProperty(property.name, boolField.value);
                 });
                 newPort.contentContainer.Add(boolField);
@@ -333,11 +333,11 @@ namespace NodeAI
                 var intField = new IntegerField
                 {
                     name = property.name,
-                    value = ((NodeData.Property<int>)property).Value
+                    value = property.ivalue
                 };
                 intField.RegisterValueChangedCallback(evt =>
                 {
-                    ((NodeData.Property<int>)property).value = intField.value;
+                    (property).ivalue = intField.value;
                     logic.SetProperty(property.name, intField.value);
                 });
                 newPort.contentContainer.Add(intField);
@@ -347,11 +347,11 @@ namespace NodeAI
                 var floatField = new FloatField
                 {
                     name = property.name,
-                    value = ((NodeData.Property<float>)property).Value
+                    value = (property).fvalue
                 };
                 floatField.RegisterValueChangedCallback(evt =>
                 {
-                    ((NodeData.Property<float>)property).value = floatField.value;
+                    (property).fvalue = floatField.value;
                     logic.SetProperty(property.name, floatField.value);
                 });
                 newPort.contentContainer.Add(floatField);
@@ -361,11 +361,11 @@ namespace NodeAI
                 var textField = new TextField
                 {
                     name = property.name,
-                    value = ((NodeData.Property<string>)property).Value
+                    value = (property).svalue
                 };
                 textField.RegisterValueChangedCallback(evt =>
                 {
-                    ((NodeData.Property<string>)property).value = textField.value;
+                    (property).svalue = textField.value;
                     logic.SetProperty<string>(property.name, textField.value);
                 });
                 newPort.contentContainer.Add(textField);
@@ -375,11 +375,11 @@ namespace NodeAI
                 var vectorField = new Vector2Field
                 {
                     name = property.name,
-                    value = ((NodeData.Property<Vector2>)property).Value
+                    value = (property).v2value
                 };
                 vectorField.RegisterValueChangedCallback(evt =>
                 {
-                    ((NodeData.Property<Vector2>)property).value = vectorField.value;
+                    (property).v2value = vectorField.value;
                     logic.SetProperty<Vector2>(property.name, vectorField.value);
                 });
                 newPort.contentContainer.Add(vectorField);
@@ -389,11 +389,11 @@ namespace NodeAI
                 var vectorField = new Vector3Field
                 {
                     name = property.name,
-                    value = ((NodeData.Property<Vector3>)property).Value
+                    value = (property).v3value
                 };
                 vectorField.RegisterValueChangedCallback(evt =>
                 {
-                    ((NodeData.Property<Vector3>)property).value = vectorField.value;
+                    (property).v3value = vectorField.value;
                     logic.SetProperty<Vector3>(property.name, vectorField.value);
                 });
                 newPort.contentContainer.Add(vectorField);
@@ -403,11 +403,11 @@ namespace NodeAI
                 var vectorField = new Vector4Field
                 {
                     name = property.name,
-                    value = ((NodeData.Property<Vector4>)property).Value
+                    value = (property).v4value
                 };
                 vectorField.RegisterValueChangedCallback(evt =>
                 {
-                    ((NodeData.Property<Vector4>)property).value = vectorField.value;
+                    (property).v4value = vectorField.value;
                     logic.SetProperty<Vector4>(property.name, vectorField.value);
                 });
                 newPort.contentContainer.Add(vectorField);
@@ -417,28 +417,14 @@ namespace NodeAI
                 var colorField = new ColorField
                 {
                     name = property.name,
-                    value = ((NodeData.Property<Color>)property).Value
+                    value = (property).cvalue
                 };
                 colorField.RegisterValueChangedCallback(evt =>
                 {
-                    ((NodeData.Property<Color>)property).value = colorField.value;
+                    (property).cvalue = colorField.value;
                     logic.SetProperty<Color>(property.name, colorField.value);
                 });
                 newPort.contentContainer.Add(colorField);
-            }
-            else if(property.type == typeof(Rect))
-            {
-                var rectField = new RectField
-                {
-                    name = property.name,
-                    value = ((NodeData.Property<Rect>)property).Value
-                };
-                rectField.RegisterValueChangedCallback(evt =>
-                {
-                    ((NodeData.Property<Rect>)property).value = rectField.value;
-                    logic.SetProperty<Rect>(property.name, rectField.value);
-                });
-                newPort.contentContainer.Add(rectField);
             }
             node.inputContainer.Add(newPort);
             if(paramNode != null)

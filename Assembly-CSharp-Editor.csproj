@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\NodeAIv2\Editor\Node.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Editor\GraphView.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Editor\SearchWindow.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Editor\Graph.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Editor\Serializer.cs" />
