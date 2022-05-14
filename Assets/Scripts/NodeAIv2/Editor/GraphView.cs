@@ -194,7 +194,7 @@ namespace NodeAI
             newNode.runtimeLogic = data.runtimeLogic;
             if(newNode.runtimeLogic != null)
             {
-                NodeData.Property[] properties = newNode.runtimeLogic.GetProperties();
+                NodeData.Property[] properties = newNode.runtimeLogic.GetProperties().ToArray();
                 foreach(NodeData.Property p in properties)
                 {
                     AddPropertyField(newNode, p, newNode.runtimeLogic);
@@ -309,7 +309,7 @@ namespace NodeAI
                 });
                 node.titleContainer.Add(btn_newChild);
             }
-            NodeData.Property[] properties = logic.GetProperties();
+            NodeData.Property[] properties = logic.GetProperties().ToArray();
             foreach(NodeData.Property p in properties)
             {
                 AddPropertyField(node, p, logic);
@@ -443,6 +443,7 @@ namespace NodeAI
                 newPort.contentContainer.Add(colorField);
             }
             node.inputContainer.Add(newPort);
+            node.inputPorts.Add(newPort);
             if(paramNode != null)
             {
                 var newEdge = paramNode.outputPort.ConnectTo(newPort);

@@ -14,6 +14,7 @@ namespace NodeAI
         public string paramReference;
 
         public Port inputPort;
+        public List<Port> inputPorts = new List<Port>();
         public Port outputPort;
 
         public List<NodeData.Property> properties;

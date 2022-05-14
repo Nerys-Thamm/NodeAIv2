@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   nodeData:
+  - GUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
+    parentGUID: 
+    title: Entry Point
+    childGUIDs:
+    - b04ed5a6-867c-4ffd-b7f3-04728937b6de
+    nodeType: 0
+    position: {x: -162, y: 0}
+    runtimeLogic: {fileID: 0}
   - GUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
     parentGUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
     title: Sequence
@@ -21,14 +29,6 @@ MonoBehaviour:
     - 9c2c6991-57f8-4276-ad88-a4df3521c5d8
     nodeType: 4
     position: {x: 3, y: 0}
-    runtimeLogic: {fileID: 0}
-  - GUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
-    parentGUID: 
-    title: Entry Point
-    childGUIDs:
-    - b04ed5a6-867c-4ffd-b7f3-04728937b6de
-    nodeType: 0
-    position: {x: -162, y: 0}
     runtimeLogic: {fileID: 0}
   - GUID: 9b486b14-0fbb-4ede-979b-caacd18db30a
     parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
@@ -43,6 +43,13 @@ MonoBehaviour:
     childGUIDs: []
     nodeType: 1
     position: {x: 183, y: 135}
+    runtimeLogic: {fileID: 0}
+  - GUID: f09e54a8-0689-4190-b774-67a3510fcf02
+    parentGUID: 
+    title: DebugMsg
+    childGUIDs: []
+    nodeType: 7
+    position: {x: -51, y: 160}
     runtimeLogic: {fileID: 0}
   nodeTree:
     rootNode:
@@ -95,6 +102,14 @@ MonoBehaviour:
             runtimeLogic: {fileID: 0}
           children: []
     nodes:
+    - GUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
+      parentGUID: 
+      title: Entry Point
+      childGUIDs:
+      - b04ed5a6-867c-4ffd-b7f3-04728937b6de
+      nodeType: 0
+      position: {x: -162, y: 0}
+      runtimeLogic: {fileID: 0}
     - GUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
       parentGUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
       title: Sequence
@@ -103,14 +118,6 @@ MonoBehaviour:
       - 9c2c6991-57f8-4276-ad88-a4df3521c5d8
       nodeType: 4
       position: {x: 3, y: 0}
-      runtimeLogic: {fileID: 0}
-    - GUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
-      parentGUID: 
-      title: Entry Point
-      childGUIDs:
-      - b04ed5a6-867c-4ffd-b7f3-04728937b6de
-      nodeType: 0
-      position: {x: -162, y: 0}
       runtimeLogic: {fileID: 0}
     - GUID: 9b486b14-0fbb-4ede-979b-caacd18db30a
       parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
@@ -126,4 +133,23 @@ MonoBehaviour:
       nodeType: 1
       position: {x: 183, y: 135}
       runtimeLogic: {fileID: 0}
-  exposedProperties: []
+    - GUID: f09e54a8-0689-4190-b774-67a3510fcf02
+      parentGUID: 
+      title: DebugMsg
+      childGUIDs: []
+      nodeType: 7
+      position: {x: -51, y: 160}
+      runtimeLogic: {fileID: 0}
+  exposedProperties:
+  - name: DebugMsg
+    GUID: ab173c01-3f62-4cf5-8589-ef91a915cd30
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    svalue: String
+    ivalue: 0
+    fvalue: 0
+    bvalue: 0
+    cvalue: {r: 0, g: 0, b: 0, a: 0}
+    v2value: {x: 0, y: 0}
+    v3value: {x: 0, y: 0, z: 0}
+    v4value: {x: 0, y: 0, z: 0, w: 0}

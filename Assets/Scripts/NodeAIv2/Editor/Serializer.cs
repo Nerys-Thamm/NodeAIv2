@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
+using System.Linq;
 
 namespace NodeAI
 {
@@ -110,6 +111,17 @@ namespace NodeAI
                 {
                     node.paramReference = nodeData.parentGUID;
                     
+                }
+                foreach(Port input in node.inputPorts)
+                {
+                    string connGUID = nodeData.runtimeLogic.GetProperties().Find(x => x.name == input.portName).GUID;
+                    var conn = nodes.Find(x => x.GUID == connGUID);
+                    if (conn != null)
+                    {
+                        var edge = conn.outputPort.ConnectTo(input);
+                        edges.Add(edge);
+                        target.AddElement(edge);
+                    }
                 }
                 
             }

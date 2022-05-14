@@ -137,10 +137,10 @@ namespace NodeAI
             return default(T);
         }
 
-        public NodeData.Property[] GetProperties()
+        public List<NodeData.Property> GetProperties()
         {
             if(properties == null) properties = new List<NodeData.SerializableProperty>();
-            return properties.ConvertAll(x => (NodeData.Property)x).ToArray();
+            return properties.ConvertAll(x => (NodeData.Property)x);
         }
 
 
