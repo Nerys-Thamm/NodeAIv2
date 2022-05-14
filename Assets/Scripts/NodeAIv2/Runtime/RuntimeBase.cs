@@ -200,6 +200,24 @@ namespace NodeAI
             return NodeData.State.Success;
         }
     }
+
+    [System.Serializable]
+    public class IfTrue : ConditionBase
+    {
+        public IfTrue()
+        {
+            AddProperty<bool>("Condition", false);
+        }
+
+        public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
+        {
+            if (GetProperty<bool>("Condition"))
+            {
+                return NodeData.State.Success;
+            }
+            return NodeData.State.Failure;
+        }
+    }
     
     [System.Serializable]
     public class DecoratorBase : RuntimeBase
