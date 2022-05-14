@@ -109,9 +109,15 @@ namespace NodeAI
         {
             Node newNode = GenerateNode(type, name, logic);
             AddElement(newNode);
-
-            newNode.SetPosition(new Rect(new Vector2(parent.GetPosition().x + parent.GetPosition().width, parent.GetPosition().y), new Vector2(200, 200)));
-
+            if(parent.outputPort.connections.Count() > 0)
+            {
+                Node lowest = (Node)parent.outputPort.connections.OrderBy(x => x.input.node.GetPosition().y).Last().input.node;
+                newNode.SetPosition(new Rect(new Vector2(parent.GetPosition().x + parent.GetPosition().width + 50,(lowest.GetPosition().yMax + 10)), new Vector2(200, 200)));
+            }
+            else
+            {
+                newNode.SetPosition(new Rect(new Vector2(parent.GetPosition().x + parent.GetPosition().width + 50, parent.GetPosition().y), new Vector2(200, 200)));
+            }
             AddElement(parent.outputPort.ConnectTo(newNode.inputPort));
 
             parent.RefreshExpandedState();

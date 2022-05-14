@@ -41,8 +41,20 @@ namespace NodeAI
                 {
                     userData = typeof(Sequence), level = 2
                 },
+                new SearchTreeEntry(new GUIContent("Selector"))
+                {
+                    userData = typeof(Selector), level = 2
+                },
                 
             };
+            tree.Add(new SearchTreeGroupEntry(new GUIContent("Decorators"), 2));
+            foreach (var type in GetInheritedClasses(typeof(DecoratorBase)))
+            {
+                tree.Add(new SearchTreeEntry(new GUIContent(type.Name))
+                {
+                    userData = type, level = 3
+                });
+            }
             tree.Add(new SearchTreeGroupEntry(new GUIContent("Action"), 1));
             foreach (var type in GetInheritedClasses(typeof(ActionBase)))
             {

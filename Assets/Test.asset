@@ -16,18 +16,9 @@ MonoBehaviour:
   - GUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
     parentGUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
     title: Sequence
-    childGUIDs:
-    - 6e276c2b-5922-404e-8816-e09d60dbd44e
-    - db608043-c3f3-4d9f-aec2-7c9414b57644
+    childGUIDs: []
     nodeType: 4
     position: {x: 3, y: 0}
-    runtimeLogic: {fileID: 0}
-  - GUID: 6e276c2b-5922-404e-8816-e09d60dbd44e
-    parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
-    title: DebugNode
-    childGUIDs: []
-    nodeType: 1
-    position: {x: 176, y: 0}
     runtimeLogic: {fileID: 0}
   - GUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
     parentGUID: 
@@ -36,13 +27,6 @@ MonoBehaviour:
     - b04ed5a6-867c-4ffd-b7f3-04728937b6de
     nodeType: 0
     position: {x: -162, y: 0}
-    runtimeLogic: {fileID: 0}
-  - GUID: db608043-c3f3-4d9f-aec2-7c9414b57644
-    parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
-    title: DebugNode
-    childGUIDs: []
-    nodeType: 1
-    position: {x: 176, y: 182}
     runtimeLogic: {fileID: 0}
   nodeTree:
     rootNode:
@@ -69,47 +53,18 @@ MonoBehaviour:
           GUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
           parentGUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
           title: Sequence
-          childGUIDs:
-          - 6e276c2b-5922-404e-8816-e09d60dbd44e
-          - db608043-c3f3-4d9f-aec2-7c9414b57644
+          childGUIDs: []
           nodeType: 4
           position: {x: 3, y: 0}
           runtimeLogic: {fileID: 0}
-        children:
-        - nodeData:
-            GUID: 6e276c2b-5922-404e-8816-e09d60dbd44e
-            parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
-            title: DebugNode
-            childGUIDs: []
-            nodeType: 1
-            position: {x: 176, y: 0}
-            runtimeLogic: {fileID: 0}
-          children: []
-        - nodeData:
-            GUID: db608043-c3f3-4d9f-aec2-7c9414b57644
-            parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
-            title: DebugNode
-            childGUIDs: []
-            nodeType: 1
-            position: {x: 176, y: 182}
-            runtimeLogic: {fileID: 0}
-          children: []
+        children: []
     nodes:
     - GUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
       parentGUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
       title: Sequence
-      childGUIDs:
-      - 6e276c2b-5922-404e-8816-e09d60dbd44e
-      - db608043-c3f3-4d9f-aec2-7c9414b57644
+      childGUIDs: []
       nodeType: 4
       position: {x: 3, y: 0}
-      runtimeLogic: {fileID: 0}
-    - GUID: 6e276c2b-5922-404e-8816-e09d60dbd44e
-      parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
-      title: DebugNode
-      childGUIDs: []
-      nodeType: 1
-      position: {x: 176, y: 0}
       runtimeLogic: {fileID: 0}
     - GUID: af8b74ce-2ad4-4a43-a7b0-8d29e8b0c1c1
       parentGUID: 
@@ -118,12 +73,5 @@ MonoBehaviour:
       - b04ed5a6-867c-4ffd-b7f3-04728937b6de
       nodeType: 0
       position: {x: -162, y: 0}
-      runtimeLogic: {fileID: 0}
-    - GUID: db608043-c3f3-4d9f-aec2-7c9414b57644
-      parentGUID: b04ed5a6-867c-4ffd-b7f3-04728937b6de
-      title: DebugNode
-      childGUIDs: []
-      nodeType: 1
-      position: {x: 176, y: 182}
       runtimeLogic: {fileID: 0}
   exposedProperties: []
