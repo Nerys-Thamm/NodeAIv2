@@ -168,10 +168,13 @@ namespace NodeAI
         public virtual NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current) => NodeData.State.Failure;
 
         public virtual void DrawGizmos(NodeAI_Agent agent){}  // Draw Gizmos for this node;
+
+        public virtual void OnInit(){}
         
         public void Init(NodeTree.Leaf current) 
         {
             state = NodeData.State.Running;
+            OnInit();
             
             foreach (NodeTree.Leaf child in current.children)
             {
@@ -197,14 +200,7 @@ namespace NodeAI
             return NodeData.State.Success;
         }
     }
-    [System.Serializable]
-    public class TestCondition : ConditionBase
-    {
-        public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
-        {
-            return NodeData.State.Success;
-        }
-    }
+    
     [System.Serializable]
     public class DecoratorBase : RuntimeBase
     {
@@ -260,15 +256,12 @@ namespace NodeAI
         public override NodeData.State ApplyDecorator(NodeAI_Agent agent, NodeTree.Leaf child)
         {
             NodeData.State childState = child.nodeData.Eval(agent, child);
-            if (childState == NodeData.State.Success)
+            if (childState != NodeData.State.Running)
             {
                 child.nodeData.runtimeLogic.Init(child);
-                return NodeData.State.Running;
             }
-            else
-            {
-                return childState;
-            }
+            return NodeData.State.Running;
+
         }
 
         public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
@@ -282,9 +275,21 @@ namespace NodeAI
         public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
         {
             
-
+            int successCount = 0;
             foreach (NodeTree.Leaf child in current.children)
             {
+                if(child.nodeData.runtimeLogic.state != NodeData.State.Running)
+                {
+                    if(child.nodeData.runtimeLogic.state == NodeData.State.Success)
+                    {
+                        successCount++;
+                    }
+                    else
+                    {
+                        return NodeData.State.Failure;
+                    }
+                    continue;
+                }
                 switch (child.nodeData.Eval(agent, child))
                 {
                     case NodeData.State.Failure:
@@ -301,7 +306,14 @@ namespace NodeAI
                 }
             }
 
-            
+            if (successCount == current.children.Count)
+            {
+                state = NodeData.State.Success;
+            }
+            else
+            {
+                state = NodeData.State.Failure;
+            }
             return state;
         }
     }

@@ -49,7 +49,7 @@ namespace NodeAI
                     }
                     else
                     {
-                        nodeData.runtimeLogic.SetPropertyParamReference(input.portName, null);
+                        nodeData.runtimeLogic.SetPropertyParamReference(input.portName, "null");
                     }
                 }
                 nodeAI_Behaviour.nodeData.Add(nodeData);

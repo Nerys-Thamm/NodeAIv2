@@ -14,6 +14,7 @@ namespace NodeAI
         public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
         {
             Debug.Log("Debug: " + GetProperty<string>("Message"));
+            state = NodeData.State.Success;
             return NodeData.State.Success;
         }
     }

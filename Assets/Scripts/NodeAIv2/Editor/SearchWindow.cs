@@ -45,6 +45,10 @@ namespace NodeAI
                 {
                     userData = typeof(Selector), level = 2
                 },
+                new SearchTreeEntry(new GUIContent("Parallel"))
+                {
+                    userData = typeof(Parallel), level = 2
+                },
                 
             };
             tree.Add(new SearchTreeGroupEntry(new GUIContent("Decorators"), 2));
