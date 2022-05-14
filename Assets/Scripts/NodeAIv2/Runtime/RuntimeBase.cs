@@ -166,6 +166,8 @@ namespace NodeAI
 
 
         public virtual NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current) => NodeData.State.Failure;
+
+        public virtual void DrawGizmos(NodeAI_Agent agent){}  // Draw Gizmos for this node;
         
         public void Init(NodeTree.Leaf current) 
         {

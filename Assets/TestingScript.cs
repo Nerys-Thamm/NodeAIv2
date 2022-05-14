@@ -14,6 +14,6 @@ public class TestingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetParameter<string>("Msg", "Success!!");
+        agent.SetParameter<string>("Msg", Time.timeSinceLevelLoad.ToString());
     }
 }

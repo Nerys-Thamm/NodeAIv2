@@ -15,7 +15,10 @@ namespace NodeAI
         {
             rootLeaf.PropogateExposedProperties(properties);
         }
-
+        public void DrawGizmos(NodeAI_Agent agent)
+        {
+            rootLeaf.DrawGizmos(agent);
+        }
 
         [System.Serializable]
         public class Leaf
@@ -44,6 +47,18 @@ namespace NodeAI
                 foreach (var child in children)
                 {
                     child.PropogateExposedProperties(properties);
+                }
+            }
+
+            public void DrawGizmos(NodeAI_Agent agent)
+            {
+                if(nodeData.runtimeLogic != null)
+                {
+                    nodeData.runtimeLogic.DrawGizmos(agent);
+                }
+                foreach (var child in children)
+                {
+                    child.DrawGizmos(agent);
                 }
             }
             

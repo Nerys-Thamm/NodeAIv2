@@ -27,5 +27,21 @@ namespace NodeAI
             }
             return NodeData.State.Failure;
         }
+
+        public override void DrawGizmos(NodeAI_Agent agent)
+        {
+            var tag = GetProperty<string>("Tag");
+            var range = GetProperty<float>("Range");
+            var targets = GameObject.FindGameObjectsWithTag(tag);
+            foreach (var target in targets)
+            {
+                var distance = Vector3.Distance(agent.transform.position, target.transform.position);
+                if (distance < range)
+                {
+                    Gizmos.color = Color.green;
+                    Gizmos.DrawLine(agent.transform.position, target.transform.position);
+                }
+            }
+        }
     }
 }

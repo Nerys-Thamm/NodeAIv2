@@ -6,7 +6,8 @@ namespace NodeAI
 {
     public class NodeAI_Agent : MonoBehaviour
     {
-        public NodeAI_Behaviour behaviour;
+        public NodeAI_Behaviour AI_Behaviour;
+        NodeAI_Behaviour behaviour;
         public NodeTree nodeTree;
 
         const float tickRate = 0.1f;
@@ -15,7 +16,7 @@ namespace NodeAI
         // Start is called before the first frame update
         void Start()
         {
-            behaviour = Instantiate(behaviour);
+            behaviour = Instantiate(AI_Behaviour);
             nodeTree = behaviour.nodeTree;
             nodeTree.rootLeaf.nodeData.runtimeLogic.Init(nodeTree.rootLeaf);
         }
@@ -104,6 +105,14 @@ namespace NodeAI
                 }
             }
             return default(T);
+        }
+
+        void OnDrawGizmos()
+        {
+            if (nodeTree != null)
+            {
+                nodeTree.DrawGizmos(this);
+            }
         }
     }
 }
