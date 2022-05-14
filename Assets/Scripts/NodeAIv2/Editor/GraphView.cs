@@ -61,7 +61,7 @@ namespace NodeAI
             node.GUID = System.Guid.NewGuid().ToString();
             node.nodeType = NodeData.Type.Parameter;
             node.SetPosition(new Rect(position, new Vector2(200, 50)));
-            node.outputPort = GeneratePort(node, Direction.Output);
+            node.outputPort = GeneratePort(node, Direction.Output, Port.Capacity.Multi);
             node.outputPort.portType = paramType;
             node.outputPort.portName = "Output";
             node.outputContainer.Add(node.outputPort);
@@ -289,6 +289,7 @@ namespace NodeAI
                     AddSearchWindow(GUIUtility.GUIToScreenPoint(newNode.GetGlobalCenter()));
                     searchWindow.SetSelectedNode(newNode);
                 });
+                btn_newChild.text = "+";
                 newNode.titleContainer.Add(btn_newChild);
             }
             newNode.RefreshExpandedState();
@@ -388,6 +389,7 @@ namespace NodeAI
                     AddSearchWindow(GUIUtility.GUIToScreenPoint(node.GetGlobalCenter()));
                     searchWindow.SetSelectedNode(node);
                 });
+                btn_newChild.text = "+";
                 node.titleContainer.Add(btn_newChild);
             }
             NodeData.Property[] properties = logic.GetProperties().ToArray();
@@ -566,13 +568,38 @@ namespace NodeAI
 
             var container = new VisualElement();
             var blackboardField = new BlackboardField{ text = p.name, typeText = p.type.Name };
-            container.Add(blackboardField);
+            var delButton = new Button(() =>
+            {
+                nodes.ForEach(x =>
+                {
+                    if(((Node)x).paramReference == p.GUID)
+                    {
+                        ((Node)x).outputPort.connections.ToList().ForEach(y =>
+                        {
+                            y.input.Disconnect(y);
+                            y.output.Disconnect(y);
+                            RemoveElement(y);
+                        });
+                        
+                        RemoveElement(x);
+                    }
+                });
+                
+                
+                exposedProperties.Remove(p);
+                container.RemoveFromHierarchy();
+            });
+            delButton.text = "X";
+            blackboardField.Add(delButton);
             var newButton = new Button(() =>
             {
                 AddElement(GenerateParameterNode(p.GUID, p.type, blackboard.GetGlobalCenter()));
             });
-            newButton.text = "Add";
-            container.Add(newButton);
+            newButton.text = "==>";
+            blackboardField.Add(newButton);
+            container.Add(blackboardField);
+            
+            //container.Add(newButton);
             blackboard.Add(container);
 
         }
