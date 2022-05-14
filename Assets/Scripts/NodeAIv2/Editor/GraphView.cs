@@ -108,6 +108,47 @@ namespace NodeAI
         public Node ContextCreateNode(Node parent, NodeData.Type type, string name, RuntimeBase logic)
         {
             Node newNode = GenerateNode(type, name, logic);
+            newNode.styleSheets.Add(Resources.Load<StyleSheet>("NodeStyle"));
+            switch(type)
+            {
+                case NodeData.Type.EntryPoint:
+                    newNode.titleContainer.style.fontSize = 20;
+                    newNode.titleContainer.style.backgroundColor = Color.green * 0.65f;
+                    break;
+                case NodeData.Type.Parameter:
+                    newNode.titleContainer.style.color = Color.white;
+                    newNode.titleContainer.style.backgroundColor = Color.grey;
+                    break;
+                case NodeData.Type.Action:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.red * 0.65f;
+                    break;
+                case NodeData.Type.Condition:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.blue * 0.65f;
+                    break;
+                case NodeData.Type.Decorator:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.yellow * 0.65f;
+                    break;
+                case NodeData.Type.Selector:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.magenta * 0.65f;
+                    break;
+                case NodeData.Type.Sequence:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.magenta * 0.65f;
+                    break;
+                case NodeData.Type.Parallel:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.magenta * 0.65f;
+                    break;
+                
+                
+            
+            }
+            newNode.titleContainer.style.fontSize = 30;
+            newNode.titleContainer.style.unityFontStyleAndWeight = FontStyle.Bold;
             AddElement(newNode);
             if(parent.outputPort.connections.Count() > 0)
             {
@@ -136,7 +177,7 @@ namespace NodeAI
             newNode.GUID = data.GUID;
             newNode.nodeType = data.nodeType;
             newNode.SetPosition(new Rect(data.position, new Vector2(800, 200)));
-
+            newNode.styleSheets.Add(Resources.Load<StyleSheet>("NodeStyle"));
             switch (data.nodeType)
             {
                 case NodeData.Type.Action:
@@ -191,6 +232,46 @@ namespace NodeAI
                 newNode.outputPort.portColor = newNode.nodeType == NodeData.Type.Parameter ? Color.green : Color.magenta;
                 newNode.outputContainer.Add(newNode.outputPort);
 
+            switch(data.nodeType)
+            {
+                case NodeData.Type.EntryPoint:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.green * 0.65f;
+                    break;
+                case NodeData.Type.Parameter:
+                    newNode.titleContainer.style.color = Color.white;
+                    newNode.titleContainer.style.backgroundColor = Color.grey;
+                    break;
+                case NodeData.Type.Action:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.red * 0.65f;
+                    break;
+                case NodeData.Type.Condition:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.blue * 0.65f;
+                    break;
+                case NodeData.Type.Decorator:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.yellow * 0.65f;
+                    break;
+                case NodeData.Type.Selector:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.magenta * 0.65f;
+                    break;
+                case NodeData.Type.Sequence:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.magenta * 0.65f;
+                    break;
+                case NodeData.Type.Parallel:
+                    newNode.titleContainer.style.color = Color.black;
+                    newNode.titleContainer.style.backgroundColor = Color.magenta * 0.65f;
+                    break;
+                
+                
+            
+            }
+            newNode.titleContainer.style.fontSize = 30;
+            newNode.titleContainer.style.unityFontStyleAndWeight = FontStyle.Bold;
             newNode.runtimeLogic = data.runtimeLogic;
             if(newNode.runtimeLogic != null)
             {
