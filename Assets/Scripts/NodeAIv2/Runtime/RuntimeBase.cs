@@ -281,7 +281,7 @@ namespace NodeAI
     {
         public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
         {
-            bool anyChildRunning = false;
+            
 
             foreach (NodeTree.Leaf child in current.children)
             {
@@ -293,15 +293,55 @@ namespace NodeAI
                     case NodeData.State.Success:
                         continue;
                     case NodeData.State.Running:
-                        anyChildRunning = true;
-                        continue;
+                        state = NodeData.State.Running;
+                        return state;
                     default:
                         state = NodeData.State.Success;
                         return state;
                 }
             }
 
-            state = anyChildRunning ? NodeData.State.Running : NodeData.State.Success;
+            
+            return state;
+        }
+    }
+
+    public class Parallel : RuntimeBase
+    {
+        public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
+        {
+            int failCount = 0;
+            bool success = false;
+            foreach (NodeTree.Leaf child in current.children)
+            {
+                switch (child.nodeData.Eval(agent, child))
+                {
+                    case NodeData.State.Failure:
+                        failCount++;
+                        continue;
+                    case NodeData.State.Success:
+                        success = true;
+                        continue;
+                    case NodeData.State.Running:
+                        state = NodeData.State.Running;
+                        continue;
+                    default:
+                        state = NodeData.State.Success;
+                        return state;
+                }
+            }
+            if (failCount == current.children.Count)
+            {
+                state = NodeData.State.Failure;
+            }
+            else if(success)
+            {
+                state = NodeData.State.Success;
+            }
+            else
+            {
+                state = NodeData.State.Running;
+            }
             return state;
         }
     }
