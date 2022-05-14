@@ -50,6 +50,8 @@ namespace NodeAI
             [SerializeField]
             public string GUID;
             [SerializeField]
+            public string paramReference;
+            [SerializeField]
             public System.Type type;
 
             public object value;
@@ -75,6 +77,7 @@ namespace NodeAI
                 var serializableProperty = new SerializableProperty();
                 serializableProperty.name = property.name;
                 serializableProperty.GUID = property.GUID;
+                serializableProperty.paramReference = property.paramReference;
                 serializableProperty.serializedTypename = property.type.AssemblyQualifiedName;
                 switch(property.type.Name)
                     {
@@ -114,6 +117,7 @@ namespace NodeAI
                 property.name = serializableProperty.name;
                 property.GUID = serializableProperty.GUID;
                 property.type = System.Type.GetType(serializableProperty.serializedTypename);
+                property.paramReference = serializableProperty.paramReference;
                 switch(property.type.Name)
                     {
                         case "Int32":
@@ -147,6 +151,8 @@ namespace NodeAI
             }
             public string name;
             public string GUID;
+            [SerializeField]
+            public string paramReference;
             public string serializedTypename;
             public System.Type type => System.Type.GetType(serializedTypename);
             public string svalue;

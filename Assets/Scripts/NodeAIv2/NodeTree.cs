@@ -11,14 +11,41 @@ namespace NodeAI
         public Leaf rootLeaf;
         public List<NodeData> nodes;
 
-        
+        public void PropogateExposedProperties(List<NodeData.SerializableProperty> properties)
+        {
+            rootLeaf.PropogateExposedProperties(properties);
+        }
+
+
         [System.Serializable]
         public class Leaf
         {
             public NodeData nodeData;
             public List<Leaf> children;
 
-            
+            public void PropogateExposedProperties(List<NodeData.SerializableProperty> properties)
+            {
+                foreach (var property in properties)
+                {
+                    List<NodeData.SerializableProperty> propertiesToChange = new List<NodeData.SerializableProperty>();
+                    propertiesToChange.AddRange(nodeData.runtimeLogic.GetPropertiesWhereParamReference(property.GUID));
+                    foreach (var propertyToChange in propertiesToChange)
+                    {
+                        propertyToChange.ivalue = property.ivalue;
+                        propertyToChange.fvalue = property.fvalue;
+                        propertyToChange.bvalue = property.bvalue;
+                        propertyToChange.svalue = property.svalue;
+                        propertyToChange.v2value = property.v2value;
+                        propertyToChange.v3value = property.v3value;
+                        propertyToChange.v4value = property.v4value;
+                        propertyToChange.cvalue = property.cvalue;
+                    }
+                }
+                foreach (var child in children)
+                {
+                    child.PropogateExposedProperties(properties);
+                }
+            }
             
             public Leaf()
             {

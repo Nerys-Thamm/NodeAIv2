@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\RuntimeBase.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\NodeAI_Behaviour.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Conditions\CheckTagInRange.cs" />
+     <Compile Include="Assets\TestingScript.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/neryst/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

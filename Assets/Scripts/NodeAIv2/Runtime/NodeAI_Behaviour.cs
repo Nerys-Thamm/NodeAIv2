@@ -11,5 +11,7 @@ namespace NodeAI
         public NodeTree nodeTree;
         [SerializeField]
         public List<NodeData.SerializableProperty> exposedProperties = new List<NodeData.SerializableProperty>();
+
+        
     }
 }

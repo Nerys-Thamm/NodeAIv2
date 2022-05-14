@@ -93,6 +93,19 @@ namespace NodeAI
             Debug.LogError("Property with name " + name + " does not exist");
         }
 
+        public void SetPropertyParamReference(string name, string paramReference)
+        {
+            foreach (NodeData.SerializableProperty property in properties)
+            {
+                if (property.name == name.ToUpper())
+                {
+                    (property).paramReference = paramReference;
+                    return;
+                }
+            }
+            Debug.LogError("Property with name " + name + " does not exist");
+        }
+
         public T GetProperty<T>(string name)
         {
             if(properties == null)
@@ -103,6 +116,7 @@ namespace NodeAI
             {
                 if (property.name == name.ToUpper() && property.serializedTypename == typeof(T).AssemblyQualifiedName)
                 {
+                    
                     switch(property.type.Name)
                     {
                         case "Int32":
@@ -137,10 +151,17 @@ namespace NodeAI
             return default(T);
         }
 
+
         public List<NodeData.Property> GetProperties()
         {
             if(properties == null) properties = new List<NodeData.SerializableProperty>();
             return properties.ConvertAll(x => (NodeData.Property)x);
+        }
+
+        public List<NodeData.SerializableProperty> GetPropertiesWhereParamReference(string paramReference)
+        {
+            if (properties == null) properties = new List<NodeData.SerializableProperty>();
+            return properties.FindAll(x => (x).paramReference == paramReference);
         }
 
 

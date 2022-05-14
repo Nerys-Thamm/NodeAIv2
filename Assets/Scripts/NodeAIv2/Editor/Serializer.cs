@@ -41,6 +41,17 @@ namespace NodeAI
                     runtimeLogic = node.runtimeLogic
                 };
                 if(node.nodeType == NodeData.Type.Parameter) nodeData.parentGUID = node.paramReference;
+                foreach (var input in node.inputPorts)
+                {
+                    if (input.connections.Count() > 0)
+                    {
+                        nodeData.runtimeLogic.SetPropertyParamReference(input.portName, ((Node)input.connections.First().output.node).paramReference);
+                    }
+                    else
+                    {
+                        nodeData.runtimeLogic.SetPropertyParamReference(input.portName, null);
+                    }
+                }
                 nodeAI_Behaviour.nodeData.Add(nodeData);
             }
 

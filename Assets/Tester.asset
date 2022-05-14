@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe18a7553fa2eea7bdc407af41fe506, type: 3}
+  m_Name: Tester
+  m_EditorClassIdentifier: 
+  nodeData:
+  - GUID: ed87ae00-8aa8-40de-8e68-df6db66bafb6
+    parentGUID: 
+    title: Entry Point
+    childGUIDs:
+    - bb35da73-ebda-48e0-ab32-131741e7aa58
+    nodeType: 0
+    position: {x: 0, y: 0}
+    runtimeLogic: {fileID: 0}
+  - GUID: bb35da73-ebda-48e0-ab32-131741e7aa58
+    parentGUID: ed87ae00-8aa8-40de-8e68-df6db66bafb6
+    title: Sequence
+    childGUIDs:
+    - a8bffd53-f4fa-4966-964a-30ade724b1c6
+    nodeType: 4
+    position: {x: 184, y: 0}
+    runtimeLogic: {fileID: 0}
+  - GUID: a8bffd53-f4fa-4966-964a-30ade724b1c6
+    parentGUID: bb35da73-ebda-48e0-ab32-131741e7aa58
+    title: DebugNode
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 364, y: 0}
+    runtimeLogic: {fileID: 0}
+  - GUID: 87324492-473d-4a57-9838-23f22f724b35
+    parentGUID: 72f03ce4-f67a-4ab1-8c51-849bea6c6234
+    title: Msg
+    childGUIDs: []
+    nodeType: 7
+    position: {x: 184, y: 115}
+    runtimeLogic: {fileID: 0}
+  nodeTree:
+    rootNode:
+      GUID: ed87ae00-8aa8-40de-8e68-df6db66bafb6
+      parentGUID: 
+      title: Entry Point
+      childGUIDs:
+      - bb35da73-ebda-48e0-ab32-131741e7aa58
+      nodeType: 0
+      position: {x: 0, y: 0}
+      runtimeLogic: {fileID: 0}
+    rootLeaf:
+      nodeData:
+        GUID: ed87ae00-8aa8-40de-8e68-df6db66bafb6
+        parentGUID: 
+        title: Entry Point
+        childGUIDs:
+        - bb35da73-ebda-48e0-ab32-131741e7aa58
+        nodeType: 0
+        position: {x: 0, y: 0}
+        runtimeLogic: {fileID: 0}
+      children:
+      - nodeData:
+          GUID: bb35da73-ebda-48e0-ab32-131741e7aa58
+          parentGUID: ed87ae00-8aa8-40de-8e68-df6db66bafb6
+          title: Sequence
+          childGUIDs:
+          - a8bffd53-f4fa-4966-964a-30ade724b1c6
+          nodeType: 4
+          position: {x: 184, y: 0}
+          runtimeLogic: {fileID: 0}
+        children:
+        - nodeData:
+            GUID: a8bffd53-f4fa-4966-964a-30ade724b1c6
+            parentGUID: bb35da73-ebda-48e0-ab32-131741e7aa58
+            title: DebugNode
+            childGUIDs: []
+            nodeType: 1
+            position: {x: 364, y: 0}
+            runtimeLogic: {fileID: 0}
+          children: []
+    nodes:
+    - GUID: ed87ae00-8aa8-40de-8e68-df6db66bafb6
+      parentGUID: 
+      title: Entry Point
+      childGUIDs:
+      - bb35da73-ebda-48e0-ab32-131741e7aa58
+      nodeType: 0
+      position: {x: 0, y: 0}
+      runtimeLogic: {fileID: 0}
+    - GUID: bb35da73-ebda-48e0-ab32-131741e7aa58
+      parentGUID: ed87ae00-8aa8-40de-8e68-df6db66bafb6
+      title: Sequence
+      childGUIDs:
+      - a8bffd53-f4fa-4966-964a-30ade724b1c6
+      nodeType: 4
+      position: {x: 184, y: 0}
+      runtimeLogic: {fileID: 0}
+    - GUID: a8bffd53-f4fa-4966-964a-30ade724b1c6
+      parentGUID: bb35da73-ebda-48e0-ab32-131741e7aa58
+      title: DebugNode
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 364, y: 0}
+      runtimeLogic: {fileID: 0}
+    - GUID: 87324492-473d-4a57-9838-23f22f724b35
+      parentGUID: 72f03ce4-f67a-4ab1-8c51-849bea6c6234
+      title: Msg
+      childGUIDs: []
+      nodeType: 7
+      position: {x: 184, y: 115}
+      runtimeLogic: {fileID: 0}
+  exposedProperties:
+  - name: Msg
+    GUID: 72f03ce4-f67a-4ab1-8c51-849bea6c6234
+    paramReference: 
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    svalue: String
+    ivalue: 0
+    fvalue: 0
+    bvalue: 0
+    cvalue: {r: 0, g: 0, b: 0, a: 0}
+    v2value: {x: 0, y: 0}
+    v3value: {x: 0, y: 0, z: 0}
+    v4value: {x: 0, y: 0, z: 0, w: 0}
