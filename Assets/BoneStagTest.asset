@@ -383,8 +383,8 @@ MonoBehaviour:
     childGUIDs:
     - 49a83301-2203-4b59-9f13-e03a696570da
     - 5e697c64-6c67-4068-b498-b1df07bdd2b6
-    - 7c307932-45fc-4dbf-90ee-fef4b94aa959
     - f79c5773-4c5b-4be5-8add-11694552948f
+    - 7c307932-45fc-4dbf-90ee-fef4b94aa959
     nodeType: 5
     position: {x: 420, y: 111}
     runtime: {fileID: 0}
@@ -392,23 +392,23 @@ MonoBehaviour:
     runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     noLogic: 0
-  - GUID: 7c307932-45fc-4dbf-90ee-fef4b94aa959
-    parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-    title: Sequence
-    childGUIDs: []
-    nodeType: 4
-    position: {x: 590, y: 744}
-    runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
   - GUID: f79c5773-4c5b-4be5-8add-11694552948f
     parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
     title: Sequence
     childGUIDs: []
     nodeType: 4
-    position: {x: 590, y: 831}
+    position: {x: 593, y: 988}
+    runtime: {fileID: 0}
+    properties: []
+    runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
+  - GUID: 7c307932-45fc-4dbf-90ee-fef4b94aa959
+    parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+    title: Sequence
+    childGUIDs: []
+    nodeType: 4
+    position: {x: 593, y: 901}
     runtime: {fileID: 0}
     properties: []
     runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
@@ -543,8 +543,8 @@ MonoBehaviour:
             childGUIDs:
             - 49a83301-2203-4b59-9f13-e03a696570da
             - 5e697c64-6c67-4068-b498-b1df07bdd2b6
-            - 7c307932-45fc-4dbf-90ee-fef4b94aa959
             - f79c5773-4c5b-4be5-8add-11694552948f
+            - 7c307932-45fc-4dbf-90ee-fef4b94aa959
             nodeType: 5
             position: {x: 420, y: 111}
             runtime: {fileID: 0}
@@ -842,7 +842,7 @@ MonoBehaviour:
               title: Sequence
               childGUIDs: []
               nodeType: 4
-              position: {x: 590, y: 744}
+              position: {x: 593, y: 901}
               runtime: {fileID: 0}
               properties: []
               runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0,
@@ -855,7 +855,7 @@ MonoBehaviour:
               title: Sequence
               childGUIDs: []
               nodeType: 4
-              position: {x: 590, y: 831}
+              position: {x: 593, y: 988}
               runtime: {fileID: 0}
               properties: []
               runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0,
@@ -1233,8 +1233,8 @@ MonoBehaviour:
       childGUIDs:
       - 49a83301-2203-4b59-9f13-e03a696570da
       - 5e697c64-6c67-4068-b498-b1df07bdd2b6
-      - 7c307932-45fc-4dbf-90ee-fef4b94aa959
       - f79c5773-4c5b-4be5-8add-11694552948f
+      - 7c307932-45fc-4dbf-90ee-fef4b94aa959
       nodeType: 5
       position: {x: 420, y: 111}
       runtime: {fileID: 0}
@@ -1242,23 +1242,23 @@ MonoBehaviour:
       runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       noLogic: 0
-    - GUID: 7c307932-45fc-4dbf-90ee-fef4b94aa959
-      parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-      title: Sequence
-      childGUIDs: []
-      nodeType: 4
-      position: {x: 590, y: 744}
-      runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
     - GUID: f79c5773-4c5b-4be5-8add-11694552948f
       parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
       title: Sequence
       childGUIDs: []
       nodeType: 4
-      position: {x: 590, y: 831}
+      position: {x: 593, y: 988}
+      runtime: {fileID: 0}
+      properties: []
+      runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
+    - GUID: 7c307932-45fc-4dbf-90ee-fef4b94aa959
+      parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+      title: Sequence
+      childGUIDs: []
+      nodeType: 4
+      position: {x: 593, y: 901}
       runtime: {fileID: 0}
       properties: []
       runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,

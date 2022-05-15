@@ -195,6 +195,12 @@ namespace NodeAI
             public Vector4 v4value;
 
         }
+
+        public struct NodeGroup
+        {
+            public string title;
+            public List<string> childGUIDs;
+        }
         
     }
 

@@ -52,6 +52,7 @@ namespace NodeAI
             {
                 var group = new Group();
                 group.title = "Group";
+                group.style.backgroundColor = Color.gray * 0.5f;
                 foreach (var node in selection.OfType<Node>())
                 {
                     group.AddElement(node);
@@ -60,6 +61,18 @@ namespace NodeAI
                 AddElement(group);
                 selection.Add(group);
             }
+        }
+
+        public void CreateGroup(string name, List<Node> nodes)
+        {
+            var group = new Group();
+            group.title = name;
+            group.style.backgroundColor = Color.gray * 0.5f;
+            foreach (var node in nodes)
+            {
+                group.AddElement(node);
+            }
+            AddElement(group);
         }
 
         private void UngroupNodes()

@@ -14,6 +14,9 @@ namespace NodeAI
         [SerializeField]
         public List<NodeData.SerializableProperty> exposedProperties = new List<NodeData.SerializableProperty>();
 
+        [SerializeField]
+        public List<NodeData.NodeGroup> nodeGroups = new List<NodeData.NodeGroup>();
+
         
     }
 }

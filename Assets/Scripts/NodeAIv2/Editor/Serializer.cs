@@ -80,6 +80,21 @@ namespace NodeAI
                 nodeAI_Behaviour.exposedProperties.Add(p);
             }
             
+            nodeAI_Behaviour.nodeGroups.Clear();
+            foreach(var g in target.graphElements.ToList().OfType<Group>())
+            {
+                NodeData.NodeGroup nodeGroup = new NodeData.NodeGroup
+                {
+                    title = g.title,
+                    childGUIDs = new List<string>()
+                };
+                foreach(var n in g.containedElements.ToList().OfType<Node>())
+                {
+                    nodeGroup.childGUIDs.Add(n.GUID);
+                }
+                nodeAI_Behaviour.nodeGroups.Add(nodeGroup);
+            }
+            
             
         }
 
@@ -135,6 +150,19 @@ namespace NodeAI
                         target.AddElement(edge);
                     }
                 }
+                
+            }
+            target.graphElements.ToList().OfType<Group>().ToList().ForEach(x => target.RemoveElement(x));
+            foreach (var nodeGroup in nodeAI_Behaviour.nodeGroups)
+            {
+                List<Node> nodesToAdd = new List<Node>();
+                foreach (var nodeGUID in nodeGroup.childGUIDs)
+                {
+                    var node = nodes.Find(x => x.GUID == nodeGUID);
+                    nodesToAdd.Add(node);
+                }
+
+                target.CreateGroup(nodeGroup.title, nodesToAdd);
                 
             }
             
