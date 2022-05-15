@@ -16,7 +16,7 @@ namespace NodeAI
                 animator = agent.GetComponent<Animator>();
                 if (animator == null)
                 {
-                    Debug.LogError("No animator found on agent");
+                    Debug.LogError("IsAnimationFinished: No animator found on agent");
                     return NodeData.State.Failure;
                 }
                 

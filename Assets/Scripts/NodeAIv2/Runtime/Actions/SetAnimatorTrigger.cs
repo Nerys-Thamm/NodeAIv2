@@ -19,7 +19,7 @@ namespace NodeAI
                 animator = agent.GetComponent<Animator>();
                 if (animator == null)
                 {
-                    Debug.LogError("No animator found on agent");
+                    Debug.LogError("SetAnimatorTrigger: No animator found on agent");
                     return NodeData.State.Failure;
                 }
                 hash = Animator.StringToHash(GetProperty<string>("Name"));

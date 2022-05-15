@@ -26,7 +26,7 @@ public class Bonestag_Charge : NodeAI.ActionBase
             animator = agent.GetComponent<Animator>();
             if (animator == null)
             {
-                Debug.LogError("No animator found on agent");
+                Debug.LogError("Bonestag_Charge: No animator found on agent");
                 return NodeData.State.Failure;
             }
         }
@@ -35,7 +35,7 @@ public class Bonestag_Charge : NodeAI.ActionBase
             navAgent = agent.GetComponent<NavMeshAgent>();
             if (navAgent == null)
             {
-                Debug.LogError("No navAgent found on agent");
+                Debug.LogError("Bonestag_Charge: No navAgent found on agent");
                 return NodeData.State.Failure;
             }
         }
