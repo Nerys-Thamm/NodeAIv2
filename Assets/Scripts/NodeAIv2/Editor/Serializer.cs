@@ -28,7 +28,7 @@ namespace NodeAI
         public void Serialize(NodeAI_Behaviour nodeAI_Behaviour)
         {
             nodeAI_Behaviour.nodeData = new List<NodeData>();
-            nodeAI_Behaviour.nodeTree = new NodeTree();
+            
             foreach (var node in nodes)
             {
                 var nodeData = new NodeData
@@ -72,7 +72,7 @@ namespace NodeAI
                 }
             }
             
-            nodeAI_Behaviour.nodeTree = NodeTree.CreateFromNodeData(nodeAI_Behaviour.nodeData.Find(x => x.nodeType == NodeData.Type.EntryPoint), nodeAI_Behaviour.nodeData);
+            
 
             nodeAI_Behaviour.exposedProperties.Clear();
             foreach(var p in target.exposedProperties)

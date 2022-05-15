@@ -22,7 +22,7 @@ namespace NodeAI
                 return;
             }
             behaviour = Instantiate(AI_Behaviour);
-            nodeTree = behaviour.nodeTree;
+            nodeTree = NodeTree.CreateFromNodeData(behaviour.nodeData.Find(x => x.nodeType == NodeData.Type.EntryPoint), behaviour.nodeData);;
             nodeTree.rootLeaf.nodeData.runtimeLogic.Init(nodeTree.rootLeaf);
         }
 

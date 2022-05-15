@@ -183,6 +183,11 @@ namespace NodeAI
             
             foreach (NodeTree.Leaf child in current.children)
             {
+                if(child.nodeData == null)
+                {
+                    Debug.LogError("nodedata is null for node");
+                    continue;
+                }
                 child.nodeData.runtimeLogic.Init(child);
             }
         }

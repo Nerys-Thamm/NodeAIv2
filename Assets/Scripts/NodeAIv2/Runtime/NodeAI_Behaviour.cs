@@ -10,8 +10,6 @@ namespace NodeAI
         [SerializeField]
         [HideInInspector]public List<NodeData> nodeData;
         [SerializeField]
-        [HideInInspector]public NodeTree nodeTree;
-        [SerializeField]
         [HideInInspector]public List<NodeData.SerializableProperty> exposedProperties = new List<NodeData.SerializableProperty>();
 
         [SerializeField]
