@@ -342,6 +342,37 @@ namespace NodeAI
         }
     }
 
+    public class Chance : DecoratorBase
+    {
+        float randValue = 0;
+        public Chance()
+        {
+            AddProperty<float>("Chance", 0.5f);
+        }
+
+        public override NodeData.State ApplyDecorator(NodeAI_Agent agent, NodeTree.Leaf child)
+        {
+            if (randValue < GetProperty<float>("Chance"))
+            {
+                return child.nodeData.Eval(agent, child);
+            }
+            else
+            {
+                return NodeData.State.Failure;
+            }
+        }
+
+        public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)
+        {
+            return ApplyDecorator(agent, current.children[0]);
+        }
+
+        public override void OnInit()
+        {
+            randValue = Random.value;
+        }
+    }
+
     public class Sequence : RuntimeBase
     {
         public override NodeData.State Eval(NodeAI_Agent agent, NodeTree.Leaf current)

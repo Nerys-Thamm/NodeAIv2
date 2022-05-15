@@ -8,14 +8,14 @@ namespace NodeAI
     public class NodeAI_Behaviour : ScriptableObject
     {
         [SerializeField]
-        public List<NodeData> nodeData;
+        [HideInInspector]public List<NodeData> nodeData;
         [SerializeField]
-        public NodeTree nodeTree;
+        [HideInInspector]public NodeTree nodeTree;
         [SerializeField]
-        public List<NodeData.SerializableProperty> exposedProperties = new List<NodeData.SerializableProperty>();
+        [HideInInspector]public List<NodeData.SerializableProperty> exposedProperties = new List<NodeData.SerializableProperty>();
 
         [SerializeField]
-        public List<NodeData.NodeGroup> nodeGroups = new List<NodeData.NodeGroup>();
+        [HideInInspector]public List<NodeData.NodeGroup> nodeGroups;
 
         
     }

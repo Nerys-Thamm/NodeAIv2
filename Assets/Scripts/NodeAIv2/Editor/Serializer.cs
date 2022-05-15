@@ -79,7 +79,7 @@ namespace NodeAI
             {
                 nodeAI_Behaviour.exposedProperties.Add(p);
             }
-            
+            if(nodeAI_Behaviour.nodeGroups == null) nodeAI_Behaviour.nodeGroups = new List<NodeData.NodeGroup>();
             nodeAI_Behaviour.nodeGroups.Clear();
             foreach(var g in target.graphElements.ToList().OfType<Group>())
             {
