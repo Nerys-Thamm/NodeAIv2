@@ -195,10 +195,12 @@ namespace NodeAI
             public Vector4 v4value;
 
         }
-
+        [System.Serializable]
         public struct NodeGroup
         {
+            [SerializeField]
             public string title;
+            [SerializeField]
             public List<string> childGUIDs;
         }
         

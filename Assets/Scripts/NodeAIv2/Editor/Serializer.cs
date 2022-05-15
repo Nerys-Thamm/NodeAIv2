@@ -38,7 +38,7 @@ namespace NodeAI
                     position = node.GetPosition().position,
                     childGUIDs = new List<string>(),
                     title = node.title,
-                    runtimeLogic = (node.runtimeLogic == null ? null : ScriptableObject.Instantiate(node.runtimeLogic))
+                    runtimeLogic = (node.runtimeLogic == null ? null : node.runtimeLogic)
                 };
                 if(node.nodeType == NodeData.Type.Parameter) nodeData.parentGUID = node.paramReference;
                 foreach (var input in node.inputPorts)

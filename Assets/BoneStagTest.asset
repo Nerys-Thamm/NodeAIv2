@@ -114,80 +114,6 @@ MonoBehaviour:
     runtimeLogicType: NodeAI.WaitUntilAnimationComplete, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     noLogic: 0
-  - GUID: c06ae18c-22a3-4eb7-90d3-d0b5624f1372
-    parentGUID: 296777c9-1393-4684-bda7-249ab214a13d
-    title: DebugNode
-    childGUIDs: []
-    nodeType: 1
-    position: {x: 2182, y: 1683}
-    runtime: {fileID: 0}
-    properties:
-    - name: MESSAGE
-      GUID: 
-      paramReference: null
-      serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      svalue: Do short range Attack
-      ivalue: 0
-      fvalue: 0
-      bvalue: 0
-      cvalue: {r: 0, g: 0, b: 0, a: 0}
-      v2value: {x: 0, y: 0}
-      v3value: {x: 0, y: 0, z: 0}
-      v4value: {x: 0, y: 0, z: 0, w: 0}
-    runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
-  - GUID: 296777c9-1393-4684-bda7-249ab214a13d
-    parentGUID: 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
-    title: Sequence
-    childGUIDs:
-    - c06ae18c-22a3-4eb7-90d3-d0b5624f1372
-    - 8f362140-1865-40af-beb2-b067f7d117fc
-    nodeType: 4
-    position: {x: 2010, y: 1534}
-    runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
-  - GUID: 8f362140-1865-40af-beb2-b067f7d117fc
-    parentGUID: 296777c9-1393-4684-bda7-249ab214a13d
-    title: CheckTagInRange
-    childGUIDs: []
-    nodeType: 2
-    position: {x: 2183, y: 1531}
-    runtime: {fileID: 0}
-    properties:
-    - name: TAG
-      GUID: 
-      paramReference: null
-      serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      svalue: Player
-      ivalue: 0
-      fvalue: 0
-      bvalue: 0
-      cvalue: {r: 0, g: 0, b: 0, a: 0}
-      v2value: {x: 0, y: 0}
-      v3value: {x: 0, y: 0, z: 0}
-      v4value: {x: 0, y: 0, z: 0, w: 0}
-    - name: RANGE
-      GUID: 
-      paramReference: null
-      serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      svalue: 
-      ivalue: 0
-      fvalue: 5
-      bvalue: 0
-      cvalue: {r: 0, g: 0, b: 0, a: 0}
-      v2value: {x: 0, y: 0}
-      v3value: {x: 0, y: 0, z: 0}
-      v4value: {x: 0, y: 0, z: 0, w: 0}
-    runtimeLogicType: NodeAI.CheckTagInRange, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
   - GUID: e025a989-8962-41ef-88d1-1a6ad50fb686
     parentGUID: 087773e4-68ad-4883-bdee-04772843319a
     title: CheckTagInRange
@@ -287,6 +213,80 @@ MonoBehaviour:
     runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     noLogic: 0
+  - GUID: c06ae18c-22a3-4eb7-90d3-d0b5624f1372
+    parentGUID: 296777c9-1393-4684-bda7-249ab214a13d
+    title: DebugNode
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 2182, y: 1683}
+    runtime: {fileID: 0}
+    properties:
+    - name: MESSAGE
+      GUID: 
+      paramReference: null
+      serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: Do short range Attack
+      ivalue: 0
+      fvalue: 0
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
+  - GUID: 296777c9-1393-4684-bda7-249ab214a13d
+    parentGUID: 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
+    title: Sequence
+    childGUIDs:
+    - c06ae18c-22a3-4eb7-90d3-d0b5624f1372
+    - 8f362140-1865-40af-beb2-b067f7d117fc
+    nodeType: 4
+    position: {x: 2010, y: 1534}
+    runtime: {fileID: 0}
+    properties: []
+    runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
+  - GUID: 8f362140-1865-40af-beb2-b067f7d117fc
+    parentGUID: 296777c9-1393-4684-bda7-249ab214a13d
+    title: CheckTagInRange
+    childGUIDs: []
+    nodeType: 2
+    position: {x: 2183, y: 1531}
+    runtime: {fileID: 0}
+    properties:
+    - name: TAG
+      GUID: 
+      paramReference: null
+      serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: Player
+      ivalue: 0
+      fvalue: 0
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    - name: RANGE
+      GUID: 
+      paramReference: null
+      serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: 
+      ivalue: 0
+      fvalue: 5
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    runtimeLogicType: NodeAI.CheckTagInRange, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
   - GUID: 3a6cf232-d298-4d86-9dd2-850dadc453f9
     parentGUID: a3976a91-efa9-459a-9a77-de0326011859
     title: Repeater
@@ -337,62 +337,12 @@ MonoBehaviour:
     runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     noLogic: 0
-  - GUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
-    parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
-    title: Parallel
-    childGUIDs:
-    - 091536d9-0fd1-4f44-a6df-066619daf621
-    - 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
-    nodeType: 6
-    position: {x: 1557, y: 1009}
-    runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: NodeAI.Parallel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
-  - GUID: 091536d9-0fd1-4f44-a6df-066619daf621
-    parentGUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
-    title: SeekClosestWithTag
-    childGUIDs: []
-    nodeType: 1
-    position: {x: 1713, y: 1009}
-    runtime: {fileID: 0}
-    properties:
-    - name: TAG
-      GUID: 
-      paramReference: null
-      serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      svalue: Player
-      ivalue: 0
-      fvalue: 0
-      bvalue: 0
-      cvalue: {r: 0, g: 0, b: 0, a: 0}
-      v2value: {x: 0, y: 0}
-      v3value: {x: 0, y: 0, z: 0}
-      v4value: {x: 0, y: 0, z: 0, w: 0}
-    - name: RANGE
-      GUID: 
-      paramReference: null
-      serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      svalue: 
-      ivalue: 0
-      fvalue: 100
-      bvalue: 0
-      cvalue: {r: 0, g: 0, b: 0, a: 0}
-      v2value: {x: 0, y: 0}
-      v3value: {x: 0, y: 0, z: 0}
-      v4value: {x: 0, y: 0, z: 0, w: 0}
-    runtimeLogicType: NodeAI.SeekClosestWithTag, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-    noLogic: 0
   - GUID: 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
     parentGUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
     title: Selector
     childGUIDs:
-    - 296777c9-1393-4684-bda7-249ab214a13d
     - 087773e4-68ad-4883-bdee-04772843319a
+    - 296777c9-1393-4684-bda7-249ab214a13d
     nodeType: 5
     position: {x: 1713, y: 1160}
     runtime: {fileID: 0}
@@ -496,66 +446,6 @@ MonoBehaviour:
     runtimeLogicType: NodeAI.WaitFor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     noLogic: 0
-  - GUID: 927646c0-bd95-491a-8300-9252265cedaf
-    parentGUID: 854f8851-4887-4f4a-b666-23c5cf28e3eb
-    title: Sequence
-    childGUIDs:
-    - 12c3ec70-c645-4eba-b299-36cf2663928d
-    - f1b01ed0-ca22-4b75-88bf-5f74999b1822
-    nodeType: 4
-    position: {x: 235, y: 0}
-    runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
-  - GUID: 12c3ec70-c645-4eba-b299-36cf2663928d
-    parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
-    title: IfTrue
-    childGUIDs: []
-    nodeType: 2
-    position: {x: 420, y: 0}
-    runtime: {fileID: 0}
-    properties:
-    - name: CONDITION
-      GUID: 1dfd1854-31ec-463a-9740-17cdd701d14f
-      paramReference: 0a88d1d6-3381-45e0-a408-9e7ed0efc417
-      serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      svalue: 
-      ivalue: 0
-      fvalue: 0
-      bvalue: 0
-      cvalue: {r: 0, g: 0, b: 0, a: 0}
-      v2value: {x: 0, y: 0}
-      v3value: {x: 0, y: 0, z: 0}
-      v4value: {x: 0, y: 0, z: 0, w: 0}
-    runtimeLogicType: NodeAI.IfTrue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
-  - GUID: 1dfd1854-31ec-463a-9740-17cdd701d14f
-    parentGUID: 0a88d1d6-3381-45e0-a408-9e7ed0efc417
-    title: BossfightStarted
-    childGUIDs: []
-    nodeType: 7
-    position: {x: 235, y: -96}
-    runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: 
-    noLogic: 1
-  - GUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-    parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
-    title: Selector
-    childGUIDs:
-    - 5e697c64-6c67-4068-b498-b1df07bdd2b6
-    - 49a83301-2203-4b59-9f13-e03a696570da
-    nodeType: 5
-    position: {x: 420, y: 111}
-    runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
   - GUID: 49a83301-2203-4b59-9f13-e03a696570da
     parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
     title: Sequence
@@ -639,6 +529,116 @@ MonoBehaviour:
     properties: []
     runtimeLogicType: 
     noLogic: 1
+  - GUID: 927646c0-bd95-491a-8300-9252265cedaf
+    parentGUID: 854f8851-4887-4f4a-b666-23c5cf28e3eb
+    title: Sequence
+    childGUIDs:
+    - 12c3ec70-c645-4eba-b299-36cf2663928d
+    - f1b01ed0-ca22-4b75-88bf-5f74999b1822
+    nodeType: 4
+    position: {x: 235, y: 0}
+    runtime: {fileID: 0}
+    properties: []
+    runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
+  - GUID: 12c3ec70-c645-4eba-b299-36cf2663928d
+    parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
+    title: IfTrue
+    childGUIDs: []
+    nodeType: 2
+    position: {x: 420, y: 0}
+    runtime: {fileID: 0}
+    properties:
+    - name: CONDITION
+      GUID: 1dfd1854-31ec-463a-9740-17cdd701d14f
+      paramReference: 0a88d1d6-3381-45e0-a408-9e7ed0efc417
+      serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: 
+      ivalue: 0
+      fvalue: 0
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    runtimeLogicType: NodeAI.IfTrue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
+  - GUID: 1dfd1854-31ec-463a-9740-17cdd701d14f
+    parentGUID: 0a88d1d6-3381-45e0-a408-9e7ed0efc417
+    title: BossfightStarted
+    childGUIDs: []
+    nodeType: 7
+    position: {x: 235, y: -96}
+    runtime: {fileID: 0}
+    properties: []
+    runtimeLogicType: 
+    noLogic: 1
+  - GUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+    parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
+    title: Selector
+    childGUIDs:
+    - 5e697c64-6c67-4068-b498-b1df07bdd2b6
+    - 49a83301-2203-4b59-9f13-e03a696570da
+    nodeType: 5
+    position: {x: 420, y: 111}
+    runtime: {fileID: 0}
+    properties: []
+    runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
+  - GUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
+    parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+    title: Parallel
+    childGUIDs:
+    - 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
+    - ff41bae5-d426-4e99-b05d-dfe4e3f7da78
+    nodeType: 6
+    position: {x: 1557, y: 1009}
+    runtime: {fileID: 0}
+    properties: []
+    runtimeLogicType: NodeAI.Parallel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
+  - GUID: ff41bae5-d426-4e99-b05d-dfe4e3f7da78
+    parentGUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
+    title: SeekClosestWithTag
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 1700, y: 1009}
+    runtime: {fileID: 0}
+    properties:
+    - name: TAG
+      GUID: 
+      paramReference: null
+      serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: Player
+      ivalue: 0
+      fvalue: 0
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    - name: RANGE
+      GUID: 
+      paramReference: null
+      serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: 
+      ivalue: 0
+      fvalue: 100
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    runtimeLogicType: NodeAI.SeekClosestWithTag, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    noLogic: 0
   nodeTree:
     rootNode:
       GUID: 854f8851-4887-4f4a-b666-23c5cf28e3eb
@@ -1079,8 +1079,8 @@ MonoBehaviour:
                       parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
                       title: Parallel
                       childGUIDs:
-                      - 091536d9-0fd1-4f44-a6df-066619daf621
                       - 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
+                      - ff41bae5-d426-4e99-b05d-dfe4e3f7da78
                       nodeType: 6
                       position: {x: 1557, y: 1009}
                       runtime: {fileID: 0}
@@ -1090,11 +1090,11 @@ MonoBehaviour:
                       noLogic: 0
                     children:
                     - nodeData:
-                        GUID: 091536d9-0fd1-4f44-a6df-066619daf621
+                        GUID: ff41bae5-d426-4e99-b05d-dfe4e3f7da78
                         parentGUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
                         title: SeekClosestWithTag
                         nodeType: 1
-                        position: {x: 1713, y: 1009}
+                        position: {x: 1700, y: 1009}
                         runtimeLogicType: NodeAI.SeekClosestWithTag, Assembly-CSharp,
                           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
                         noLogic: 0
@@ -1211,80 +1211,6 @@ MonoBehaviour:
       runtimeLogicType: NodeAI.WaitUntilAnimationComplete, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       noLogic: 0
-    - GUID: c06ae18c-22a3-4eb7-90d3-d0b5624f1372
-      parentGUID: 296777c9-1393-4684-bda7-249ab214a13d
-      title: DebugNode
-      childGUIDs: []
-      nodeType: 1
-      position: {x: 2182, y: 1683}
-      runtime: {fileID: 0}
-      properties:
-      - name: MESSAGE
-        GUID: 
-        paramReference: null
-        serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        svalue: Do short range Attack
-        ivalue: 0
-        fvalue: 0
-        bvalue: 0
-        cvalue: {r: 0, g: 0, b: 0, a: 0}
-        v2value: {x: 0, y: 0}
-        v3value: {x: 0, y: 0, z: 0}
-        v4value: {x: 0, y: 0, z: 0, w: 0}
-      runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
-    - GUID: 296777c9-1393-4684-bda7-249ab214a13d
-      parentGUID: 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
-      title: Sequence
-      childGUIDs:
-      - c06ae18c-22a3-4eb7-90d3-d0b5624f1372
-      - 8f362140-1865-40af-beb2-b067f7d117fc
-      nodeType: 4
-      position: {x: 2010, y: 1534}
-      runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
-    - GUID: 8f362140-1865-40af-beb2-b067f7d117fc
-      parentGUID: 296777c9-1393-4684-bda7-249ab214a13d
-      title: CheckTagInRange
-      childGUIDs: []
-      nodeType: 2
-      position: {x: 2183, y: 1531}
-      runtime: {fileID: 0}
-      properties:
-      - name: TAG
-        GUID: 
-        paramReference: null
-        serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        svalue: Player
-        ivalue: 0
-        fvalue: 0
-        bvalue: 0
-        cvalue: {r: 0, g: 0, b: 0, a: 0}
-        v2value: {x: 0, y: 0}
-        v3value: {x: 0, y: 0, z: 0}
-        v4value: {x: 0, y: 0, z: 0, w: 0}
-      - name: RANGE
-        GUID: 
-        paramReference: null
-        serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        svalue: 
-        ivalue: 0
-        fvalue: 5
-        bvalue: 0
-        cvalue: {r: 0, g: 0, b: 0, a: 0}
-        v2value: {x: 0, y: 0}
-        v3value: {x: 0, y: 0, z: 0}
-        v4value: {x: 0, y: 0, z: 0, w: 0}
-      runtimeLogicType: NodeAI.CheckTagInRange, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      noLogic: 0
     - GUID: e025a989-8962-41ef-88d1-1a6ad50fb686
       parentGUID: 087773e4-68ad-4883-bdee-04772843319a
       title: CheckTagInRange
@@ -1384,6 +1310,80 @@ MonoBehaviour:
       runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       noLogic: 0
+    - GUID: c06ae18c-22a3-4eb7-90d3-d0b5624f1372
+      parentGUID: 296777c9-1393-4684-bda7-249ab214a13d
+      title: DebugNode
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 2182, y: 1683}
+      runtime: {fileID: 0}
+      properties:
+      - name: MESSAGE
+        GUID: 
+        paramReference: null
+        serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: Do short range Attack
+        ivalue: 0
+        fvalue: 0
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
+    - GUID: 296777c9-1393-4684-bda7-249ab214a13d
+      parentGUID: 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
+      title: Sequence
+      childGUIDs:
+      - c06ae18c-22a3-4eb7-90d3-d0b5624f1372
+      - 8f362140-1865-40af-beb2-b067f7d117fc
+      nodeType: 4
+      position: {x: 2010, y: 1534}
+      runtime: {fileID: 0}
+      properties: []
+      runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
+    - GUID: 8f362140-1865-40af-beb2-b067f7d117fc
+      parentGUID: 296777c9-1393-4684-bda7-249ab214a13d
+      title: CheckTagInRange
+      childGUIDs: []
+      nodeType: 2
+      position: {x: 2183, y: 1531}
+      runtime: {fileID: 0}
+      properties:
+      - name: TAG
+        GUID: 
+        paramReference: null
+        serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: Player
+        ivalue: 0
+        fvalue: 0
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      - name: RANGE
+        GUID: 
+        paramReference: null
+        serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: 
+        ivalue: 0
+        fvalue: 5
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      runtimeLogicType: NodeAI.CheckTagInRange, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      noLogic: 0
     - GUID: 3a6cf232-d298-4d86-9dd2-850dadc453f9
       parentGUID: a3976a91-efa9-459a-9a77-de0326011859
       title: Repeater
@@ -1434,62 +1434,12 @@ MonoBehaviour:
       runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       noLogic: 0
-    - GUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
-      parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
-      title: Parallel
-      childGUIDs:
-      - 091536d9-0fd1-4f44-a6df-066619daf621
-      - 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
-      nodeType: 6
-      position: {x: 1557, y: 1009}
-      runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: NodeAI.Parallel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
-    - GUID: 091536d9-0fd1-4f44-a6df-066619daf621
-      parentGUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
-      title: SeekClosestWithTag
-      childGUIDs: []
-      nodeType: 1
-      position: {x: 1713, y: 1009}
-      runtime: {fileID: 0}
-      properties:
-      - name: TAG
-        GUID: 
-        paramReference: null
-        serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        svalue: Player
-        ivalue: 0
-        fvalue: 0
-        bvalue: 0
-        cvalue: {r: 0, g: 0, b: 0, a: 0}
-        v2value: {x: 0, y: 0}
-        v3value: {x: 0, y: 0, z: 0}
-        v4value: {x: 0, y: 0, z: 0, w: 0}
-      - name: RANGE
-        GUID: 
-        paramReference: null
-        serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        svalue: 
-        ivalue: 0
-        fvalue: 100
-        bvalue: 0
-        cvalue: {r: 0, g: 0, b: 0, a: 0}
-        v2value: {x: 0, y: 0}
-        v3value: {x: 0, y: 0, z: 0}
-        v4value: {x: 0, y: 0, z: 0, w: 0}
-      runtimeLogicType: NodeAI.SeekClosestWithTag, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      noLogic: 0
     - GUID: 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
       parentGUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
       title: Selector
       childGUIDs:
-      - 296777c9-1393-4684-bda7-249ab214a13d
       - 087773e4-68ad-4883-bdee-04772843319a
+      - 296777c9-1393-4684-bda7-249ab214a13d
       nodeType: 5
       position: {x: 1713, y: 1160}
       runtime: {fileID: 0}
@@ -1593,66 +1543,6 @@ MonoBehaviour:
       runtimeLogicType: NodeAI.WaitFor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       noLogic: 0
-    - GUID: 927646c0-bd95-491a-8300-9252265cedaf
-      parentGUID: 854f8851-4887-4f4a-b666-23c5cf28e3eb
-      title: Sequence
-      childGUIDs:
-      - 12c3ec70-c645-4eba-b299-36cf2663928d
-      - f1b01ed0-ca22-4b75-88bf-5f74999b1822
-      nodeType: 4
-      position: {x: 235, y: 0}
-      runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
-    - GUID: 12c3ec70-c645-4eba-b299-36cf2663928d
-      parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
-      title: IfTrue
-      childGUIDs: []
-      nodeType: 2
-      position: {x: 420, y: 0}
-      runtime: {fileID: 0}
-      properties:
-      - name: CONDITION
-        GUID: 1dfd1854-31ec-463a-9740-17cdd701d14f
-        paramReference: 0a88d1d6-3381-45e0-a408-9e7ed0efc417
-        serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        svalue: 
-        ivalue: 0
-        fvalue: 0
-        bvalue: 0
-        cvalue: {r: 0, g: 0, b: 0, a: 0}
-        v2value: {x: 0, y: 0}
-        v3value: {x: 0, y: 0, z: 0}
-        v4value: {x: 0, y: 0, z: 0, w: 0}
-      runtimeLogicType: NodeAI.IfTrue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
-    - GUID: 1dfd1854-31ec-463a-9740-17cdd701d14f
-      parentGUID: 0a88d1d6-3381-45e0-a408-9e7ed0efc417
-      title: BossfightStarted
-      childGUIDs: []
-      nodeType: 7
-      position: {x: 235, y: -96}
-      runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: 
-      noLogic: 1
-    - GUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-      parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
-      title: Selector
-      childGUIDs:
-      - 5e697c64-6c67-4068-b498-b1df07bdd2b6
-      - 49a83301-2203-4b59-9f13-e03a696570da
-      nodeType: 5
-      position: {x: 420, y: 111}
-      runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
     - GUID: 49a83301-2203-4b59-9f13-e03a696570da
       parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
       title: Sequence
@@ -1736,6 +1626,116 @@ MonoBehaviour:
       properties: []
       runtimeLogicType: 
       noLogic: 1
+    - GUID: 927646c0-bd95-491a-8300-9252265cedaf
+      parentGUID: 854f8851-4887-4f4a-b666-23c5cf28e3eb
+      title: Sequence
+      childGUIDs:
+      - 12c3ec70-c645-4eba-b299-36cf2663928d
+      - f1b01ed0-ca22-4b75-88bf-5f74999b1822
+      nodeType: 4
+      position: {x: 235, y: 0}
+      runtime: {fileID: 0}
+      properties: []
+      runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
+    - GUID: 12c3ec70-c645-4eba-b299-36cf2663928d
+      parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
+      title: IfTrue
+      childGUIDs: []
+      nodeType: 2
+      position: {x: 420, y: 0}
+      runtime: {fileID: 0}
+      properties:
+      - name: CONDITION
+        GUID: 1dfd1854-31ec-463a-9740-17cdd701d14f
+        paramReference: 0a88d1d6-3381-45e0-a408-9e7ed0efc417
+        serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: 
+        ivalue: 0
+        fvalue: 0
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      runtimeLogicType: NodeAI.IfTrue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
+    - GUID: 1dfd1854-31ec-463a-9740-17cdd701d14f
+      parentGUID: 0a88d1d6-3381-45e0-a408-9e7ed0efc417
+      title: BossfightStarted
+      childGUIDs: []
+      nodeType: 7
+      position: {x: 235, y: -96}
+      runtime: {fileID: 0}
+      properties: []
+      runtimeLogicType: 
+      noLogic: 1
+    - GUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+      parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
+      title: Selector
+      childGUIDs:
+      - 5e697c64-6c67-4068-b498-b1df07bdd2b6
+      - 49a83301-2203-4b59-9f13-e03a696570da
+      nodeType: 5
+      position: {x: 420, y: 111}
+      runtime: {fileID: 0}
+      properties: []
+      runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
+    - GUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
+      parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+      title: Parallel
+      childGUIDs:
+      - 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
+      - ff41bae5-d426-4e99-b05d-dfe4e3f7da78
+      nodeType: 6
+      position: {x: 1557, y: 1009}
+      runtime: {fileID: 0}
+      properties: []
+      runtimeLogicType: NodeAI.Parallel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
+    - GUID: ff41bae5-d426-4e99-b05d-dfe4e3f7da78
+      parentGUID: eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
+      title: SeekClosestWithTag
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 1700, y: 1009}
+      runtime: {fileID: 0}
+      properties:
+      - name: TAG
+        GUID: 
+        paramReference: null
+        serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: Player
+        ivalue: 0
+        fvalue: 0
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      - name: RANGE
+        GUID: 
+        paramReference: null
+        serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: 
+        ivalue: 0
+        fvalue: 100
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      runtimeLogicType: NodeAI.SeekClosestWithTag, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      noLogic: 0
   exposedProperties:
   - name: BossfightStarted
     GUID: 0a88d1d6-3381-45e0-a408-9e7ed0efc417
@@ -1776,3 +1776,42 @@ MonoBehaviour:
     v2value: {x: 0, y: 0}
     v3value: {x: 0, y: 0, z: 0}
     v4value: {x: 0, y: 0, z: 0, w: 0}
+  nodeGroups:
+  - title: Long range Attack
+    childGUIDs:
+    - e025a989-8962-41ef-88d1-1a6ad50fb686
+    - 087773e4-68ad-4883-bdee-04772843319a
+    - bc086416-ab8f-4d27-9a8a-55c59bfcdc3a
+    - e26735e8-51fa-495c-a7c7-72ca8a21040a
+  - title: Short range Attack
+    childGUIDs:
+    - c06ae18c-22a3-4eb7-90d3-d0b5624f1372
+    - 296777c9-1393-4684-bda7-249ab214a13d
+    - 8f362140-1865-40af-beb2-b067f7d117fc
+  - title: Chase Player
+    childGUIDs:
+    - 3a6cf232-d298-4d86-9dd2-850dadc453f9
+    - 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+    - eb9b1ced-68d3-488b-8bfd-0c6a313fd40d
+    - 32a008f7-86c7-48e5-a9c4-cce0ec9bfe0a
+    - ff41bae5-d426-4e99-b05d-dfe4e3f7da78
+  - title: Charge
+    childGUIDs:
+    - 2c46c093-2af0-4a20-b093-8522d4550cbf
+    - 7bf80187-7899-4edc-8739-bc6216bd5720
+    - dd076d3c-e4c6-4453-9293-d649940269b2
+    - 0dfd2b2b-7ab1-4d2e-abb6-eddbd0322c24
+    - d8075091-a3a4-4a97-be69-f990b12684b3
+  - title: Eat bait
+    childGUIDs:
+    - 49a83301-2203-4b59-9f13-e03a696570da
+    - a4c53c78-6a8e-4288-825f-745d36f49e7b
+    - 317ac8cc-65fb-446d-8652-b078591fa5da
+    - 3099d7cb-ee70-4830-8613-41751366b86b
+    - f6937267-d7d5-47e8-b5a2-7523aa98b173
+  - title: Wait for fight start
+    childGUIDs:
+    - 927646c0-bd95-491a-8300-9252265cedaf
+    - 12c3ec70-c645-4eba-b299-36cf2663928d
+    - 1dfd1854-31ec-463a-9740-17cdd701d14f
+    - f1b01ed0-ca22-4b75-88bf-5f74999b1822

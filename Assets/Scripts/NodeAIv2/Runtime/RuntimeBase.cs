@@ -183,7 +183,7 @@ namespace NodeAI
             
             foreach (NodeTree.Leaf child in current.children)
             {
-                child.nodeData.Init(child);
+                child.nodeData.runtimeLogic.Init(child);
             }
         }
     }
