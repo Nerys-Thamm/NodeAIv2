@@ -26,6 +26,9 @@ namespace NodeAI
             this.AddManipulator(new RectangleSelector());
             this.AddManipulator(new SelectionDropper());
             
+            RegisterCallback<MouseDownEvent>(HandleMouseEvents);
+
+            var g = new Group();
             
 
             var grid = new GridBackground();
@@ -41,6 +44,77 @@ namespace NodeAI
             
             UnityEditor.Experimental.GraphView.SearchWindow.Open(new SearchWindowContext(position), searchWindow);
 
+        }
+
+        private void GroupNodes()
+        {
+            if (selection.Count() > 1)
+            {
+                var group = new Group();
+                group.title = "Group";
+                foreach (var node in selection.OfType<Node>())
+                {
+                    group.AddElement(node);
+                }
+                ClearSelection();
+                AddElement(group);
+                selection.Add(group);
+            }
+        }
+
+        private void UngroupNodes()
+        {
+            if (selection.Count() > 0)
+            {
+                var group = selection.OfType<Group>().FirstOrDefault();
+                if (group != null)
+                {
+                    foreach (var node in group.Children().OfType<Node>())
+                    {
+                        AddElement(node);
+                    }
+                    RemoveElement(group);
+                    selection.Remove(group);
+                }
+            }
+        }
+        private void UnlinkAndRemove(Node n)
+        {
+            foreach (var port in n.outputContainer.Children().OfType<Port>())
+            {
+                port.connections.ToList().ForEach(c => RemoveElement(c));
+            }
+            foreach (var port in n.inputContainer.Children().OfType<Port>())
+            {
+                port.connections.ToList().ForEach(c => RemoveElement(c));
+            }
+            RemoveElement(n);
+        }
+        private void RemoveSelectedNodes()
+        {
+            selection.OfType<Node>().ToList().ForEach(n => UnlinkAndRemove(n));
+            ClearSelection();
+        }
+
+        private void HandleMouseEvents(MouseDownEvent e)
+        {
+            if (e.button == 1)
+            {
+                if (selection.Count() > 0)
+                {
+                    var menu = new GenericMenu();
+                    if(selection.Count() > 1)
+                    {
+                        menu.AddItem(new GUIContent("Group"), false, GroupNodes);
+                        menu.AddItem(new GUIContent("Delete All"), false, RemoveSelectedNodes);
+                    }
+                    if(selection.OfType<Group>().Count() > 0)
+                    {
+                        menu.AddItem(new GUIContent("Ungroup"), false, UngroupNodes);
+                    }
+                    menu.ShowAsContext();
+                }
+            }
         }
 
         public void AddEntryNode()
