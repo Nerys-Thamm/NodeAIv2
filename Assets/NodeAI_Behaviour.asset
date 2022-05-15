@@ -50,10 +50,12 @@ MonoBehaviour:
       v4value: {x: 0, y: 0, z: 0, w: 0}
     runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+    noLogic: 0
   - GUID: 0c4a51ed-da9f-4749-bfbd-7f093461022b
     parentGUID: 70f88861-42f7-4bba-acf9-b2ddaed2806f
     title: Sequence
     childGUIDs:
+    - 842bbe86-f674-4860-8aa6-fde8da0805a1
     - f0a5bc04-ca9d-47f6-9052-6824e5106995
     nodeType: 4
     position: {x: 235, y: 0}
@@ -61,6 +63,18 @@ MonoBehaviour:
     properties: []
     runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+    noLogic: 0
+  - GUID: 842bbe86-f674-4860-8aa6-fde8da0805a1
+    parentGUID: 0c4a51ed-da9f-4749-bfbd-7f093461022b
+    title: Sequence
+    childGUIDs: []
+    nodeType: 4
+    position: {x: 420, y: 111}
+    runtime: {fileID: 0}
+    properties: []
+    runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
   - GUID: f0a5bc04-ca9d-47f6-9052-6824e5106995
     parentGUID: 0c4a51ed-da9f-4749-bfbd-7f093461022b
     title: DebugNode
@@ -84,6 +98,7 @@ MonoBehaviour:
       v4value: {x: 0, y: 0, z: 0, w: 0}
     runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+    noLogic: 0
   nodeTree:
     rootNode:
       GUID: 70f88861-42f7-4bba-acf9-b2ddaed2806f
@@ -123,6 +138,7 @@ MonoBehaviour:
         v4value: {x: 0, y: 0, z: 0, w: 0}
       runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
+      noLogic: 0
     rootLeaf:
       nodeData:
         GUID: 70f88861-42f7-4bba-acf9-b2ddaed2806f
@@ -162,12 +178,14 @@ MonoBehaviour:
           v4value: {x: 0, y: 0, z: 0, w: 0}
         runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
+        noLogic: 0
       children:
       - nodeData:
           GUID: 0c4a51ed-da9f-4749-bfbd-7f093461022b
           parentGUID: 70f88861-42f7-4bba-acf9-b2ddaed2806f
           title: Sequence
           childGUIDs:
+          - 842bbe86-f674-4860-8aa6-fde8da0805a1
           - f0a5bc04-ca9d-47f6-9052-6824e5106995
           nodeType: 4
           position: {x: 235, y: 0}
@@ -175,6 +193,7 @@ MonoBehaviour:
           properties: []
           runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+          noLogic: 0
         children:
         - nodeData:
             GUID: f0a5bc04-ca9d-47f6-9052-6824e5106995
@@ -200,6 +219,20 @@ MonoBehaviour:
               v4value: {x: 0, y: 0, z: 0, w: 0}
             runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0,
               Culture=neutral, PublicKeyToken=null
+            noLogic: 0
+          children: []
+        - nodeData:
+            GUID: 842bbe86-f674-4860-8aa6-fde8da0805a1
+            parentGUID: 0c4a51ed-da9f-4749-bfbd-7f093461022b
+            title: Sequence
+            childGUIDs: []
+            nodeType: 4
+            position: {x: 420, y: 111}
+            runtime: {fileID: 0}
+            properties: []
+            runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+            noLogic: 0
           children: []
     nodes:
     - GUID: 70f88861-42f7-4bba-acf9-b2ddaed2806f
@@ -239,10 +272,12 @@ MonoBehaviour:
         v4value: {x: 0, y: 0, z: 0, w: 0}
       runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
+      noLogic: 0
     - GUID: 0c4a51ed-da9f-4749-bfbd-7f093461022b
       parentGUID: 70f88861-42f7-4bba-acf9-b2ddaed2806f
       title: Sequence
       childGUIDs:
+      - 842bbe86-f674-4860-8aa6-fde8da0805a1
       - f0a5bc04-ca9d-47f6-9052-6824e5106995
       nodeType: 4
       position: {x: 235, y: 0}
@@ -250,6 +285,18 @@ MonoBehaviour:
       properties: []
       runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
+      noLogic: 0
+    - GUID: 842bbe86-f674-4860-8aa6-fde8da0805a1
+      parentGUID: 0c4a51ed-da9f-4749-bfbd-7f093461022b
+      title: Sequence
+      childGUIDs: []
+      nodeType: 4
+      position: {x: 420, y: 111}
+      runtime: {fileID: 0}
+      properties: []
+      runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
     - GUID: f0a5bc04-ca9d-47f6-9052-6824e5106995
       parentGUID: 0c4a51ed-da9f-4749-bfbd-7f093461022b
       title: DebugNode
@@ -273,4 +320,83 @@ MonoBehaviour:
         v4value: {x: 0, y: 0, z: 0, w: 0}
       runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-  exposedProperties: []
+      noLogic: 0
+  exposedProperties:
+  - name: Msg
+    GUID: 6c8d2dd5-3acd-4860-9481-99d14837397d
+    paramReference: 
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    svalue: String
+    ivalue: 0
+    fvalue: 0
+    bvalue: 0
+    cvalue: {r: 0, g: 0, b: 0, a: 0}
+    v2value: {x: 0, y: 0}
+    v3value: {x: 0, y: 0, z: 0}
+    v4value: {x: 0, y: 0, z: 0, w: 0}
+  - name: Msg
+    GUID: 6c8d2dd5-3acd-4860-9481-99d14837397d
+    paramReference: 
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    svalue: String
+    ivalue: 0
+    fvalue: 0
+    bvalue: 0
+    cvalue: {r: 0, g: 0, b: 0, a: 0}
+    v2value: {x: 0, y: 0}
+    v3value: {x: 0, y: 0, z: 0}
+    v4value: {x: 0, y: 0, z: 0, w: 0}
+  - name: Msg
+    GUID: 6c8d2dd5-3acd-4860-9481-99d14837397d
+    paramReference: 
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    svalue: String
+    ivalue: 0
+    fvalue: 0
+    bvalue: 0
+    cvalue: {r: 0, g: 0, b: 0, a: 0}
+    v2value: {x: 0, y: 0}
+    v3value: {x: 0, y: 0, z: 0}
+    v4value: {x: 0, y: 0, z: 0, w: 0}
+  - name: Msg
+    GUID: 6c8d2dd5-3acd-4860-9481-99d14837397d
+    paramReference: 
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    svalue: String
+    ivalue: 0
+    fvalue: 0
+    bvalue: 0
+    cvalue: {r: 0, g: 0, b: 0, a: 0}
+    v2value: {x: 0, y: 0}
+    v3value: {x: 0, y: 0, z: 0}
+    v4value: {x: 0, y: 0, z: 0, w: 0}
+  - name: Msg
+    GUID: 6c8d2dd5-3acd-4860-9481-99d14837397d
+    paramReference: 
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    svalue: String
+    ivalue: 0
+    fvalue: 0
+    bvalue: 0
+    cvalue: {r: 0, g: 0, b: 0, a: 0}
+    v2value: {x: 0, y: 0}
+    v3value: {x: 0, y: 0, z: 0}
+    v4value: {x: 0, y: 0, z: 0, w: 0}
+  - name: Msg
+    GUID: 6c8d2dd5-3acd-4860-9481-99d14837397d
+    paramReference: 
+    serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+      PublicKeyToken=b77a5c561934e089
+    svalue: String
+    ivalue: 0
+    fvalue: 0
+    bvalue: 0
+    cvalue: {r: 0, g: 0, b: 0, a: 0}
+    v2value: {x: 0, y: 0}
+    v3value: {x: 0, y: 0, z: 0}
+    v4value: {x: 0, y: 0, z: 0, w: 0}

@@ -45,11 +45,14 @@ namespace NodeAI
         private List<SerializableProperty> properties;
         [SerializeField]
         private string runtimeLogicType;
+
+        [SerializeField]
+        private bool noLogic = false;
         public RuntimeBase runtimeLogic
         {
             get
             {
-                if (runtime == null)
+                if (runtime == null && !noLogic)
                 {
                     runtime = (RuntimeBase)ScriptableObject.CreateInstance(System.Type.GetType(runtimeLogicType));
                     runtime.RepopulateProperties(properties == null ? new List<SerializableProperty>() : properties);
@@ -58,9 +61,13 @@ namespace NodeAI
             }
             set
             {
+                noLogic = (value == null);
                 runtime = value;
-                properties = runtime.GetProperties().ConvertAll(x => (SerializableProperty)x);
-                runtimeLogicType = runtime.GetType().AssemblyQualifiedName;
+                if(!noLogic)
+                {
+                    properties = runtime.GetProperties().ConvertAll(x => (SerializableProperty)x);
+                    runtimeLogicType = runtime.GetType().AssemblyQualifiedName;
+                }
             }
         }
         

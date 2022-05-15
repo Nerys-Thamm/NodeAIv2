@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b31cddfd229080bbc8f108a7752a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AI_Behaviour: {fileID: 0}
+  AI_Behaviour: {fileID: 11400000, guid: 25b2b346735c03a9996fa69064a25942, type: 2}
   nodeTree:
     rootNode:
       GUID: 
@@ -641,6 +641,7 @@ MonoBehaviour:
       runtime: {fileID: 0}
       properties: []
       runtimeLogicType: 
+      noLogic: 0
     rootLeaf:
       nodeData:
         GUID: 
@@ -652,6 +653,7 @@ MonoBehaviour:
         runtime: {fileID: 0}
         properties: []
         runtimeLogicType: 
+        noLogic: 0
       children: []
     nodes: []
 --- !u!4 &2106514666

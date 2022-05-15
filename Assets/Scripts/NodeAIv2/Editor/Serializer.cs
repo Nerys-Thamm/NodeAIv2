@@ -38,7 +38,7 @@ namespace NodeAI
                     position = node.GetPosition().position,
                     childGUIDs = new List<string>(),
                     title = node.title,
-                    runtimeLogic = ScriptableObject.Instantiate(node.runtimeLogic)
+                    runtimeLogic = (node.runtimeLogic == null ? null : ScriptableObject.Instantiate(node.runtimeLogic))
                 };
                 if(node.nodeType == NodeData.Type.Parameter) nodeData.parentGUID = node.paramReference;
                 foreach (var input in node.inputPorts)
@@ -46,6 +46,7 @@ namespace NodeAI
                     if (input.connections.Count() > 0)
                     {
                         nodeData.runtimeLogic.SetPropertyParamReference(input.portName, ((Node)input.connections.First().output.node).paramReference);
+                        nodeData.runtimeLogic.SetPropertyGUID(input.portName, ((Node)input.connections.First().output.node).GUID);
                     }
                     else
                     {
@@ -73,7 +74,7 @@ namespace NodeAI
             
             nodeAI_Behaviour.nodeTree = NodeTree.CreateFromNodeData(nodeAI_Behaviour.nodeData.Find(x => x.nodeType == NodeData.Type.EntryPoint), nodeAI_Behaviour.nodeData);
 
-            
+            nodeAI_Behaviour.exposedProperties.Clear();
             foreach(var p in target.exposedProperties)
             {
                 nodeAI_Behaviour.exposedProperties.Add(p);
