@@ -91,6 +91,11 @@ namespace NodeAI
                 newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Selector, ((Type)entry.userData).Name, ScriptableObject.CreateInstance<Selector>());
                 
             }
+            else if(((Type)entry.userData) == typeof(Parallel))
+            {
+                newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Parallel, ((Type)entry.userData).Name, ScriptableObject.CreateInstance<Parallel>());
+                
+            }
             else if(((Type)entry.userData).BaseType == typeof(DecoratorBase))
             {
                 newNode = graphView.ContextCreateNode(selectedNode, NodeData.Type.Decorator, ((Type)entry.userData).Name, (DecoratorBase)ScriptableObject.CreateInstance(((Type)entry.userData)));

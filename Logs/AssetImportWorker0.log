@@ -2050,3 +2050,261 @@ Received Import Request.
 Start importing Assets/Scripts/NodeAIv2/Runtime/Actions/WaitUntilAnimationComplete.cs using Guid(0ad0e6674ef73a1c6b8a3d44d1977ed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f941f4f3b98f20023e8bc4a80a479fdc') in 0.003788 seconds 
   Import took 0.007259 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 389.925201 seconds.
+  path: Assets/Test.asset
+  artifactKey: Guid(25b2b346735c03a9996fa69064a25942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test.asset using Guid(25b2b346735c03a9996fa69064a25942) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: NodeAI::NodeTree.rootLeaf
+0: NodeAI::NodeAI_Behaviour.nodeTree
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: Leaf.children
+0: Leaf.children
+
+ -> (artifact id: '8c09eadf88d86a17d3511c25d9e24732') in 0.017730 seconds 
+  Import took 0.021638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 57.473207 seconds.
+  path: Assets/Test.asset
+  artifactKey: Guid(25b2b346735c03a9996fa69064a25942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test.asset using Guid(25b2b346735c03a9996fa69064a25942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f301cc415e4d9bc527b2ed30a9c1b896') in 0.001689 seconds 
+  Import took 0.005625 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002341 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.913 seconds
+Domain Reload Profiling:
+	ReloadAssembly (913ms)
+		BeginReloadAssembly (74ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (785ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (281ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (287ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (211ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2642 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.1 MB.
+System memory in use after: 109.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 3196.
+Total: 5.322699 ms (FindLiveObjects: 0.568280 ms CreateObjectMapping: 0.082100 ms MarkObjects: 3.104859 ms  DeleteObjects: 1.566490 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 141.522981 seconds.
+  path: Assets/BoneStagTest.asset
+  artifactKey: Guid(71b33540be7f23b5da0a7ab34b8fa495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoneStagTest.asset using Guid(71b33540be7f23b5da0a7ab34b8fa495) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: NodeAI::NodeTree.rootLeaf
+0: NodeAI::NodeAI_Behaviour.nodeTree
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: Leaf.children
+0: Leaf.children
+
+ -> (artifact id: 'fe45a93b1db62272271a485f65483a5c') in 0.022021 seconds 
+  Import took 0.026227 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.808455 seconds.
+  path: Assets/BoneStagTest.asset
+  artifactKey: Guid(71b33540be7f23b5da0a7ab34b8fa495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoneStagTest.asset using Guid(71b33540be7f23b5da0a7ab34b8fa495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '843ddab28be0d7dfb14349b8eb6bfcfc') in 0.001667 seconds 
+  Import took 0.005073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001585 seconds.
+  path: Assets/BoneStagTest.asset
+  artifactKey: Guid(71b33540be7f23b5da0a7ab34b8fa495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoneStagTest.asset using Guid(71b33540be7f23b5da0a7ab34b8fa495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '843ddab28be0d7dfb14349b8eb6bfcfc') in 0.001234 seconds 
+  Import took 0.003692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 92.593335 seconds.
+  path: Assets/Scripts/NodeAIv2/Runtime/RuntimeBase.cs
+  artifactKey: Guid(651fdca877a839e53a42e234937aa1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeAIv2/Runtime/RuntimeBase.cs using Guid(651fdca877a839e53a42e234937aa1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b0767eebb124a34120159e9090696b1') in 0.000709 seconds 
+  Import took 0.004391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002581 seconds.
+  path: Assets/Scripts/NodeAIv2/Runtime/RuntimeBase.cs
+  artifactKey: Guid(651fdca877a839e53a42e234937aa1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeAIv2/Runtime/RuntimeBase.cs using Guid(651fdca877a839e53a42e234937aa1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b0767eebb124a34120159e9090696b1') in 0.000726 seconds 
+  Import took 0.004801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.640802 seconds.
+  path: Assets/Scripts/NodeAIv2/Runtime/NodeData.cs
+  artifactKey: Guid(3dfd3ba047a5686df94bd937f15c3d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeAIv2/Runtime/NodeData.cs using Guid(3dfd3ba047a5686df94bd937f15c3d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cd749e043396a18cf539560daaf6115') in 0.000649 seconds 
+  Import took 0.004662 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002356 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Domain Reload Profiling:
+	ReloadAssembly (898ms)
+		BeginReloadAssembly (69ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (776ms)
+			LoadAssemblies (51ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (283ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (275ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (202ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2642 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.1 MB.
+System memory in use after: 109.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 3199.
+Total: 4.871029 ms (FindLiveObjects: 0.428030 ms CreateObjectMapping: 0.071470 ms MarkObjects: 2.744469 ms  DeleteObjects: 1.625870 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 168.082545 seconds.
+  path: Assets/Scripts/NodeAIv2/Editor/SearchWindow.cs
+  artifactKey: Guid(37135bb9cada04af1870441459fe4e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeAIv2/Editor/SearchWindow.cs using Guid(37135bb9cada04af1870441459fe4e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38ab3817012f2ddb113ff9250fa2c245') in 0.004639 seconds 
+  Import took 0.008743 seconds .
+
