@@ -199,7 +199,7 @@ namespace NodeAI
                 });
             };
 
-            blackboard.SetPosition(new Rect(10, 30, 200, 300));
+            blackboard.SetPosition(new Rect(10, 30, 275, 200));
             graphView.blackboard = blackboard;
             graphView.Add(blackboard);
         }
