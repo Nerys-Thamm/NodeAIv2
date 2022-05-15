@@ -7,7 +7,13 @@ namespace NodeAI
     public class NodeAI_Agent : MonoBehaviour
     {
         public NodeAI_Behaviour AI_Behaviour;
-        NodeAI_Behaviour behaviour;
+        NodeAI_Behaviour _behaviour;
+
+        public NodeAI_Behaviour behaviour{
+            get{
+                return _behaviour;
+            }
+        }
         public NodeTree nodeTree = null;
 
         const float tickRate = 0.1f;
@@ -21,15 +27,15 @@ namespace NodeAI
                 Debug.LogError("No AI_Behaviour assigned to NodeAI_Agent " + gameObject.name);
                 return;
             }
-            behaviour = Instantiate(AI_Behaviour);
-            nodeTree = NodeTree.CreateFromNodeData(behaviour.nodeData.Find(x => x.nodeType == NodeData.Type.EntryPoint), behaviour.nodeData);;
+            _behaviour = Instantiate(AI_Behaviour);
+            nodeTree = NodeTree.CreateFromNodeData(_behaviour.nodeData.Find(x => x.nodeType == NodeData.Type.EntryPoint), _behaviour.nodeData);;
             nodeTree.rootLeaf.nodeData.runtimeLogic.Init(nodeTree.rootLeaf);
         }
 
         // Update is called once per frame
         void Update()
         {
-            if(behaviour == null)
+            if(_behaviour == null)
             {
                 return;
             }
@@ -44,11 +50,11 @@ namespace NodeAI
 
         public void SetParameter<T>(string name, T value)
         {
-            if(behaviour == null)
+            if(_behaviour == null)
             {
                 return;
             }
-            foreach (var property in behaviour.exposedProperties)
+            foreach (var property in _behaviour.exposedProperties)
             {
                 if (property.name == name && property.type == typeof(T))
                 {
@@ -81,7 +87,7 @@ namespace NodeAI
                         default:
                             break;
                     }
-                    nodeTree.PropogateExposedProperties(behaviour.exposedProperties);
+                    nodeTree.PropogateExposedProperties(_behaviour.exposedProperties);
                     return;
                 }
             }
@@ -90,11 +96,11 @@ namespace NodeAI
 
         public T GetParameter<T>(string name)
         {
-            if(behaviour == null)
+            if(_behaviour == null)
             {
                 return default(T);
             }
-            foreach (var property in behaviour.exposedProperties)
+            foreach (var property in _behaviour.exposedProperties)
             {
                 if (property.name == name && property.type == typeof(T))
                 {
@@ -126,7 +132,7 @@ namespace NodeAI
 
         void OnDrawGizmos()
         {
-            if (behaviour != null)
+            if (_behaviour != null)
             {
                 nodeTree.DrawGizmos(this);
             }
