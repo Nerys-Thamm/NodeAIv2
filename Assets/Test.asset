@@ -16,8 +16,7 @@ MonoBehaviour:
   - GUID: adb630c1-f008-4e11-910e-dedbcab785f3
     parentGUID: 
     title: Entry Point
-    childGUIDs:
-    - b3649e39-ef87-4892-9f1d-47d0578265f0
+    childGUIDs: []
     nodeType: 0
     position: {x: 0, y: 0}
     runtime: {fileID: 0}
@@ -51,47 +50,12 @@ MonoBehaviour:
     runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     noLogic: 0
-  - GUID: b3649e39-ef87-4892-9f1d-47d0578265f0
-    parentGUID: adb630c1-f008-4e11-910e-dedbcab785f3
-    title: DebugNode
-    childGUIDs: []
-    nodeType: 1
-    position: {x: 235, y: 0}
-    runtime: {fileID: 0}
-    properties:
-    - name: MESSAGE
-      GUID: 
-      paramReference: 609697aa-d7b7-4ccf-860b-c788f188e33d
-      serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      svalue: String
-      ivalue: 0
-      fvalue: 0
-      bvalue: 0
-      cvalue: {r: 0, g: 0, b: 0, a: 0}
-      v2value: {x: 0, y: 0}
-      v3value: {x: 0, y: 0, z: 0}
-      v4value: {x: 0, y: 0, z: 0, w: 0}
-    runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
-  - GUID: 1f0e7b1b-9ebd-4262-b05b-c20ab1b0e6f6
-    parentGUID: 609697aa-d7b7-4ccf-860b-c788f188e33d
-    title: Msg
-    childGUIDs: []
-    nodeType: 7
-    position: {x: 30, y: 128}
-    runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: 
-    noLogic: 1
   nodeTree:
     rootNode:
       GUID: adb630c1-f008-4e11-910e-dedbcab785f3
       parentGUID: 
       title: Entry Point
-      childGUIDs:
-      - b3649e39-ef87-4892-9f1d-47d0578265f0
+      childGUIDs: []
       nodeType: 0
       position: {x: 0, y: 0}
       runtime: {fileID: 0}
@@ -130,8 +94,7 @@ MonoBehaviour:
         GUID: adb630c1-f008-4e11-910e-dedbcab785f3
         parentGUID: 
         title: Entry Point
-        childGUIDs:
-        - b3649e39-ef87-4892-9f1d-47d0578265f0
+        childGUIDs: []
         nodeType: 0
         position: {x: 0, y: 0}
         runtime: {fileID: 0}
@@ -165,39 +128,12 @@ MonoBehaviour:
         runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
         noLogic: 0
-      children:
-      - nodeData:
-          GUID: b3649e39-ef87-4892-9f1d-47d0578265f0
-          parentGUID: adb630c1-f008-4e11-910e-dedbcab785f3
-          title: DebugNode
-          childGUIDs: []
-          nodeType: 1
-          position: {x: 235, y: 0}
-          runtime: {fileID: 0}
-          properties:
-          - name: MESSAGE
-            GUID: 
-            paramReference: 609697aa-d7b7-4ccf-860b-c788f188e33d
-            serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            svalue: String
-            ivalue: 0
-            fvalue: 0
-            bvalue: 0
-            cvalue: {r: 0, g: 0, b: 0, a: 0}
-            v2value: {x: 0, y: 0}
-            v3value: {x: 0, y: 0, z: 0}
-            v4value: {x: 0, y: 0, z: 0, w: 0}
-          runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          noLogic: 0
-        children: []
+      children: []
     nodes:
     - GUID: adb630c1-f008-4e11-910e-dedbcab785f3
       parentGUID: 
       title: Entry Point
-      childGUIDs:
-      - b3649e39-ef87-4892-9f1d-47d0578265f0
+      childGUIDs: []
       nodeType: 0
       position: {x: 0, y: 0}
       runtime: {fileID: 0}
@@ -231,40 +167,6 @@ MonoBehaviour:
       runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       noLogic: 0
-    - GUID: b3649e39-ef87-4892-9f1d-47d0578265f0
-      parentGUID: adb630c1-f008-4e11-910e-dedbcab785f3
-      title: DebugNode
-      childGUIDs: []
-      nodeType: 1
-      position: {x: 235, y: 0}
-      runtime: {fileID: 0}
-      properties:
-      - name: MESSAGE
-        GUID: 
-        paramReference: 609697aa-d7b7-4ccf-860b-c788f188e33d
-        serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        svalue: String
-        ivalue: 0
-        fvalue: 0
-        bvalue: 0
-        cvalue: {r: 0, g: 0, b: 0, a: 0}
-        v2value: {x: 0, y: 0}
-        v3value: {x: 0, y: 0, z: 0}
-        v4value: {x: 0, y: 0, z: 0, w: 0}
-      runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
-    - GUID: 1f0e7b1b-9ebd-4262-b05b-c20ab1b0e6f6
-      parentGUID: 609697aa-d7b7-4ccf-860b-c788f188e33d
-      title: Msg
-      childGUIDs: []
-      nodeType: 7
-      position: {x: 30, y: 128}
-      runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: 
-      noLogic: 1
   exposedProperties:
   - name: Msg
     GUID: 609697aa-d7b7-4ccf-860b-c788f188e33d

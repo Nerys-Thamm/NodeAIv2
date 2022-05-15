@@ -49,6 +49,12 @@
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\SeekClosestWithTag.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\RuntimeBase.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\NodeAI_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\SetAnimatorTrigger.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\SetAnimatorBool.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\SetAnimatorFloat.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\SetAnimatorInt.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Conditions\IsAnimationFinished.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\WaitUntilAnimationComplete.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/neryst/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

@@ -8,7 +8,6 @@ namespace NodeAI
     {
         float timer = 0f;
         float sceneTime = 0f;
-
         public WaitFor()
         {
             AddProperty<float>("Time", 1f);
@@ -27,7 +26,6 @@ namespace NodeAI
 
             return state;
         }
-
         public override void OnInit()
         {
             timer = 0f;
