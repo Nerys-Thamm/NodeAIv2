@@ -51,6 +51,58 @@ MonoBehaviour:
     runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     noLogic: 0
+  - GUID: 5e697c64-6c67-4068-b498-b1df07bdd2b6
+    parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+    title: Repeater
+    childGUIDs:
+    - a3976a91-efa9-459a-9a77-de0326011859
+    nodeType: 3
+    position: {x: 590, y: 592}
+    runtime: {fileID: 0}
+    properties:
+    - name: REPEATCOUNT
+      GUID: 
+      paramReference: null
+      serializedTypename: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: 
+      ivalue: 1
+      fvalue: 0
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    - name: REPEATFOREVER
+      GUID: 
+      paramReference: null
+      serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: 
+      ivalue: 0
+      fvalue: 0
+      bvalue: 1
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
+  - GUID: a3976a91-efa9-459a-9a77-de0326011859
+    parentGUID: 5e697c64-6c67-4068-b498-b1df07bdd2b6
+    title: Selector
+    childGUIDs:
+    - 7bf80187-7899-4edc-8739-bc6216bd5720
+    - e56e1314-387d-4d94-b524-39b7610461b9
+    - 3a6cf232-d298-4d86-9dd2-850dadc453f9
+    nodeType: 5
+    position: {x: 825, y: 592}
+    runtime: {fileID: 0}
+    properties: []
+    runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
   - GUID: 927646c0-bd95-491a-8300-9252265cedaf
     parentGUID: 854f8851-4887-4f4a-b666-23c5cf28e3eb
     title: Sequence
@@ -98,6 +150,19 @@ MonoBehaviour:
     properties: []
     runtimeLogicType: 
     noLogic: 1
+  - GUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+    parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
+    title: Selector
+    childGUIDs:
+    - 49a83301-2203-4b59-9f13-e03a696570da
+    - 5e697c64-6c67-4068-b498-b1df07bdd2b6
+    nodeType: 5
+    position: {x: 420, y: 111}
+    runtime: {fileID: 0}
+    properties: []
+    runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    noLogic: 0
   - GUID: 49a83301-2203-4b59-9f13-e03a696570da
     parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
     title: Sequence
@@ -106,7 +171,7 @@ MonoBehaviour:
     - 317ac8cc-65fb-446d-8652-b078591fa5da
     - 3099d7cb-ee70-4830-8613-41751366b86b
     nodeType: 4
-    position: {x: 590, y: 111}
+    position: {x: 635, y: 109}
     runtime: {fileID: 0}
     properties: []
     runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
@@ -117,7 +182,7 @@ MonoBehaviour:
     title: IfTrue
     childGUIDs: []
     nodeType: 2
-    position: {x: 775, y: 111}
+    position: {x: 820, y: 109}
     runtime: {fileID: 0}
     properties:
     - name: CONDITION
@@ -141,7 +206,7 @@ MonoBehaviour:
     title: SetAnimatorTrigger
     childGUIDs: []
     nodeType: 1
-    position: {x: 775, y: 222}
+    position: {x: 820, y: 220}
     runtime: {fileID: 0}
     properties:
     - name: NAME
@@ -165,7 +230,7 @@ MonoBehaviour:
     title: WaitUntilAnimationComplete
     childGUIDs: []
     nodeType: 1
-    position: {x: 775, y: 333}
+    position: {x: 820, y: 331}
     runtime: {fileID: 0}
     properties: []
     runtimeLogicType: NodeAI.WaitUntilAnimationComplete, Assembly-CSharp, Version=0.0.0.0,
@@ -176,49 +241,11 @@ MonoBehaviour:
     title: CorrectBait
     childGUIDs: []
     nodeType: 7
-    position: {x: 639, y: 24}
+    position: {x: 684, y: 22}
     runtime: {fileID: 0}
     properties: []
     runtimeLogicType: 
     noLogic: 1
-  - GUID: 5e697c64-6c67-4068-b498-b1df07bdd2b6
-    parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-    title: Repeater
-    childGUIDs:
-    - a3976a91-efa9-459a-9a77-de0326011859
-    nodeType: 3
-    position: {x: 590, y: 592}
-    runtime: {fileID: 0}
-    properties:
-    - name: REPEATCOUNT
-      GUID: 
-      paramReference: null
-      serializedTypename: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      svalue: 
-      ivalue: 1
-      fvalue: 0
-      bvalue: 0
-      cvalue: {r: 0, g: 0, b: 0, a: 0}
-      v2value: {x: 0, y: 0}
-      v3value: {x: 0, y: 0, z: 0}
-      v4value: {x: 0, y: 0, z: 0, w: 0}
-    - name: REPEATFOREVER
-      GUID: 
-      paramReference: null
-      serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      svalue: 
-      ivalue: 0
-      fvalue: 0
-      bvalue: 1
-      cvalue: {r: 0, g: 0, b: 0, a: 0}
-      v2value: {x: 0, y: 0}
-      v3value: {x: 0, y: 0, z: 0}
-      v4value: {x: 0, y: 0, z: 0, w: 0}
-    runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
   - GUID: 2c46c093-2af0-4a20-b093-8522d4550cbf
     parentGUID: 03bf8945-7c23-4c0b-928b-db15c12b5b9f
     title: InBearTrap
@@ -320,7 +347,7 @@ MonoBehaviour:
     title: WaitUntilAnimationComplete
     childGUIDs: []
     nodeType: 1
-    position: {x: 1141, y: 720}
+    position: {x: 1145, y: 956}
     runtime: {fileID: 0}
     properties: []
     runtimeLogicType: NodeAI.WaitUntilAnimationComplete, Assembly-CSharp, Version=0.0.0.0,
@@ -329,9 +356,10 @@ MonoBehaviour:
   - GUID: 3a6cf232-d298-4d86-9dd2-850dadc453f9
     parentGUID: a3976a91-efa9-459a-9a77-de0326011859
     title: Repeater
-    childGUIDs: []
+    childGUIDs:
+    - 001918b3-9eb7-4ec4-bb11-cdba88eae39d
     nodeType: 3
-    position: {x: 1004, y: 1030}
+    position: {x: 1154, y: 1194}
     runtime: {fileID: 0}
     properties:
     - name: REPEATCOUNT
@@ -363,55 +391,78 @@ MonoBehaviour:
     runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     noLogic: 0
-  - GUID: a3976a91-efa9-459a-9a77-de0326011859
-    parentGUID: 5e697c64-6c67-4068-b498-b1df07bdd2b6
-    title: Selector
-    childGUIDs:
-    - 7bf80187-7899-4edc-8739-bc6216bd5720
-    - e56e1314-387d-4d94-b524-39b7610461b9
-    - 3a6cf232-d298-4d86-9dd2-850dadc453f9
-    nodeType: 5
-    position: {x: 825, y: 592}
-    runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
-  - GUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-    parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
-    title: Selector
-    childGUIDs:
-    - 49a83301-2203-4b59-9f13-e03a696570da
-    - 5e697c64-6c67-4068-b498-b1df07bdd2b6
-    - f79c5773-4c5b-4be5-8add-11694552948f
-    - 7c307932-45fc-4dbf-90ee-fef4b94aa959
-    nodeType: 5
-    position: {x: 420, y: 111}
-    runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    noLogic: 0
-  - GUID: f79c5773-4c5b-4be5-8add-11694552948f
-    parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+  - GUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+    parentGUID: 3a6cf232-d298-4d86-9dd2-850dadc453f9
     title: Sequence
-    childGUIDs: []
+    childGUIDs:
+    - c131631a-7564-442c-b0e7-a8e181742788
+    - 13016152-9c8a-4f57-9bee-5b1cdc8c0983
     nodeType: 4
-    position: {x: 593, y: 988}
+    position: {x: 1389, y: 1194}
     runtime: {fileID: 0}
     properties: []
     runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     noLogic: 0
-  - GUID: 7c307932-45fc-4dbf-90ee-fef4b94aa959
-    parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-    title: Sequence
+  - GUID: c131631a-7564-442c-b0e7-a8e181742788
+    parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+    title: SeekClosestWithTag
     childGUIDs: []
-    nodeType: 4
-    position: {x: 593, y: 901}
+    nodeType: 1
+    position: {x: 1574, y: 1194}
     runtime: {fileID: 0}
-    properties: []
-    runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    properties:
+    - name: TAG
+      GUID: 
+      paramReference: 
+      serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: Player
+      ivalue: 0
+      fvalue: 0
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    - name: RANGE
+      GUID: 
+      paramReference: 
+      serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: 
+      ivalue: 0
+      fvalue: 100
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    runtimeLogicType: NodeAI.SeekClosestWithTag, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    noLogic: 0
+  - GUID: 13016152-9c8a-4f57-9bee-5b1cdc8c0983
+    parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+    title: DebugNode
+    childGUIDs: []
+    nodeType: 1
+    position: {x: 1574, y: 1329}
+    runtime: {fileID: 0}
+    properties:
+    - name: MESSAGE
+      GUID: 
+      paramReference: 
+      serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      svalue: Attack!
+      ivalue: 0
+      fvalue: 0
+      bvalue: 0
+      cvalue: {r: 0, g: 0, b: 0, a: 0}
+      v2value: {x: 0, y: 0}
+      v3value: {x: 0, y: 0, z: 0}
+      v4value: {x: 0, y: 0, z: 0, w: 0}
+    runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     noLogic: 0
   nodeTree:
@@ -543,8 +594,6 @@ MonoBehaviour:
             childGUIDs:
             - 49a83301-2203-4b59-9f13-e03a696570da
             - 5e697c64-6c67-4068-b498-b1df07bdd2b6
-            - f79c5773-4c5b-4be5-8add-11694552948f
-            - 7c307932-45fc-4dbf-90ee-fef4b94aa959
             nodeType: 5
             position: {x: 420, y: 111}
             runtime: {fileID: 0}
@@ -562,7 +611,7 @@ MonoBehaviour:
               - 317ac8cc-65fb-446d-8652-b078591fa5da
               - 3099d7cb-ee70-4830-8613-41751366b86b
               nodeType: 4
-              position: {x: 590, y: 111}
+              position: {x: 635, y: 109}
               runtime: {fileID: 0}
               properties: []
               runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0,
@@ -575,7 +624,7 @@ MonoBehaviour:
                 title: IfTrue
                 childGUIDs: []
                 nodeType: 2
-                position: {x: 775, y: 111}
+                position: {x: 820, y: 109}
                 runtime: {fileID: 0}
                 properties:
                 - name: CONDITION
@@ -601,7 +650,7 @@ MonoBehaviour:
                 title: SetAnimatorTrigger
                 childGUIDs: []
                 nodeType: 1
-                position: {x: 775, y: 222}
+                position: {x: 820, y: 220}
                 runtime: {fileID: 0}
                 properties:
                 - name: NAME
@@ -627,7 +676,7 @@ MonoBehaviour:
                 title: WaitUntilAnimationComplete
                 childGUIDs: []
                 nodeType: 1
-                position: {x: 775, y: 333}
+                position: {x: 820, y: 331}
                 runtime: {fileID: 0}
                 properties: []
                 runtimeLogicType: NodeAI.WaitUntilAnimationComplete, Assembly-CSharp,
@@ -790,7 +839,7 @@ MonoBehaviour:
                   title: WaitUntilAnimationComplete
                   childGUIDs: []
                   nodeType: 1
-                  position: {x: 1141, y: 720}
+                  position: {x: 1145, y: 956}
                   runtime: {fileID: 0}
                   properties: []
                   runtimeLogicType: NodeAI.WaitUntilAnimationComplete, Assembly-CSharp,
@@ -801,9 +850,10 @@ MonoBehaviour:
                   GUID: 3a6cf232-d298-4d86-9dd2-850dadc453f9
                   parentGUID: a3976a91-efa9-459a-9a77-de0326011859
                   title: Repeater
-                  childGUIDs: []
+                  childGUIDs:
+                  - 001918b3-9eb7-4ec4-bb11-cdba88eae39d
                   nodeType: 3
-                  position: {x: 1004, y: 1030}
+                  position: {x: 1154, y: 1194}
                   runtime: {fileID: 0}
                   properties:
                   - name: REPEATCOUNT
@@ -835,33 +885,87 @@ MonoBehaviour:
                   runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0,
                     Culture=neutral, PublicKeyToken=null
                   noLogic: 0
-                children: []
-          - nodeData:
-              GUID: 7c307932-45fc-4dbf-90ee-fef4b94aa959
-              parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-              title: Sequence
-              childGUIDs: []
-              nodeType: 4
-              position: {x: 593, y: 901}
-              runtime: {fileID: 0}
-              properties: []
-              runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0,
-                Culture=neutral, PublicKeyToken=null
-              noLogic: 0
-            children: []
-          - nodeData:
-              GUID: f79c5773-4c5b-4be5-8add-11694552948f
-              parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-              title: Sequence
-              childGUIDs: []
-              nodeType: 4
-              position: {x: 593, y: 988}
-              runtime: {fileID: 0}
-              properties: []
-              runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0,
-                Culture=neutral, PublicKeyToken=null
-              noLogic: 0
-            children: []
+                children:
+                - nodeData:
+                    GUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+                    parentGUID: 3a6cf232-d298-4d86-9dd2-850dadc453f9
+                    title: Sequence
+                    childGUIDs:
+                    - c131631a-7564-442c-b0e7-a8e181742788
+                    - 13016152-9c8a-4f57-9bee-5b1cdc8c0983
+                    nodeType: 4
+                    position: {x: 1389, y: 1194}
+                    runtime: {fileID: 0}
+                    properties: []
+                    runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0,
+                      Culture=neutral, PublicKeyToken=null
+                    noLogic: 0
+                  children:
+                  - nodeData:
+                      GUID: c131631a-7564-442c-b0e7-a8e181742788
+                      parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+                      title: SeekClosestWithTag
+                      childGUIDs: []
+                      nodeType: 1
+                      position: {x: 1574, y: 1194}
+                      runtime: {fileID: 0}
+                      properties:
+                      - name: TAG
+                        GUID: 
+                        paramReference: 
+                        serializedTypename: System.String, mscorlib, Version=4.0.0.0,
+                          Culture=neutral, PublicKeyToken=b77a5c561934e089
+                        svalue: Player
+                        ivalue: 0
+                        fvalue: 0
+                        bvalue: 0
+                        cvalue: {r: 0, g: 0, b: 0, a: 0}
+                        v2value: {x: 0, y: 0}
+                        v3value: {x: 0, y: 0, z: 0}
+                        v4value: {x: 0, y: 0, z: 0, w: 0}
+                      - name: RANGE
+                        GUID: 
+                        paramReference: 
+                        serializedTypename: System.Single, mscorlib, Version=4.0.0.0,
+                          Culture=neutral, PublicKeyToken=b77a5c561934e089
+                        svalue: 
+                        ivalue: 0
+                        fvalue: 100
+                        bvalue: 0
+                        cvalue: {r: 0, g: 0, b: 0, a: 0}
+                        v2value: {x: 0, y: 0}
+                        v3value: {x: 0, y: 0, z: 0}
+                        v4value: {x: 0, y: 0, z: 0, w: 0}
+                      runtimeLogicType: NodeAI.SeekClosestWithTag, Assembly-CSharp,
+                        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+                      noLogic: 0
+                    children: []
+                  - nodeData:
+                      GUID: 13016152-9c8a-4f57-9bee-5b1cdc8c0983
+                      parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+                      title: DebugNode
+                      childGUIDs: []
+                      nodeType: 1
+                      position: {x: 1574, y: 1329}
+                      runtime: {fileID: 0}
+                      properties:
+                      - name: MESSAGE
+                        GUID: 
+                        paramReference: 
+                        serializedTypename: System.String, mscorlib, Version=4.0.0.0,
+                          Culture=neutral, PublicKeyToken=b77a5c561934e089
+                        svalue: Attack!
+                        ivalue: 0
+                        fvalue: 0
+                        bvalue: 0
+                        cvalue: {r: 0, g: 0, b: 0, a: 0}
+                        v2value: {x: 0, y: 0}
+                        v3value: {x: 0, y: 0, z: 0}
+                        v4value: {x: 0, y: 0, z: 0, w: 0}
+                      runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0,
+                        Culture=neutral, PublicKeyToken=null
+                      noLogic: 0
+                    children: []
     nodes:
     - GUID: 854f8851-4887-4f4a-b666-23c5cf28e3eb
       parentGUID: 
@@ -899,6 +1003,58 @@ MonoBehaviour:
         v3value: {x: 0, y: 0, z: 0}
         v4value: {x: 0, y: 0, z: 0, w: 0}
       runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
+    - GUID: 5e697c64-6c67-4068-b498-b1df07bdd2b6
+      parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+      title: Repeater
+      childGUIDs:
+      - a3976a91-efa9-459a-9a77-de0326011859
+      nodeType: 3
+      position: {x: 590, y: 592}
+      runtime: {fileID: 0}
+      properties:
+      - name: REPEATCOUNT
+        GUID: 
+        paramReference: null
+        serializedTypename: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: 
+        ivalue: 1
+        fvalue: 0
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      - name: REPEATFOREVER
+        GUID: 
+        paramReference: null
+        serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: 
+        ivalue: 0
+        fvalue: 0
+        bvalue: 1
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
+    - GUID: a3976a91-efa9-459a-9a77-de0326011859
+      parentGUID: 5e697c64-6c67-4068-b498-b1df07bdd2b6
+      title: Selector
+      childGUIDs:
+      - 7bf80187-7899-4edc-8739-bc6216bd5720
+      - e56e1314-387d-4d94-b524-39b7610461b9
+      - 3a6cf232-d298-4d86-9dd2-850dadc453f9
+      nodeType: 5
+      position: {x: 825, y: 592}
+      runtime: {fileID: 0}
+      properties: []
+      runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       noLogic: 0
     - GUID: 927646c0-bd95-491a-8300-9252265cedaf
@@ -948,6 +1104,19 @@ MonoBehaviour:
       properties: []
       runtimeLogicType: 
       noLogic: 1
+    - GUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+      parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
+      title: Selector
+      childGUIDs:
+      - 49a83301-2203-4b59-9f13-e03a696570da
+      - 5e697c64-6c67-4068-b498-b1df07bdd2b6
+      nodeType: 5
+      position: {x: 420, y: 111}
+      runtime: {fileID: 0}
+      properties: []
+      runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      noLogic: 0
     - GUID: 49a83301-2203-4b59-9f13-e03a696570da
       parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
       title: Sequence
@@ -956,7 +1125,7 @@ MonoBehaviour:
       - 317ac8cc-65fb-446d-8652-b078591fa5da
       - 3099d7cb-ee70-4830-8613-41751366b86b
       nodeType: 4
-      position: {x: 590, y: 111}
+      position: {x: 635, y: 109}
       runtime: {fileID: 0}
       properties: []
       runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
@@ -967,7 +1136,7 @@ MonoBehaviour:
       title: IfTrue
       childGUIDs: []
       nodeType: 2
-      position: {x: 775, y: 111}
+      position: {x: 820, y: 109}
       runtime: {fileID: 0}
       properties:
       - name: CONDITION
@@ -991,7 +1160,7 @@ MonoBehaviour:
       title: SetAnimatorTrigger
       childGUIDs: []
       nodeType: 1
-      position: {x: 775, y: 222}
+      position: {x: 820, y: 220}
       runtime: {fileID: 0}
       properties:
       - name: NAME
@@ -1015,7 +1184,7 @@ MonoBehaviour:
       title: WaitUntilAnimationComplete
       childGUIDs: []
       nodeType: 1
-      position: {x: 775, y: 333}
+      position: {x: 820, y: 331}
       runtime: {fileID: 0}
       properties: []
       runtimeLogicType: NodeAI.WaitUntilAnimationComplete, Assembly-CSharp, Version=0.0.0.0,
@@ -1026,49 +1195,11 @@ MonoBehaviour:
       title: CorrectBait
       childGUIDs: []
       nodeType: 7
-      position: {x: 639, y: 24}
+      position: {x: 684, y: 22}
       runtime: {fileID: 0}
       properties: []
       runtimeLogicType: 
       noLogic: 1
-    - GUID: 5e697c64-6c67-4068-b498-b1df07bdd2b6
-      parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-      title: Repeater
-      childGUIDs:
-      - a3976a91-efa9-459a-9a77-de0326011859
-      nodeType: 3
-      position: {x: 590, y: 592}
-      runtime: {fileID: 0}
-      properties:
-      - name: REPEATCOUNT
-        GUID: 
-        paramReference: null
-        serializedTypename: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        svalue: 
-        ivalue: 1
-        fvalue: 0
-        bvalue: 0
-        cvalue: {r: 0, g: 0, b: 0, a: 0}
-        v2value: {x: 0, y: 0}
-        v3value: {x: 0, y: 0, z: 0}
-        v4value: {x: 0, y: 0, z: 0, w: 0}
-      - name: REPEATFOREVER
-        GUID: 
-        paramReference: null
-        serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        svalue: 
-        ivalue: 0
-        fvalue: 0
-        bvalue: 1
-        cvalue: {r: 0, g: 0, b: 0, a: 0}
-        v2value: {x: 0, y: 0}
-        v3value: {x: 0, y: 0, z: 0}
-        v4value: {x: 0, y: 0, z: 0, w: 0}
-      runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
     - GUID: 2c46c093-2af0-4a20-b093-8522d4550cbf
       parentGUID: 03bf8945-7c23-4c0b-928b-db15c12b5b9f
       title: InBearTrap
@@ -1170,7 +1301,7 @@ MonoBehaviour:
       title: WaitUntilAnimationComplete
       childGUIDs: []
       nodeType: 1
-      position: {x: 1141, y: 720}
+      position: {x: 1145, y: 956}
       runtime: {fileID: 0}
       properties: []
       runtimeLogicType: NodeAI.WaitUntilAnimationComplete, Assembly-CSharp, Version=0.0.0.0,
@@ -1179,9 +1310,10 @@ MonoBehaviour:
     - GUID: 3a6cf232-d298-4d86-9dd2-850dadc453f9
       parentGUID: a3976a91-efa9-459a-9a77-de0326011859
       title: Repeater
-      childGUIDs: []
+      childGUIDs:
+      - 001918b3-9eb7-4ec4-bb11-cdba88eae39d
       nodeType: 3
-      position: {x: 1004, y: 1030}
+      position: {x: 1154, y: 1194}
       runtime: {fileID: 0}
       properties:
       - name: REPEATCOUNT
@@ -1213,55 +1345,78 @@ MonoBehaviour:
       runtimeLogicType: NodeAI.Repeater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       noLogic: 0
-    - GUID: a3976a91-efa9-459a-9a77-de0326011859
-      parentGUID: 5e697c64-6c67-4068-b498-b1df07bdd2b6
-      title: Selector
-      childGUIDs:
-      - 7bf80187-7899-4edc-8739-bc6216bd5720
-      - e56e1314-387d-4d94-b524-39b7610461b9
-      - 3a6cf232-d298-4d86-9dd2-850dadc453f9
-      nodeType: 5
-      position: {x: 825, y: 592}
-      runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
-    - GUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-      parentGUID: 927646c0-bd95-491a-8300-9252265cedaf
-      title: Selector
-      childGUIDs:
-      - 49a83301-2203-4b59-9f13-e03a696570da
-      - 5e697c64-6c67-4068-b498-b1df07bdd2b6
-      - f79c5773-4c5b-4be5-8add-11694552948f
-      - 7c307932-45fc-4dbf-90ee-fef4b94aa959
-      nodeType: 5
-      position: {x: 420, y: 111}
-      runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: NodeAI.Selector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      noLogic: 0
-    - GUID: f79c5773-4c5b-4be5-8add-11694552948f
-      parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
+    - GUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+      parentGUID: 3a6cf232-d298-4d86-9dd2-850dadc453f9
       title: Sequence
-      childGUIDs: []
+      childGUIDs:
+      - c131631a-7564-442c-b0e7-a8e181742788
+      - 13016152-9c8a-4f57-9bee-5b1cdc8c0983
       nodeType: 4
-      position: {x: 593, y: 988}
+      position: {x: 1389, y: 1194}
       runtime: {fileID: 0}
       properties: []
       runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       noLogic: 0
-    - GUID: 7c307932-45fc-4dbf-90ee-fef4b94aa959
-      parentGUID: f1b01ed0-ca22-4b75-88bf-5f74999b1822
-      title: Sequence
+    - GUID: c131631a-7564-442c-b0e7-a8e181742788
+      parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+      title: SeekClosestWithTag
       childGUIDs: []
-      nodeType: 4
-      position: {x: 593, y: 901}
+      nodeType: 1
+      position: {x: 1574, y: 1194}
       runtime: {fileID: 0}
-      properties: []
-      runtimeLogicType: NodeAI.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      properties:
+      - name: TAG
+        GUID: 
+        paramReference: 
+        serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: Player
+        ivalue: 0
+        fvalue: 0
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      - name: RANGE
+        GUID: 
+        paramReference: 
+        serializedTypename: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: 
+        ivalue: 0
+        fvalue: 100
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      runtimeLogicType: NodeAI.SeekClosestWithTag, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      noLogic: 0
+    - GUID: 13016152-9c8a-4f57-9bee-5b1cdc8c0983
+      parentGUID: 001918b3-9eb7-4ec4-bb11-cdba88eae39d
+      title: DebugNode
+      childGUIDs: []
+      nodeType: 1
+      position: {x: 1574, y: 1329}
+      runtime: {fileID: 0}
+      properties:
+      - name: MESSAGE
+        GUID: 
+        paramReference: 
+        serializedTypename: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        svalue: Attack!
+        ivalue: 0
+        fvalue: 0
+        bvalue: 0
+        cvalue: {r: 0, g: 0, b: 0, a: 0}
+        v2value: {x: 0, y: 0}
+        v3value: {x: 0, y: 0, z: 0}
+        v4value: {x: 0, y: 0, z: 0, w: 0}
+      runtimeLogicType: NodeAI.DebugNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       noLogic: 0
   exposedProperties:

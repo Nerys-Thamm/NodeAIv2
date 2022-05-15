@@ -3446,3 +3446,47 @@ Received Import Request.
 Start importing Assets/Scripts/NodeAIv2/Editor/Serializer.cs using Guid(8e39426bbcab757f388bfdccfa9635a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eac9b90c717fba4cc7a0d75ce8a43e1e') in 0.003680 seconds 
   Import took 0.006868 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 639.662836 seconds.
+  path: Assets/BoneStagTest.asset
+  artifactKey: Guid(71b33540be7f23b5da0a7ab34b8fa495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoneStagTest.asset using Guid(71b33540be7f23b5da0a7ab34b8fa495) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: NodeAI::NodeTree.rootLeaf
+0: NodeAI::NodeAI_Behaviour.nodeTree
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+
+Serialization depth limit 10 exceeded at 'NodeAI::NodeData.childGUIDs'. There may be an object composition cycle in one or more of your serialized classes.
+
+Serialization hierarchy:
+11: NodeAI::NodeData.childGUIDs
+10: Leaf.nodeData
+9: Leaf.children
+8: Leaf.children
+7: Leaf.children
+6: Leaf.children
+5: Leaf.children
+4: Leaf.children
+3: Leaf.children
+2: Leaf.children
+1: Leaf.children
+0: Leaf.children
+
+ -> (artifact id: '3036a06d3a5f1f227039259b2287223a') in 0.019118 seconds 
+  Import took 0.023724 seconds .
+
