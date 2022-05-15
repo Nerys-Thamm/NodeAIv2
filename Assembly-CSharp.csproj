@@ -37,18 +37,18 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\NodeData.cs" />
+     <Compile Include="Assets\TestingScript.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Conditions\CheckTagInRange.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\WaitFor.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\DebugNode.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\LinkData.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\NodeTree.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\NodeAI_Agent.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\SeekClosestWithTag.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\RuntimeBase.cs" />
      <Compile Include="Assets\Scripts\NodeAIv2\Runtime\NodeAI_Behaviour.cs" />
-     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Conditions\CheckTagInRange.cs" />
-     <Compile Include="Assets\TestingScript.cs" />
-     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\SeekClosestWithTag.cs" />
-     <Compile Include="Assets\Scripts\NodeAIv2\Runtime\Actions\WaitFor.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/neryst/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

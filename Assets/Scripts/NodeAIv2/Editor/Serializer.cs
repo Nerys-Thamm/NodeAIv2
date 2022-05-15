@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor;
 using System.Linq;
 
 namespace NodeAI
@@ -24,9 +25,8 @@ namespace NodeAI
             
         }
 
-        public NodeAI_Behaviour Serialize()
+        public void Serialize(NodeAI_Behaviour nodeAI_Behaviour)
         {
-            var nodeAI_Behaviour = ScriptableObject.CreateInstance<NodeAI_Behaviour>();
             nodeAI_Behaviour.nodeData = new List<NodeData>();
             nodeAI_Behaviour.nodeTree = new NodeTree();
             foreach (var node in nodes)
@@ -38,7 +38,7 @@ namespace NodeAI
                     position = node.GetPosition().position,
                     childGUIDs = new List<string>(),
                     title = node.title,
-                    runtimeLogic = node.runtimeLogic
+                    runtimeLogic = ScriptableObject.Instantiate(node.runtimeLogic)
                 };
                 if(node.nodeType == NodeData.Type.Parameter) nodeData.parentGUID = node.paramReference;
                 foreach (var input in node.inputPorts)
@@ -78,8 +78,8 @@ namespace NodeAI
             {
                 nodeAI_Behaviour.exposedProperties.Add(p);
             }
-
-            return nodeAI_Behaviour;
+            
+            
         }
 
 

@@ -8,7 +8,7 @@ namespace NodeAI
     {
         public NodeAI_Behaviour AI_Behaviour;
         NodeAI_Behaviour behaviour;
-        public NodeTree nodeTree;
+        public NodeTree nodeTree = null;
 
         const float tickRate = 0.1f;
         float tickTimer = 0f;
@@ -16,6 +16,11 @@ namespace NodeAI
         // Start is called before the first frame update
         void Start()
         {
+            if(AI_Behaviour == null)
+            {
+                Debug.LogError("No AI_Behaviour assigned to NodeAI_Agent " + gameObject.name);
+                return;
+            }
             behaviour = Instantiate(AI_Behaviour);
             nodeTree = behaviour.nodeTree;
             nodeTree.rootLeaf.nodeData.runtimeLogic.Init(nodeTree.rootLeaf);
@@ -24,6 +29,10 @@ namespace NodeAI
         // Update is called once per frame
         void Update()
         {
+            if(behaviour == null)
+            {
+                return;
+            }
             tickTimer += Time.deltaTime;
             if (tickTimer > tickRate)
             {
@@ -35,6 +44,10 @@ namespace NodeAI
 
         public void SetParameter<T>(string name, T value)
         {
+            if(behaviour == null)
+            {
+                return;
+            }
             foreach (var property in behaviour.exposedProperties)
             {
                 if (property.name == name && property.type == typeof(T))
@@ -77,6 +90,10 @@ namespace NodeAI
 
         public T GetParameter<T>(string name)
         {
+            if(behaviour == null)
+            {
+                return default(T);
+            }
             foreach (var property in behaviour.exposedProperties)
             {
                 if (property.name == name && property.type == typeof(T))
@@ -109,7 +126,7 @@ namespace NodeAI
 
         void OnDrawGizmos()
         {
-            if (nodeTree != null)
+            if (behaviour != null)
             {
                 nodeTree.DrawGizmos(this);
             }

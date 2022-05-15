@@ -38,9 +38,32 @@ namespace NodeAI
         }
 
         public State Eval(NodeAI_Agent agent, NodeTree.Leaf current) => runtimeLogic.Eval(agent, current);
-
+        public void Init(NodeTree.Leaf current) => runtimeLogic.Init(current);
         [SerializeField]
-        public RuntimeBase runtimeLogic;
+        RuntimeBase runtime;
+        [SerializeField]
+        private List<SerializableProperty> properties;
+        [SerializeField]
+        private string runtimeLogicType;
+        public RuntimeBase runtimeLogic
+        {
+            get
+            {
+                if (runtime == null)
+                {
+                    runtime = (RuntimeBase)ScriptableObject.CreateInstance(System.Type.GetType(runtimeLogicType));
+                    runtime.RepopulateProperties(properties == null ? new List<SerializableProperty>() : properties);
+                }
+                return runtime;
+            }
+            set
+            {
+                runtime = value;
+                properties = runtime.GetProperties().ConvertAll(x => (SerializableProperty)x);
+                runtimeLogicType = runtime.GetType().AssemblyQualifiedName;
+            }
+        }
+        
 
         [System.Serializable]
         public class Property

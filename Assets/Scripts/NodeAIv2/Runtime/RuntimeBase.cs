@@ -17,6 +17,11 @@ namespace NodeAI
         [SerializeField]
         List<NodeData.SerializableProperty> properties = new List<NodeData.SerializableProperty>();
 
+        public void RepopulateProperties(List<NodeData.SerializableProperty> properties)
+        {
+            this.properties = properties;
+        }
+
         public void AddProperty<T>(string name, T initialValue)
         {
             if(properties == null)
@@ -178,7 +183,7 @@ namespace NodeAI
             
             foreach (NodeTree.Leaf child in current.children)
             {
-                child.nodeData.runtimeLogic.Init(child);
+                child.nodeData.Init(child);
             }
         }
     }
@@ -289,12 +294,12 @@ namespace NodeAI
             if (childState != NodeData.State.Running && repeatCount < GetProperty<int>("RepeatCount"))
             {
                 repeatCount++;
-                child.nodeData.runtimeLogic.Init(child);
+                child.nodeData.Init(child);
                 return NodeData.State.Running;
             }
             else if (childState != NodeData.State.Running && GetProperty<bool>("RepeatForever"))
             {
-                child.nodeData.runtimeLogic.Init(child);
+                child.nodeData.Init(child);
                 return NodeData.State.Running;
             }
             else

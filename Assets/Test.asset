@@ -13,170 +13,65 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   nodeData:
-  - GUID: d357f709-af43-4000-8cd0-8fc78e686320
+  - GUID: 49ed2bee-949a-46e8-b5cf-04a472141630
     parentGUID: 
     title: Entry Point
     childGUIDs:
-    - 16195c43-5adf-429c-8f5e-816664cb7856
+    - 822794e3-dbee-42e7-9a9a-509bf8d3b88d
     nodeType: 0
-    position: {x: 0, y: 0}
+    position: {x: 28, y: 16}
     runtimeLogic: {fileID: 0}
-  - GUID: 16195c43-5adf-429c-8f5e-816664cb7856
-    parentGUID: d357f709-af43-4000-8cd0-8fc78e686320
-    title: Sequence
-    childGUIDs:
-    - 30372da2-d1ab-4cd4-ac50-8a22a872a50e
-    - 6a337159-af18-4fc5-8e3a-f7821bb8a5dc
-    - de634941-c08a-4630-879a-5b932396e523
-    nodeType: 4
-    position: {x: 235, y: 0}
-    runtimeLogic: {fileID: 0}
-  - GUID: 30372da2-d1ab-4cd4-ac50-8a22a872a50e
-    parentGUID: 16195c43-5adf-429c-8f5e-816664cb7856
-    title: IfTrue
-    childGUIDs: []
-    nodeType: 2
-    position: {x: 420, y: 0}
-    runtimeLogic: {fileID: 0}
-  - GUID: e25bcd1b-21c2-4228-bd47-6fcdca0e845a
-    parentGUID: bc239bfe-c104-4d04-8e39-3f7db68a7a83
-    title: CanAttack
-    childGUIDs: []
-    nodeType: 7
-    position: {x: 285, y: -99}
-    runtimeLogic: {fileID: 0}
-  - GUID: 6a337159-af18-4fc5-8e3a-f7821bb8a5dc
-    parentGUID: 16195c43-5adf-429c-8f5e-816664cb7856
-    title: WaitFor
+  - GUID: 822794e3-dbee-42e7-9a9a-509bf8d3b88d
+    parentGUID: 49ed2bee-949a-46e8-b5cf-04a472141630
+    title: DebugNode
     childGUIDs: []
     nodeType: 1
-    position: {x: 420, y: 111}
-    runtimeLogic: {fileID: 0}
-  - GUID: de634941-c08a-4630-879a-5b932396e523
-    parentGUID: 16195c43-5adf-429c-8f5e-816664cb7856
-    title: SeekClosestWithTag
-    childGUIDs: []
-    nodeType: 1
-    position: {x: 420, y: 222}
+    position: {x: 263, y: 16}
     runtimeLogic: {fileID: 0}
   nodeTree:
     rootNode:
-      GUID: d357f709-af43-4000-8cd0-8fc78e686320
+      GUID: 49ed2bee-949a-46e8-b5cf-04a472141630
       parentGUID: 
       title: Entry Point
       childGUIDs:
-      - 16195c43-5adf-429c-8f5e-816664cb7856
+      - 822794e3-dbee-42e7-9a9a-509bf8d3b88d
       nodeType: 0
-      position: {x: 0, y: 0}
+      position: {x: 28, y: 16}
       runtimeLogic: {fileID: 0}
     rootLeaf:
       nodeData:
-        GUID: d357f709-af43-4000-8cd0-8fc78e686320
+        GUID: 49ed2bee-949a-46e8-b5cf-04a472141630
         parentGUID: 
         title: Entry Point
         childGUIDs:
-        - 16195c43-5adf-429c-8f5e-816664cb7856
+        - 822794e3-dbee-42e7-9a9a-509bf8d3b88d
         nodeType: 0
-        position: {x: 0, y: 0}
+        position: {x: 28, y: 16}
         runtimeLogic: {fileID: 0}
       children:
       - nodeData:
-          GUID: 16195c43-5adf-429c-8f5e-816664cb7856
-          parentGUID: d357f709-af43-4000-8cd0-8fc78e686320
-          title: Sequence
-          childGUIDs:
-          - 30372da2-d1ab-4cd4-ac50-8a22a872a50e
-          - 6a337159-af18-4fc5-8e3a-f7821bb8a5dc
-          - de634941-c08a-4630-879a-5b932396e523
-          nodeType: 4
-          position: {x: 235, y: 0}
+          GUID: 822794e3-dbee-42e7-9a9a-509bf8d3b88d
+          parentGUID: 49ed2bee-949a-46e8-b5cf-04a472141630
+          title: DebugNode
+          childGUIDs: []
+          nodeType: 1
+          position: {x: 263, y: 16}
           runtimeLogic: {fileID: 0}
-        children:
-        - nodeData:
-            GUID: 30372da2-d1ab-4cd4-ac50-8a22a872a50e
-            parentGUID: 16195c43-5adf-429c-8f5e-816664cb7856
-            title: IfTrue
-            childGUIDs: []
-            nodeType: 2
-            position: {x: 420, y: 0}
-            runtimeLogic: {fileID: 0}
-          children: []
-        - nodeData:
-            GUID: 6a337159-af18-4fc5-8e3a-f7821bb8a5dc
-            parentGUID: 16195c43-5adf-429c-8f5e-816664cb7856
-            title: WaitFor
-            childGUIDs: []
-            nodeType: 1
-            position: {x: 420, y: 111}
-            runtimeLogic: {fileID: 0}
-          children: []
-        - nodeData:
-            GUID: de634941-c08a-4630-879a-5b932396e523
-            parentGUID: 16195c43-5adf-429c-8f5e-816664cb7856
-            title: SeekClosestWithTag
-            childGUIDs: []
-            nodeType: 1
-            position: {x: 420, y: 222}
-            runtimeLogic: {fileID: 0}
-          children: []
+        children: []
     nodes:
-    - GUID: d357f709-af43-4000-8cd0-8fc78e686320
+    - GUID: 49ed2bee-949a-46e8-b5cf-04a472141630
       parentGUID: 
       title: Entry Point
       childGUIDs:
-      - 16195c43-5adf-429c-8f5e-816664cb7856
+      - 822794e3-dbee-42e7-9a9a-509bf8d3b88d
       nodeType: 0
-      position: {x: 0, y: 0}
+      position: {x: 28, y: 16}
       runtimeLogic: {fileID: 0}
-    - GUID: 16195c43-5adf-429c-8f5e-816664cb7856
-      parentGUID: d357f709-af43-4000-8cd0-8fc78e686320
-      title: Sequence
-      childGUIDs:
-      - 30372da2-d1ab-4cd4-ac50-8a22a872a50e
-      - 6a337159-af18-4fc5-8e3a-f7821bb8a5dc
-      - de634941-c08a-4630-879a-5b932396e523
-      nodeType: 4
-      position: {x: 235, y: 0}
-      runtimeLogic: {fileID: 0}
-    - GUID: 30372da2-d1ab-4cd4-ac50-8a22a872a50e
-      parentGUID: 16195c43-5adf-429c-8f5e-816664cb7856
-      title: IfTrue
-      childGUIDs: []
-      nodeType: 2
-      position: {x: 420, y: 0}
-      runtimeLogic: {fileID: 0}
-    - GUID: e25bcd1b-21c2-4228-bd47-6fcdca0e845a
-      parentGUID: bc239bfe-c104-4d04-8e39-3f7db68a7a83
-      title: CanAttack
-      childGUIDs: []
-      nodeType: 7
-      position: {x: 285, y: -99}
-      runtimeLogic: {fileID: 0}
-    - GUID: 6a337159-af18-4fc5-8e3a-f7821bb8a5dc
-      parentGUID: 16195c43-5adf-429c-8f5e-816664cb7856
-      title: WaitFor
+    - GUID: 822794e3-dbee-42e7-9a9a-509bf8d3b88d
+      parentGUID: 49ed2bee-949a-46e8-b5cf-04a472141630
+      title: DebugNode
       childGUIDs: []
       nodeType: 1
-      position: {x: 420, y: 111}
+      position: {x: 263, y: 16}
       runtimeLogic: {fileID: 0}
-    - GUID: de634941-c08a-4630-879a-5b932396e523
-      parentGUID: 16195c43-5adf-429c-8f5e-816664cb7856
-      title: SeekClosestWithTag
-      childGUIDs: []
-      nodeType: 1
-      position: {x: 420, y: 222}
-      runtimeLogic: {fileID: 0}
-  exposedProperties:
-  - name: CanAttack
-    GUID: bc239bfe-c104-4d04-8e39-3f7db68a7a83
-    paramReference: 
-    serializedTypename: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-      PublicKeyToken=b77a5c561934e089
-    svalue: 
-    ivalue: 0
-    fvalue: 0
-    bvalue: 0
-    cvalue: {r: 0, g: 0, b: 0, a: 0}
-    v2value: {x: 0, y: 0}
-    v3value: {x: 0, y: 0, z: 0}
-    v4value: {x: 0, y: 0, z: 0, w: 0}
+  exposedProperties: []

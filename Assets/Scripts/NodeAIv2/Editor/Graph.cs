@@ -66,11 +66,10 @@ namespace NodeAI
             GraphView newGraph = new GraphView();
             newGraph.AddEntryNode();
             var serializer = Serializer.GetInstance(newGraph);
-
-            behaviour = serializer.Serialize();
-            
-            
+            behaviour = ScriptableObject.CreateInstance<NodeAI_Behaviour>();
             ProjectWindowUtil.CreateAsset(behaviour, "NodeAI_Behaviour.asset");
+            AssetDatabase.SaveAssets();
+            serializer.Serialize(behaviour);
             AssetDatabase.Refresh();
             EditorUtility.SetDirty(behaviour);
             AssetDatabase.SaveAssets();
@@ -102,19 +101,7 @@ namespace NodeAI
             var saveButton = new ToolbarButton(() => { 
                 if(behaviour != null)
                 {
-                    NodeAI_Behaviour newData = Serializer.GetInstance(graphView).Serialize();
-                    behaviour.nodeData = newData.nodeData;
-                    behaviour.nodeTree = newData.nodeTree;
-                    behaviour.exposedProperties = newData.exposedProperties;
-                    EditorUtility.SetDirty(behaviour);
-                    AssetDatabase.SaveAssets();
-                    AssetDatabase.Refresh();
-                }
-                else
-                {
-                    behaviour = Serializer.GetInstance(graphView).Serialize();
-                    ProjectWindowUtil.CreateAsset(behaviour, "NodeAI_Behaviour.asset");
-                    AssetDatabase.Refresh();
+                    Serializer.GetInstance(graphView).Serialize(behaviour);
                     EditorUtility.SetDirty(behaviour);
                     AssetDatabase.SaveAssets();
                     AssetDatabase.Refresh();
